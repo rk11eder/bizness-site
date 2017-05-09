@@ -1,0 +1,132 @@
+/* ==========================================================================
+   GOOGLE MAPS
+   ========================================================================== */
+
+.angular-google-map-container {
+  height: 400px;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*FONT FACE EXAMPLE*/
+/*@font-face {
+    font-family: 'MyriadProRegular';
+    src: url('../fonts/myriadpro-webfont.eot');
+    src: url('../fonts/myriadpro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/myriadpro-webfont.woff') format('woff'),
+         url('../fonts/myriadpro-webfont.ttf') format('truetype'),
+         url('../fonts/myriadpro-webfont.svg#MyriadProRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+
+[ng-cloak]
+{
+  display: none !important;
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+a{
+  text-decoration:none;
+  color:black;
+}
+a:hover{
+  text-decoration: none;
+  color: black;
+}
+
+p{
+  margin:0px;
+}
+
+.pd0{
+  padding: 0px;
+}
+
+.cursor{
+  cursor:pointer;
+}
+
+.ola{
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
+
+/*HOME*/
+.holder_destaques_home{
+  height: 100vh;
+}
+.titulo_destaques{
+  height: 30%;
+  background-color: black;
+}
+
+.fotos_destaques{
+  height: 70%;
+  background-image: url(../img/home_destaques.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.holder_home_logos_holder{
+  display: flex;
+}
+.holder_home_logos_holder_esquerda{
+  display: flex;
+  align-items:center;
+}
+
+.holder_logos_home{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.holder_logos_home div{
+  width: 25%;
+  display: flex;
+  align-items: center;
+  padding: 20px 0px;
+  justify-content: center
+}
+
+.holder_texto_home{
+  display:flex;
+}
+
+.holder_texto_home_esquerda{
+  background-color:#eb504c;
+  display: flex;
+  align-items:center;
+}
+
+.texto_home{
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size:20px;
+  color:#34394f;
+}
+.texto_home span{
+  font-weight: 700;
+}
+
+
+@media screen and (max-width:1200px) {
+
+}
+
+@media screen and (max-width:992px) {
+  
+}
+
+@media screen and (max-width:768px) {
+
+}
