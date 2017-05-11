@@ -23,8 +23,8 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
             $rootScope.area_sel = 'home';
             $rootScope.menu_mobile_open = false;
             $rootScope.array_tags = [];
-            // var promise = services.get_destaques(lang);  
-            return 1;
+             var promise = services.insta();  
+            return promise;
           }]
         }
       }).
@@ -63,8 +63,5 @@ arquitetaApp.run(['$rootScope','services',function($rootScope, services){
   $rootScope.lang_array = array_lang;
 
   $rootScope.pathgeral = pathgeral;
+  
 }]);
-
-
-
-

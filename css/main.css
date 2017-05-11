@@ -67,7 +67,9 @@ p{
 }
 .titulo_destaques{
   height: 30%;
-  background-color: black;
+  background-color: #33384e;
+  display: flex;
+  align-items: center;
 }
 
 .fotos_destaques{
@@ -170,6 +172,26 @@ p{
   padding-left: 15px;
 }*/
 
+.holder_titulo_home{
+  display:flex;
+}
+
+.home_titulo{
+  color:#eb504c;
+  font-size: 108px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  line-height: 100px;
+}
+
+.home_tipo{
+  font-size:18px;
+  font-family:'Roboto';
+  font-weight: 400;
+  color:#ffffff;
+  padding-top: 6px;
+}
+
 
 /*FOOTER*/
 
@@ -223,6 +245,24 @@ font-family: 'Roboto';
   margin-left: 70px;
       top: 50%;
     margin-top: -30px;
+}
+
+
+/*MENU*/
+
+.menu_holder{
+  position: fixed;
+  z-index: 2;
+  height: 100vh;
+  width: 86px;
+  background-color: white;
+  left: 10px
+}
+
+.vertical-text {
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+  float:left;
 }
 
 @media screen and (max-width:1200px) {

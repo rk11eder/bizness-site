@@ -25,9 +25,10 @@ services.service('services',['$http','$q','$location','$window', function ($http
 
         return deferred.promise;
     }
-    this.get_projetos = function(lang){
+    this.insta = function(){
+        
         var deferred = $q.defer();
-        $http.get('server/get_projetos.php?lang='+lang+'&data='+(Math.random()),{ cache: false}).success(function(data, status) {
+        $http.post('server/insta.php?data='+(Math.random()),{ cache: false}).success(function(data, status) {
             deferred.resolve(data);
         }).error(function(data, status) {
             deferred.reject(data);
@@ -35,16 +36,7 @@ services.service('services',['$http','$q','$location','$window', function ($http
 
         return deferred.promise;
     }
-    this.get_projeto_aberto = function(id,lang){
-        var deferred = $q.defer();
-        $http.post('server/get_projeto_aberto.php?lang='+lang+'&data='+(Math.random()),{'id':id},{ cache: false}).success(function(data, status) {
-            deferred.resolve(data);
-        }).error(function(data, status) {
-            deferred.reject(data);
-        });
-
-        return deferred.promise;
-    }
+  
 }]);
 
 /*servico para mudar page title (SEO)*/

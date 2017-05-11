@@ -1,7 +1,7 @@
 'use strict';
 
 /*exemplo controller*/
-arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location', function homeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location){
+arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function homeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
 
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {
@@ -12,15 +12,10 @@ arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout'
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('PROJECTSTART');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
-
-    // var promise_preco = services.get_preco();
-    //     promise_preco.then(
-    //     function(response){
-    //       $scope.preco= response;
-    //       console.log($scope.preco);
-    //       }
-    // );
+   
+$scope.ins = items.data;
 
 
-    
+  console.log($scope.ins);
+
 }]);

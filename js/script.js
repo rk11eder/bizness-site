@@ -23,8 +23,8 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
             $rootScope.area_sel = 'home';
             $rootScope.menu_mobile_open = false;
             $rootScope.array_tags = [];
-            // var promise = services.get_destaques(lang);  
-            return 1;
+             var promise = services.insta();  
+            return promise;
           }]
         }
       }).
@@ -63,12 +63,8 @@ arquitetaApp.run(['$rootScope','services',function($rootScope, services){
   $rootScope.lang_array = array_lang;
 
   $rootScope.pathgeral = pathgeral;
-}]);
-
-
-
-
-'use strict';
+  
+}]);'use strict';
 
 
 var services = angular.module('services', []);
@@ -95,9 +91,10 @@ services.service('services',['$http','$q','$location','$window', function ($http
 
         return deferred.promise;
     }
-    this.get_projetos = function(lang){
+    this.insta = function(){
+        
         var deferred = $q.defer();
-        $http.get('server/get_projetos.php?lang='+lang+'&data='+(Math.random()),{ cache: false}).success(function(data, status) {
+        $http.post('server/insta.php?data='+(Math.random()),{ cache: false}).success(function(data, status) {
             deferred.resolve(data);
         }).error(function(data, status) {
             deferred.reject(data);
@@ -105,16 +102,7 @@ services.service('services',['$http','$q','$location','$window', function ($http
 
         return deferred.promise;
     }
-    this.get_projeto_aberto = function(id,lang){
-        var deferred = $q.defer();
-        $http.post('server/get_projeto_aberto.php?lang='+lang+'&data='+(Math.random()),{'id':id},{ cache: false}).success(function(data, status) {
-            deferred.resolve(data);
-        }).error(function(data, status) {
-            deferred.reject(data);
-        });
-
-        return deferred.promise;
-    }
+  
 }]);
 
 /*servico para mudar page title (SEO)*/
@@ -178,7 +166,7 @@ arquitetaApp.directive('footer', [function () {
 'use strict';
 
 /*exemplo controller*/
-arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location', function homeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location){
+arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function homeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
 
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {
@@ -189,17 +177,12 @@ arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout'
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('PROJECTSTART');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
-
-    // var promise_preco = services.get_preco();
-    //     promise_preco.then(
-    //     function(response){
-    //       $scope.preco= response;
-    //       console.log($scope.preco);
-    //       }
-    // );
+   
+$scope.ins = items.data;
 
 
-    
+  console.log($scope.ins);
+
 }]);'use strict';
 
 /*exemplo controller*/
