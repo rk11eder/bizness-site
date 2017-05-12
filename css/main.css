@@ -250,7 +250,7 @@ font-family: 'Roboto';
 
 /*MENU*/
 
-.menu_holder{
+/*.menu_holder{
   position: fixed;
   z-index: 2;
   height: 100vh;
@@ -263,6 +263,10 @@ font-family: 'Roboto';
 	transform: rotate(90deg);
 	transform-origin: left top 0;
   float:left;
+}*/
+
+canvas{
+  border:1px solid black;
 }
 
 @media screen and (max-width:1200px) {
