@@ -28,6 +28,19 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
           }]
         }
       }).
+    when('/'+lang+'/portfolio', {
+        templateUrl: 'views/portfolio.html',
+        controller: 'portefolioCtrl',
+        resolve:{
+            items: ['$rootScope','services', function($rootScope,services){
+                $rootScope.area_sel = 'portfolio';
+                $rootScope.menu_mobile_open = false;
+                $rootScope.array_tags = [];
+                var promise = services.insta();
+                return promise;
+            }]
+        }
+    }).
       // when('/'+lang+'/projects/:id', {
       //   templateUrl: 'views/project.html',
       //   controller: 'projectCtrl',
