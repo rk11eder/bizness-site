@@ -4,7 +4,7 @@
     unset($_COOKIE['cookiesProject']);
     $cookie_name = "cookiesProject";
     $cookie_value = $lang;
-    setcookie($cookie_name, $cookie_value, time()+((3600 * 24)*30), "/");  
+    setcookie($cookie_name, $cookie_value, time()+((3600 * 24)*30), "/");
   }
   else{
     if (isset($_COOKIE['cookiesProject'])) {
@@ -38,9 +38,9 @@
 $url_base = $_SERVER['PHP_SELF'];
 $url_base_array = explode('/',$url_base);
 $url_base = "";
-for ($i=0; $i < count($url_base_array)-1; $i++) { 
+for ($i=0; $i < count($url_base_array)-1; $i++) {
     $url_base .= $url_base_array[$i]."/";
-} 
+}
 
 $desc_page = "";
 
@@ -84,18 +84,19 @@ $desc_page = "";
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
-    
+
+
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   </head>
   <body >
-    
+
     <!-- MENU -->
     <menu></menu>
 
     <!-- CONTAINER -->
     <div class="container_website col-xs-12 pd0"  ng-view></div>
-    
+
     <!-- FOOTER -->
     <footer></footer>
     <script src='//maps.googleapis.com/maps/api/js?&key=AIzaSyBEsDaD7pRIfOpsO2w2V9UMQSucIl6Z6DU'></script>
@@ -104,10 +105,10 @@ $desc_page = "";
 
     <script src="js/plugins.js"></script>
     <script src="js/user_scripts/lang/<?php echo $lang; ?>.js"></script>
-    <?php 
+    <?php
         $mydir = "js/user_scripts/";
         $d = dir($mydir);
-        
+
         unlink("js/script.js");
         $myfile = fopen("js/script.js", "w") or die("Unable to open file!");
 
@@ -121,15 +122,16 @@ $desc_page = "";
         $content_file = file_get_contents($mydir."directives.js");
         fwrite($myfile, $content_file);
 
-        while($entry = $d->read()) {
-           if ($entry!= "." && $entry!= ".." && $entry!= "app.js" && $entry!= "services.js" && $entry!= "directives.js") {
-            $array_nome_file = explode(".",$entry);
-            //if ($array_nome_file[count($array_nome_file)-2] == 'min') {
-              $content_file = file_get_contents($mydir.$entry);
-              fwrite($myfile, $content_file);
+    while ($entry = $d->read()) {
+        if ($entry != "." && $entry != ".DS_Store" && $entry != ".." && $entry != "app.js" && $entry != "services.js" && $entry != "directives.js" && $entry != "lang" && $entry != "minify") {
+            // echo $entry;
+            $array_nome_file = explode(".", $entry);
+            // if ($array_nome_file[count($array_nome_file)-2] == 'min') {
+            $content_file = file_get_contents($mydir . $entry);
+            fwrite($myfile, $content_file);
             //}
-           }
         }
+    }
         $d->close();
 
         fclose($myfile);
