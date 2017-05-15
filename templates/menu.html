@@ -1,15 +1,28 @@
-<div class="col-xs-12 menu_holder">
-	<!--<div class="col-xs-12 pd0">
-		<img src="img/logo_biz.svg" alt="" width="50">
-	</div>
-	<div class="col-xs-12 pd0">
-		<div class="vertical-text">INICIO</div>
-		<div class="vertical-text">SOBRE</div>
-		<div class="vertical-text">PORTFOLIO</div>
-		<div class="vertical-text">CONTACTOS</div>
-	</div>-->
+<div class="menu_holder">
+    <div class="pd0 icon_menu">
+        <img src="img/logo_biz.svg" alt="" width="50">
+    </div>
+    <div class="menu-list-holder">
+        <div class="icon_menu_list">
+            <img src="img/logo_facebook_branco.svg">
+        </div>
+        <div class="icon_menu_list">
+            <img src="img/logo_instagram_branco.svg">
+        </div>
+        <ul class="pd0 nav">
+            <li class="vertical-text" ng-class="{menu_item_sel: area_sel == 'home'}"><a ng-href="{{lang}}/home"><span>INICIO</span></a>
+            </li>
+            <li class="vertical-text" ng-class="{menu_item_sel: area_sel == 'sobrenos'}"><a ng-href="{{lang}}/sobrenos"><span>SOBRE</span></a>
+            </li>
+            <li class="vertical-text" ng-class="{menu_item_sel: area_sel == 'portfolio'}"><a
+                    ng-href="{{lang}}/portfolio"><span>PORTFOLIO</span></a></li>
+            <li class="vertical-text" ng-class="{menu_item_sel: area_sel == 'contactos'}"><a
+                    ng-href="{{lang}}/contactos"><span>CONTACTOS</span></a></li>
+        </ul>
 
 
+    </div>
 
-</div>	
+
+</div>
 	
