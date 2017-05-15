@@ -90,7 +90,7 @@ p{
 .holder_logos_home{
   display: flex;
   flex-wrap: wrap;
-  
+
 }
 .holder_logos_home div{
   width: 25%;
@@ -154,7 +154,7 @@ p{
   border-bottom: 1px solid #20222e;
   width: 100%;
   color:#ffffff;
-  
+
 }
 
 .textarea_home{
@@ -216,7 +216,7 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
 }
 
 .footer_esquerda{
@@ -224,7 +224,7 @@ font-family: 'Roboto';
   font-weight: 300;
   font-size: 15px;
   color:#ffffff;
-  
+
 }
 
 .footer_texto span{
@@ -337,6 +337,58 @@ font-family: 'Roboto';
   font-family: 'Roboto';
   font-weight: bold;
 }
+/*SOBRE NOS*/
+.fotos_sobrenos{
+  width: 20%;
+  background-image: url('../img/folio2.jpg');background-size: cover;
+  height: 33.33333%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  float: left;
+}
+.holder_conteudo_sobrenos{
+  position: absolute;
+  z-index: 2;
+}
+.texto_top_sobrenos{
+  text-align: right;
+  padding-right: 5%;
+  font-size: 60px;
+  font-family: Roboto;
+  padding-left: 40%;
+  color: #eb504c;
+  padding-top: 5%;
+  font-weight: bold;
+}
+
+.texto_middle_sobrenos {
+    position: absolute;
+    top: 50%;
+    transform: translate(20%, -50%);
+    color: rgba(52, 57, 79, 0.9);
+    font-family: Roboto;
+    font-size: 31px;
+    font-weight:bold;
+}
+.texto_botttom_left_sobrenos{
+  top: 50%;
+  transform: translate(0%,-50%);
+  font-size: 30px;
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.texto_botttom_right_sobrenos{
+  font-size: 30px;
+  color: #eb504c;
+  top: 50%;
+  transform: translate(0%,-50%);
+  padding-right: 10%;
+  font-family: Roboto;
+}
+
 /*MENU*/
 
 /*.menu_holder{
@@ -362,7 +414,7 @@ canvas{
 }
 
 @media screen and (max-width:992px) {
-  
+
 }
 
 @media screen and (max-width:768px) {
