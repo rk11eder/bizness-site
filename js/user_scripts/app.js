@@ -67,6 +67,19 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
             }]
         }
     }).
+    when('/'+lang+'/contactos', {
+        templateUrl: 'views/contactos.html',
+        controller: 'contactosCtrl',
+        resolve:{
+            items: ['$rootScope','services', function($rootScope,services){
+                $rootScope.area_sel = 'contactos';
+                $rootScope.menu_mobile_open = false;
+                $rootScope.array_tags = [];
+                var promise = services.insta();
+                return promise;
+            }]
+        }
+    }).
       // when('/'+lang+'/projects/:id', {
       //   templateUrl: 'views/project.html',
       //   controller: 'projectCtrl',
