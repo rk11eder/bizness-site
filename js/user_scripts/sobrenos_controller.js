@@ -1,7 +1,7 @@
 'use strict';
 
 /*exemplo controller*/
-arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function homeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
+arquitetaApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function sobrenosCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
 
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {
@@ -13,11 +13,7 @@ arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout'
   	PageTitle.setTitle('PROJECTSTART');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
    
-/*$scope.ins = items.data;*/
-
-/*
-  console.log($scope.ins);*/
-  /*RESIZE WINDOW*/
+/*RESIZE WINDOW*/
 	var w = angular.element($window);
 	$scope.getWindowDimensions = function () {
 		return {
@@ -29,7 +25,7 @@ arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout'
    	var canvas = document.querySelector('canvas');
 
   	canvas.width = w.width();
-	canvas.height = 700;
+	canvas.height = w.height() - (w.height() * 0.10);
 
 	var c = canvas.getContext('2d');
 
@@ -94,8 +90,9 @@ var circleArray = [];
 			this.draw = function(){
 				c.beginPath();
 				c.rect(this.x,this.y,this.z,this.t);	
-				c.strokeStyle = 'blue';
-				c.stroke();
+				c.strokeStyle = '#34394f';
+				c.fillStyle="#34394f";
+				c.fill();
 			}
 
 			this.update = function(){
@@ -225,7 +222,7 @@ function Trirot(x,y,a,d,dx,dy){
 				c.moveTo(p1x,p1y);
 				c.lineTo(p2x,p2y);
 				c.lineTo(p3x,p3y);
-				c.fillStyle = "black";
+				c.fillStyle="#34394f";
 				c.fill();
 			}
 
@@ -251,7 +248,7 @@ function Trirot(x,y,a,d,dx,dy){
 			var x = Math.random() * canvas.width;
 			var y = Math.random() * canvas.height;
 			var a = Math.random() * 120;
-			var d = 10;
+			var d = 8;
 			var dx = (Math.random() - 0.5) * 2;
 			var dy = (Math.random() - 0.5) * 2;
 			trirotArray.push(new Trirot(x,y,a,d,dx,dy));
@@ -285,7 +282,8 @@ function Trirot(x,y,a,d,dx,dy){
 
 		animate();
 
-  console.log(canvas);
+
+
   
 
 }]);
