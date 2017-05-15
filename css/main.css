@@ -98,6 +98,11 @@ p{
   flex-wrap: wrap;
 
 }
+.logo_insta{
+  position: absolute;
+  z-index: 20;
+  margin: 20px;
+}
 .holder_logos_home div{
   width: 25%;
   display: flex;
@@ -278,6 +283,7 @@ font-family: 'Roboto';
 }
 .holder_backgrounds{
   height: 100%;
+  position: absolute;
   width: 100%;
 }
 .linha_half_bd{
