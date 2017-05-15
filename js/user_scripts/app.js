@@ -41,16 +41,29 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
             }]
         }
     }).
-    when('/'+lang+'/contactos', {
-        templateUrl: 'views/contactos.html',
-        controller: 'contactosCtrl',
+    when('/'+lang+'/portfolio', {
+        templateUrl: 'views/portfolio.html',
+        controller: 'portefolioCtrl',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
-                $rootScope.area_sel = 'contactos';
+                $rootScope.area_sel = 'portfolio';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
-                // var promise = services.insta();
-                return 1;
+                var promise = services.insta();
+                return promise;
+            }]
+        }
+    }).
+    when('/'+lang+'/portfolio2', {
+        templateUrl: 'views/portfolio2.html',
+        controller: 'portefolio2Ctrl',
+        resolve:{
+            items: ['$rootScope','services', function($rootScope,services){
+                $rootScope.area_sel = 'portfolio2';
+                $rootScope.menu_mobile_open = false;
+                $rootScope.array_tags = [];
+                var promise = services.insta();
+                return promise;
             }]
         }
     }).
