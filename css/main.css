@@ -128,7 +128,14 @@ p{
 }
 
 .contactos_home_holder{
+  text-align: center;
   display: flex;
+}.contactos_home_holder  p{
+   z-index: 110;
+   position: absolute;
+}.contactos_home_holder h1{
+    z-index: 110;
+    position: absolute;
 }
 
 .input_submit_contactos_home{
@@ -292,6 +299,43 @@ font-family: 'Roboto';
   font-family: "Roboto";
   font-style: italic;
   color: rgb(255, 255, 255);
+}
+.mapa_home img{
+  height: 90vh;
+  width: 100vw;
+}
+.circle {
+  background: rgb(255, 255, 255);
+  z-index: 100;
+  position: absolute;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  left:50%;
+  top: 50%;
+  transform: translate(-50%,0%);
+
+}
+.circle img{
+  padding-top: 20px;
+  width: 40px;
+  display: block;
+  margin: auto;
+
+}
+.testo_mapa_home{
+  position: absolute;
+  z-index: 110;
+  color: #eb504c;
+  font-size: 45px;
+  width: 97vw;
+  text-align: right;
+  margin-top: 7%;
+}
+.testo_mapa_home p{
+
+  font-family: 'Roboto';
+  font-weight: bold;
 }
 /*MENU*/
 
