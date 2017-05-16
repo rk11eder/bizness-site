@@ -46,7 +46,8 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         controller: 'portfolio2Ctrl',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
-                $rootScope.area_sel = 'portfolio2';
+                $rootScope.area_sel = 'portfolio';
+                $rootScope.sub_area_sel = 'portfolio2';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
                 

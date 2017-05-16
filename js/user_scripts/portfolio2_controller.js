@@ -12,8 +12,10 @@ arquitetaApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$ti
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('PROJECTSTART');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
-   
- 
+    $rootScope.hide_menu = 0;
+    $rootScope.hide_botao_menu = 0;
+
+
   
 
 }]);

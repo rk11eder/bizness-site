@@ -469,12 +469,73 @@ font-family: 'Roboto';
   -webkit-transform-origin: left top;
   -webkit-transform:rotate(-90deg) translate3D(-100%,0,0);
   color: #7f7f7f;
-  height: 45px;
-  width: calc(100vh - 70px);
+  height: 66px;
+  width: calc(100vh - 100px);
 
 }
+.menu-list-holder2{
+  -webkit-transform-origin: left top;
+  -webkit-transform: rotate(-90deg) translate3D(-100%,0,0);
+  color: #7f7f7f;
+  height: 66px;
+  width: calc(100vh - 100px);
+  position: absolute;
+  top: 100px;
+  background: transparent;
+  pointer-events: none;
+  display: none;
+}
+.menu_holder_active{
+  display: block;
+}
+.menu_barra_red{
+  background: #eb504c;
+  width: 90%;
+  height: 100%;
+  float: left;
+  pointer-events: all;
+}
+.menu_barra_btn{
+  width: 10%;
+  height: 100%;
+  float: right;
+  background-size: contain;
+  background: white url('../img/botao_open_menu.svg') no-repeat center;
+  transform: rotate(90deg);
+  pointer-events: all;
+}
+.menu_back{
+  background: url("../img/menu_back.svg") no-repeat center;
+  background-size: contain;;
+  height: 40px;
+  width: 40px;
+  transform: rotate(90deg) translate3d(30%,20%,0);
+  float: right;
+}
+.toggle_mostrar_menu{
+  animation: menu_mostrar_animation 2s forwards ease-in-out;
+}
+@keyframes menu_mostrar_animation {
+  0%   {width: 90%;}
+  100% {width: 15%;}
+}
+.toggle_hide_menu{
+  animation: menu_fechar_animation 2s forwards ease-in-out;
+}
+@keyframes menu_fechar_animation {
+  0%   {width: 15%;}
+  100% {width: 90%;}
+}
+.fadeOut{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+  
+}
+
 .icon_menu{
-height: 70px;
+  height: 100px;
+  width: 55px;
 }
 .menu_holder ul{
   display: inline-block;
@@ -484,7 +545,7 @@ height: 70px;
     margin-right:40px;
     float:right;
     height:100%;
-    line-height:45px;
+    line-height:66px;
 }
 .nav>li>a{
   padding: 0;

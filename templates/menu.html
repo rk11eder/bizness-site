@@ -1,5 +1,5 @@
 <div class="menu_holder">
-    <div class="pd0 icon_menu" style="background: url('img/logo_biz.svg')no - repeat center center;">
+    <div class="pd0 icon_menu" style="background: url('img/logo_biz.svg')no-repeat center; background-size: contain">
     </div>
     <div class="menu-list-holder">
         <div class="icon_menu_list">
@@ -19,7 +19,13 @@
                     ng-href="{{lang}}/contactos"><span>CONTACTOS</span></a></li>
         </ul>
 
-
+    </div>
+    <div class="menu-list-holder2" ng-class="{menu_holder_active: area_sel == 'portfolio'&& sub_area_sel == 'portfolio2'}">
+        <div class="menu_barra_red" ng-class="{toggle_mostrar_menu: hide_menu == '1', toggle_hide_menu: hide_menu == '2'}">
+            <div class="menu_back">
+            </div>
+        </div>
+        <div class="menu_barra_btn" ng-click="changeMenu()" ng-class="{fadeOut : hide_botao_menu == '1'}"> </div>
     </div>
 
 
