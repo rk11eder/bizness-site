@@ -418,7 +418,7 @@ font-family: 'Roboto';
   float:left;
 }*/
 .menu_holder {
-  width: 89vh;
+  width: 70px;
   height: 45px;
   position: fixed;
   z-index: 2000;
@@ -430,11 +430,11 @@ font-family: 'Roboto';
   -webkit-transform:rotate(-90deg) translate3D(-100%,0,0);
   color: #7f7f7f;
   height: 45px;
+  width: calc(100vh - 70px);
 
 }
 .icon_menu{
-  margin-top: 20px;
-  margin-bottom: 18px;
+height: 70px;
 }
 .menu_holder ul{
   display: inline-block;
