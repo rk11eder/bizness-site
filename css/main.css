@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .angular-google-map-container {
-  height: 400px;
+  height: 90vh;
 }
 
 
@@ -130,7 +130,6 @@ p{
 .texto_home span{
   font-weight: 700;
 }
-
 .contactos_holder{
   background-color:#34394f;
   display: flex;
@@ -141,13 +140,23 @@ p{
 .contactos_home_holder{
   text-align: center;
   display: flex;
-}.contactos_home_holder  p{
-   z-index: 110;
-   position: absolute;
-}.contactos_home_holder h1{
-    z-index: 110;
-    position: absolute;
 }
+.contactos_home_holder_texto{
+  z-index: 100;
+  position: absolute;
+
+  color: white;
+  margin-top: 27%;
+  font-family: 'Roboto';
+
+}
+.contactos_home_holder  p{
+  font-size: 33px;
+
+}.contactos_home_holder h1{
+   font-weight: bold;
+   font-size: 63px;
+ }
 
 .input_submit_contactos_home{
   background-color: #20222e;
@@ -169,13 +178,12 @@ p{
 }
 
 .textarea_home{
-   height: 180px;
+  height: 180px;
   background-color:#34394f;
   width: 100%;
   border:none;
   color:#ffffff;
 }
-
 .input_home::placeholder, .textarea_home::placeholder{
    color:white;
   font-family: 'Roboto';
@@ -339,10 +347,12 @@ font-family: 'Roboto';
   position: absolute;
   z-index: 110;
   color: #eb504c;
-  font-size: 45px;
-  width: 97vw;
+  font-size: 35px;
+  /* width: 97vw; */
   text-align: right;
-  margin-top: 7%;
+  margin-top: 20vh;
+  right: 27px;
+
 }
 .testo_mapa_home p{
 
