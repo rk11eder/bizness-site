@@ -349,6 +349,46 @@ font-family: 'Roboto';
   font-family: 'Roboto';
   font-weight: bold;
 }
+/*PORTFOLIO  2 */
+.folio2_header{
+   background-image: url('../img/folio2.jpg');
+   background-size: cover;
+   height: 80vh;
+   margin-bottom: 15vh;
+ }
+.holder_folio2_header{
+   top: 50%;
+   position: absolute;
+   transform: translate(0%, -50%);
+ }
+.titulo_folio2{
+   color: white;
+   font-family: ROBOTO;
+   font-size: 47px;
+   padding-right: 50%;
+   font-weight: bold;
+   padding-top: 18px;
+ }
+.descricao_folio2{
+   font-size: 14px;
+   font-family: Roboto;
+   color: rgb(255, 255, 255);
+   padding-top: 15px;
+ }
+.linha_folio2{
+  height: 50vh;
+}
+.texto_folio2{
+   height: 100%;
+   text-align: right;
+   padding-right: 5%;
+   padding-left: 19%;
+   font-family: Roboto;
+ }
+.imagem_folio2{
+   height: 100%;
+   background-size: cover;
+ }
 /*SOBRE NOS*/
 .fotos_sobrenos{
   width: 20%;

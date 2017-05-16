@@ -56,7 +56,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
     }).
     when('/'+lang+'/portfolio2', {
         templateUrl: 'views/portfolio2.html',
-        controller: 'portefolio2Ctrl',
+        controller: 'portfolio2Ctrl',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.area_sel = 'portfolio2';
