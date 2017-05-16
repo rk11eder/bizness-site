@@ -545,7 +545,7 @@ font-family: 'Roboto';
 
 .icon_menu{
   height: 100px;
-  width: 55px;
+  width: 66px;
 }
 .menu_holder ul{
   display: inline-block;
@@ -574,7 +574,7 @@ font-family: 'Roboto';
 .icon_menu_list{
   min-height: 10px;
   display: inline-block;
-  margin-top: 11px;
+  margin-top: 23px;
   margin-left: 15px;
   transform: rotate(90deg);
 }

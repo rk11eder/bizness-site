@@ -21,6 +21,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         resolve:{
           items: ['$rootScope','services', function($rootScope,services){
             $rootScope.area_sel = 'home';
+              $rootScope.sub_area_sel = '';
             $rootScope.menu_mobile_open = false;
             $rootScope.array_tags = [];
              var promise = services.insta();  
@@ -34,6 +35,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.area_sel = 'portfolio';
+                $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
                 
@@ -61,6 +63,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.area_sel = 'contactos';
+                $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
                 var promise = services.insta();
@@ -74,6 +77,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.area_sel = 'sobrenos';
+                $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
                 var promise = services.insta();
