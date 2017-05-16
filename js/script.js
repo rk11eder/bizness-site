@@ -30,40 +30,27 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
       }).
     when('/'+lang+'/portfolio', {
         templateUrl: 'views/portfolio.html',
-        controller: 'portefolioCtrl',
+        controller: 'portfolioCtrl',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.area_sel = 'portfolio';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
-                var promise = services.insta();
-                return promise;
-            }]
-        }
-    }).
-    when('/'+lang+'/portfolio', {
-        templateUrl: 'views/portfolio.html',
-        controller: 'portefolioCtrl',
-        resolve:{
-            items: ['$rootScope','services', function($rootScope,services){
-                $rootScope.area_sel = 'portfolio';
-                $rootScope.menu_mobile_open = false;
-                $rootScope.array_tags = [];
-                var promise = services.insta();
-                return promise;
+                
+                return 1;
             }]
         }
     }).
     when('/'+lang+'/portfolio2', {
         templateUrl: 'views/portfolio2.html',
-        controller: 'portefolio2Ctrl',
+        controller: 'portfolio2Ctrl',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.area_sel = 'portfolio2';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
-                var promise = services.insta();
-                return promise;
+                
+                return 1;
             }]
         }
     }).
@@ -733,7 +720,22 @@ arquitetaApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$time
 		};
 	};
 
-   	var canvas = document.querySelector('canvas');
+   
+
+
+			/*RESIZE WINDOW*/
+	var w = angular.element($window);
+	$scope.getWindowDimensions = function () {
+		return {
+		   'h': w.height(),
+		   'w': w.width()
+		};
+	};
+
+
+
+	$scope.resize_func = function(){
+			var canvas = document.querySelector('canvas');
 
   	canvas.width = w.width();
 	canvas.height = w.height() - (w.height() * 0.10);
@@ -994,8 +996,26 @@ function Trirot(x,y,a,d,dx,dy){
 		animate();
 
 
+	};
 
-  
+	$scope.$watch($scope.getWindowDimensions, function (newValue, oldValue) {
+	   $scope.resize_func();
+	}, true);
+
+	w.bind('resize', function () {
+		$scope.$apply();
+	});
+
+	w.bind('load', function () {
+		$scope.resize_func();
+		$scope.$apply();
+	});
+
+	$scope.$on('$viewContentLoaded', function() {
+   	$scope.resize_func();
+	});
+
+	$scope.resize_func();
 
 }]);'use strict';
 

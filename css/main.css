@@ -359,6 +359,46 @@ font-family: 'Roboto';
   font-family: 'Roboto';
   font-weight: bold;
 }
+/*PORTFOLIO  2 */
+.folio2_header{
+   background-image: url('../img/folio2.jpg');
+   background-size: cover;
+   height: 80vh;
+   margin-bottom: 15vh;
+ }
+.holder_folio2_header{
+   top: 50%;
+   position: absolute;
+   transform: translate(0%, -50%);
+ }
+.titulo_folio2{
+   color: white;
+   font-family: ROBOTO;
+   font-size: 47px;
+   padding-right: 50%;
+   font-weight: bold;
+   padding-top: 18px;
+ }
+.descricao_folio2{
+   font-size: 14px;
+   font-family: Roboto;
+   color: rgb(255, 255, 255);
+   padding-top: 15px;
+ }
+.linha_folio2{
+  height: 50vh;
+}
+.texto_folio2{
+   height: 100%;
+   text-align: right;
+   padding-right: 5%;
+   padding-left: 19%;
+   font-family: Roboto;
+ }
+.imagem_folio2{
+   height: 100%;
+   background-size: cover;
+ }
 /*SOBRE NOS*/
 .fotos_sobrenos{
   width: 20%;
@@ -378,7 +418,7 @@ font-family: 'Roboto';
   text-align: right;
   padding-right: 5%;
   font-size: 60px;
-  font-family: Roboto;
+  font-family: 'Roboto';
   padding-left: 40%;
   color: #eb504c;
   padding-top: 5%;
@@ -390,7 +430,7 @@ font-family: 'Roboto';
     top: 50%;
     transform: translate(20%, -50%);
     color: rgba(52, 57, 79, 0.9);
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 31px;
     font-weight:bold;
 }
@@ -408,7 +448,7 @@ font-family: 'Roboto';
   top: 50%;
   transform: translate(0%,-50%);
   padding-right: 10%;
-  font-family: Roboto;
+  font-family: 'Roboto';
 }
 
 /*MENU*/
@@ -428,7 +468,7 @@ font-family: 'Roboto';
   float:left;
 }*/
 .menu_holder {
-  width: 89vh;
+  width: 70px;
   height: 45px;
   position: fixed;
   z-index: 2000;
@@ -440,11 +480,11 @@ font-family: 'Roboto';
   -webkit-transform:rotate(-90deg) translate3D(-100%,0,0);
   color: #7f7f7f;
   height: 45px;
+  width: calc(100vh - 70px);
 
 }
 .icon_menu{
-  margin-top: 20px;
-  margin-bottom: 18px;
+height: 70px;
 }
 .menu_holder ul{
   display: inline-block;

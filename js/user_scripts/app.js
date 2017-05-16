@@ -30,40 +30,27 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
       }).
     when('/'+lang+'/portfolio', {
         templateUrl: 'views/portfolio.html',
-        controller: 'portefolioCtrl',
+        controller: 'portfolioCtrl',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.area_sel = 'portfolio';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
-                var promise = services.insta();
-                return promise;
-            }]
-        }
-    }).
-    when('/'+lang+'/portfolio', {
-        templateUrl: 'views/portfolio.html',
-        controller: 'portefolioCtrl',
-        resolve:{
-            items: ['$rootScope','services', function($rootScope,services){
-                $rootScope.area_sel = 'portfolio';
-                $rootScope.menu_mobile_open = false;
-                $rootScope.array_tags = [];
-                var promise = services.insta();
-                return promise;
+                
+                return 1;
             }]
         }
     }).
     when('/'+lang+'/portfolio2', {
         templateUrl: 'views/portfolio2.html',
-        controller: 'portefolio2Ctrl',
+        controller: 'portfolio2Ctrl',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.area_sel = 'portfolio2';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
-                var promise = services.insta();
-                return promise;
+                
+                return 1;
             }]
         }
     }).

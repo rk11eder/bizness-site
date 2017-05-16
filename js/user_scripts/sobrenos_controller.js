@@ -22,7 +22,22 @@ arquitetaApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$time
 		};
 	};
 
-   	var canvas = document.querySelector('canvas');
+   
+
+
+			/*RESIZE WINDOW*/
+	var w = angular.element($window);
+	$scope.getWindowDimensions = function () {
+		return {
+		   'h': w.height(),
+		   'w': w.width()
+		};
+	};
+
+
+
+	$scope.resize_func = function(){
+			var canvas = document.querySelector('canvas');
 
   	canvas.width = w.width();
 	canvas.height = w.height() - (w.height() * 0.10);
@@ -283,7 +298,25 @@ function Trirot(x,y,a,d,dx,dy){
 		animate();
 
 
+	};
 
-  
+	$scope.$watch($scope.getWindowDimensions, function (newValue, oldValue) {
+	   $scope.resize_func();
+	}, true);
+
+	w.bind('resize', function () {
+		$scope.$apply();
+	});
+
+	w.bind('load', function () {
+		$scope.resize_func();
+		$scope.$apply();
+	});
+
+	$scope.$on('$viewContentLoaded', function() {
+   	$scope.resize_func();
+	});
+
+	$scope.resize_func();
 
 }]);
