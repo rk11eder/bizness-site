@@ -37,6 +37,7 @@ body, html{
 	padding: 0px;
    width:  100%;
   height: 100%;
+  overflow: auto;
 }
 
 
@@ -289,9 +290,7 @@ font-family: 'Roboto';
 .linha_half_bd{
   height: 200px;
 }
-.portfolio_logo{
 
-}
 .portfolio_logo img{
 
   position: absolute;
@@ -354,7 +353,11 @@ font-family: 'Roboto';
    background-image: url('../img/folio2.jpg');
    background-size: cover;
    height: 80vh;
-   margin-bottom: 15vh;
+   
+ }
+ .conteudo_port_holder{
+   padding-top: 100px;
+   background-color:white;
  }
 .holder_folio2_header{
    top: 50%;
@@ -389,6 +392,29 @@ font-family: 'Roboto';
    height: 100%;
    background-size: cover;
  }
+
+ .portfolio2_holder{
+  position: relative;
+  float: left;
+  overflow: auto;
+  width: 100%;
+ }
+/* .container_website{
+overflow: hidden;
+ }*/
+
+ .portfolio2_holder2{
+  overflow: auto;
+ }
+
+ 
+ .holder_backgrounds_portfolio2{
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background-color: #3367cc;
+  opacity: 0.9;
+}
 /*SOBRE NOS*/
 .fotos_sobrenos{
   width: 20%;
@@ -466,7 +492,16 @@ font-family: 'Roboto';
 }
 .menu-list-holder{
   background:white;
+
+  transform-origin: left top;
+  -moz-transform-origin: left top;
+  -o-transform-origin: left top;
+  -ms-transform-origin: left top;
   -webkit-transform-origin: left top;
+  transform:rotate(-90deg) translate3D(-100%,0,0);
+  -moz-transform:rotate(-90deg) translate3D(-100%,0,0);
+  -o-transform:rotate(-90deg) translate3D(-100%,0,0);
+  -ms-transform:rotate(-90deg) translate3D(-100%,0,0);
   -webkit-transform:rotate(-90deg) translate3D(-100%,0,0);
   color: #7f7f7f;
   height: 45px;
