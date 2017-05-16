@@ -21,6 +21,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         resolve:{
           items: ['$rootScope','services', function($rootScope,services){
             $rootScope.area_sel = 'home';
+              $rootScope.sub_area_sel = '';
             $rootScope.menu_mobile_open = false;
             $rootScope.array_tags = [];
              var promise = services.insta();  
@@ -34,6 +35,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.area_sel = 'portfolio';
+                $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
                 
@@ -46,7 +48,8 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         controller: 'portfolio2Ctrl',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
-                $rootScope.area_sel = 'portfolio2';
+                $rootScope.area_sel = 'portfolio';
+                $rootScope.sub_area_sel = 'portfolio2';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
                 
@@ -60,6 +63,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.area_sel = 'contactos';
+                $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
                 var promise = services.insta();
@@ -73,6 +77,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.area_sel = 'sobrenos';
+                $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
                 var promise = services.insta();
@@ -172,7 +177,7 @@ services.service('PageTitle',['$rootScope','$rootElement', function($rootScope,$
       angular.element($rootElement.find('meta[name=\'twitter:description\']')[0]).attr('content',newDesc);
     }
   };
-}]);arquitetaApp.directive('menu', [ 'services', function (services) {
+}]);arquitetaApp.directive('menu', [ 'services','$rootScope', function (services,$rootScope) {
   return {
     restrict: 'E',
     replace: true,
@@ -195,6 +200,18 @@ services.service('PageTitle',['$rootScope','$rootElement', function($rootScope,$
       scope.changelangGE =  function(){
           window.location.assign(pathgeral+'ge/'+scope.area_sel)
           console.log();   
+      };
+      scope.changeMenu = function () {
+          // console.log($rootScope.hide_menu);
+          if ($rootScope.hide_menu === 1){
+              $rootScope.hide_menu = 2;
+              $rootScope.hide__botao_menu = 2;
+          }
+          else {
+              $rootScope.hide_menu = 1;
+              $rootScope.hide_botao_menu= 1;
+          }
+          console.log($rootScope.hide_menu);
       };
     
 
@@ -645,8 +662,10 @@ arquitetaApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$ti
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('PROJECTSTART');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
-   
- 
+    $rootScope.hide_menu = 0;
+    $rootScope.hide_botao_menu = 0;
+
+
   
 
 }]);'use strict';

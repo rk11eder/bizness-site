@@ -37,6 +37,7 @@ body, html{
 	padding: 0px;
    width:  100%;
   height: 100%;
+  overflow: auto;
 }
 
 
@@ -297,9 +298,7 @@ font-family: 'Roboto';
 .linha_half_bd{
   height: 200px;
 }
-.portfolio_logo{
 
-}
 .portfolio_logo img{
 
   position: absolute;
@@ -364,7 +363,11 @@ font-family: 'Roboto';
    background-image: url('../img/folio2.jpg');
    background-size: cover;
    height: 80vh;
-   margin-bottom: 15vh;
+   
+ }
+ .conteudo_port_holder{
+   padding-top: 100px;
+   background-color:white;
  }
 .holder_folio2_header{
    top: 50%;
@@ -399,6 +402,29 @@ font-family: 'Roboto';
    height: 100%;
    background-size: cover;
  }
+
+ .portfolio2_holder{
+  position: relative;
+  float: left;
+  overflow: auto;
+  width: 100%;
+ }
+/* .container_website{
+overflow: hidden;
+ }*/
+
+ .portfolio2_holder2{
+  overflow: auto;
+ }
+
+ 
+ .holder_backgrounds_portfolio2{
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background-color: #3367cc;
+  opacity: 0.9;
+}
 /*SOBRE NOS*/
 .fotos_sobrenos{
   width: 20%;
@@ -498,15 +524,85 @@ font-family: 'Roboto';
 }
 .menu-list-holder{
   background:white;
+
+  transform-origin: left top;
+  -moz-transform-origin: left top;
+  -o-transform-origin: left top;
+  -ms-transform-origin: left top;
   -webkit-transform-origin: left top;
+  transform:rotate(-90deg) translate3D(-100%,0,0);
+  -moz-transform:rotate(-90deg) translate3D(-100%,0,0);
+  -o-transform:rotate(-90deg) translate3D(-100%,0,0);
+  -ms-transform:rotate(-90deg) translate3D(-100%,0,0);
   -webkit-transform:rotate(-90deg) translate3D(-100%,0,0);
   color: #7f7f7f;
-  height: 45px;
-  width: calc(100vh - 70px);
+  height: 66px;
+  width: calc(100vh - 100px);
 
 }
+.menu-list-holder2{
+  -webkit-transform-origin: left top;
+  -webkit-transform: rotate(-90deg) translate3D(-100%,0,0);
+  color: #7f7f7f;
+  height: 66px;
+  width: calc(100vh - 100px);
+  position: absolute;
+  top: 100px;
+  background: transparent;
+  pointer-events: none;
+  display: none;
+}
+.menu_holder_active{
+  display: block;
+}
+.menu_barra_red{
+  background: #eb504c;
+  width: 90%;
+  height: 100%;
+  float: left;
+  pointer-events: all;
+}
+.menu_barra_btn{
+  width: 10%;
+  height: 100%;
+  float: right;
+  background-size: contain;
+  background: white url('../img/botao_open_menu.svg') no-repeat center;
+  transform: rotate(90deg);
+  pointer-events: all;
+}
+.menu_back{
+  background: url("../img/menu_back.svg") no-repeat center;
+  background-size: contain;;
+  height: 40px;
+  width: 40px;
+  transform: rotate(90deg) translate3d(30%,20%,0);
+  float: right;
+}
+.toggle_mostrar_menu{
+  animation: menu_mostrar_animation 2s forwards ease-in-out;
+}
+@keyframes menu_mostrar_animation {
+  0%   {width: 90%;}
+  100% {width: 15%;}
+}
+.toggle_hide_menu{
+  animation: menu_fechar_animation 2s forwards ease-in-out;
+}
+@keyframes menu_fechar_animation {
+  0%   {width: 15%;}
+  100% {width: 90%;}
+}
+.fadeOut{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+  
+}
+
 .icon_menu{
-height: 70px;
+  height: 100px;
+  width: 66px;
 }
 .menu_holder ul{
   display: inline-block;
@@ -516,7 +612,7 @@ height: 70px;
     margin-right:40px;
     float:right;
     height:100%;
-    line-height:45px;
+    line-height:66px;
 }
 .nav>li>a{
   padding: 0;
@@ -535,7 +631,7 @@ height: 70px;
 .icon_menu_list{
   min-height: 10px;
   display: inline-block;
-  margin-top: 11px;
+  margin-top: 23px;
   margin-left: 15px;
   transform: rotate(90deg);
 }
