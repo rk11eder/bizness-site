@@ -46,5 +46,6 @@ arquitetaApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$ti
 			
 			
   
-
+$rootScope.hide_menu = 0;
+    $rootScope.hide_botao_menu = 0;
 }]);

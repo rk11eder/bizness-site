@@ -21,6 +21,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         resolve:{
           items: ['$rootScope','services', function($rootScope,services){
             $rootScope.area_sel = 'home';
+              $rootScope.sub_area_sel = '';
             $rootScope.menu_mobile_open = false;
             $rootScope.array_tags = [];
              var promise = services.insta();  
@@ -34,6 +35,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.area_sel = 'portfolio';
+                $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
                 
@@ -46,7 +48,8 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         controller: 'portfolio2Ctrl',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
-                $rootScope.area_sel = 'portfolio2';
+                $rootScope.area_sel = 'portfolio';
+                $rootScope.sub_area_sel = 'portfolio2';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
                 
@@ -60,6 +63,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.area_sel = 'contactos';
+                $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
                 var promise = services.insta();
@@ -73,6 +77,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.area_sel = 'sobrenos';
+                $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
                 var promise = services.insta();
@@ -172,7 +177,7 @@ services.service('PageTitle',['$rootScope','$rootElement', function($rootScope,$
       angular.element($rootElement.find('meta[name=\'twitter:description\']')[0]).attr('content',newDesc);
     }
   };
-}]);arquitetaApp.directive('menu', [ 'services', function (services) {
+}]);arquitetaApp.directive('menu', [ 'services','$rootScope', function (services,$rootScope) {
   return {
     restrict: 'E',
     replace: true,
@@ -195,6 +200,18 @@ services.service('PageTitle',['$rootScope','$rootElement', function($rootScope,$
       scope.changelangGE =  function(){
           window.location.assign(pathgeral+'ge/'+scope.area_sel)
           console.log();   
+      };
+      scope.changeMenu = function () {
+          // console.log($rootScope.hide_menu);
+          if ($rootScope.hide_menu === 1){
+              $rootScope.hide_menu = 2;
+              $rootScope.hide__botao_menu = 2;
+          }
+          else {
+              $rootScope.hide_menu = 1;
+              $rootScope.hide_botao_menu= 1;
+          }
+          console.log($rootScope.hide_menu);
       };
     
 
@@ -238,242 +255,105 @@ arquitetaApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$tim
     /*
      console.log($scope.ins);*/
     /*RESIZE WINDOW*/
-    uiGmapGoogleMapApi.then(function(maps) {
 
-    });
-
-    function initMap() {
-
-        // Create a new StyledMapType object, passing it an array of styles,
-        // and the name to be displayed on the map type control.
-        var styledMapType = new google.maps.StyledMapType(
-            [
-                {
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#242f3e"
-                        }
-                    ]
-                },
-                {
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#746855"
-                        }
-                    ]
-                },
-                {
-                    "elementType": "labels.text.stroke",
-                    "stylers": [
-                        {
-                            "color": "#242f3e"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "administrative.land_parcel",
-                    "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "administrative.locality",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#d59563"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "labels.text",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#d59563"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi.park",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#263c3f"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi.park",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#6b9a76"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#38414e"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "geometry.stroke",
-                    "stylers": [
-                        {
-                            "color": "#212a37"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#9ca5b3"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#746855"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "geometry.stroke",
-                    "stylers": [
-                        {
-                            "color": "#1f2835"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#f3d19c"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.local",
-                    "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#2f3948"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit.station",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#d59563"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#17263c"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#515c6d"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [
-                        {
-                            "color": "#17263c"
-                        }
-                    ]
-                }
-            ]
-        )
-
-    }
-
-
-    $scope.map = {
-        center: {
-
-            latitude:   38.703505,
-            longitude: -9.178821,
+    var styleArray= [
+        {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+        {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+        {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+        {
+            featureType: 'administrative.locality',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#d59563'}]
         },
-        zoom: 18,
+        {
+            featureType: 'poi',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#d59563'}]
+        },
+        {
+            featureType: 'poi.park',
+            elementType: 'geometry',
+            stylers: [{color: '#263c3f'}]
+        },
+        {
+            featureType: 'poi.park',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#6b9a76'}]
+        },
+        {
+            featureType: 'road',
+            elementType: 'geometry',
+            stylers: [{color: '#38414e'}]
+        },
+        {
+            featureType: 'road',
+            elementType: 'geometry.stroke',
+            stylers: [{color: '#212a37'}]
+        },
+        {
+            featureType: 'road',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#9ca5b3'}]
+        },
+        {
+            featureType: 'road.highway',
+            elementType: 'geometry',
+            stylers: [{color: '#746855'}]
+        },
+        {
+            featureType: 'road.highway',
+            elementType: 'geometry.stroke',
+            stylers: [{color: '#1f2835'}]
+        },
+        {
+            featureType: 'road.highway',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#f3d19c'}]
+        },
+        {
+            featureType: 'transit',
+            elementType: 'geometry',
+            stylers: [{color: '#2f3948'}]
+        },
+        {
+            featureType: 'transit.station',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#d59563'}]
+        },
+        {
+            featureType: 'water',
+            elementType: 'geometry',
+            stylers: [{color: '#17263c'}]
+        },
+        {
+            featureType: 'water',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#515c6d'}]
+        },
+        {
+            featureType: 'water',
+            elementType: 'labels.text.stroke',
+            stylers: [{color: '#17263c'}]
+        }
+    ]
 
 
 
-
-    };
-
-    $scope.options = {
-        scrollwheel: false,
-        mapTypeControl: false,
-        // mapTypeId: "SATELLITE",
-        // maptype: G_SATELLITE_MAP
-        mapTypeId: ['roadmap','styled_map']
-
-    };
-
-
-
+    $scope.map = {center: {latitude: 38.703505, longitude: -9.178821 }, zoom: 18 };
+    $scope.map = {center: {latitude: 38.703505, longitude: -9.178821 }, zoom: 18 };
+    $scope.options = {scrollwheel: false, styles: styleArray, mapTypeControl: false, };
+    $scope.coordsUpdates = 0;
+    $scope.dynamicMoveCtr = 0;
     $scope.marker = {
-
         id: 0,
         coords: {
-            latitude:   38.703505,
-            longitude: -9.178821,
+            latitude: 38.703505,
+            longitude: -9.178821
         },
-
+        options: {icon:"img/mapa_pin.png"},
 
     };
+
 
 
 
@@ -782,39 +662,10 @@ arquitetaApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$ti
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('PROJECTSTART');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
-   
-		angular.element('body').bind("scroll", function(){
-
-				var portfolio = $('.holder_backgrounds_portfolio2').offset().top;
-				var currentScroll = $('.holder_backgrounds_portfolio2').offset().top; // get current position
-				console.log(currentScroll);
-
-				$scope.map = function(x, in_min, in_max, out_min, out_max){
-					if(x<in_min) return out_min;
-					if(x>in_max) return out_max;
-					return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-				}
-
-				//PERGUNTAR JOAO SE ISTO PODE FICAR ASSIM "PERFORMANCE"
-				$scope.valor =	$scope.map(portfolio, -400, 0, 0.3, 0.9);
-				$('.holder_backgrounds_portfolio2').css('opacity', $scope.valor);
-
-						var conteudo = $('.conteudo_port_holder').offset().top;
-						
-						
-						var parallaximage = $('.folio2_header');
-
-				parallaximage.css('transform','translateY('+ -(currentScroll * .5) + 'px)' );
-					
+    $rootScope.hide_menu = 0;
+    $rootScope.hide_botao_menu = 0;
 
 
-
-
-            $scope.$apply();
-        });
-
-			
-			
   
 
 }]);'use strict';

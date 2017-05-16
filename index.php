@@ -100,7 +100,7 @@ $desc_page = "";
     <!-- FOOTER -->
     <footer></footer>
 
-    <script src='//maps.googleapis.com/maps/api/js?&key=AIzaSyBEsDaD7pRIfOpsO2w2V9UMQSucIl6Z6DU'></script>
+   <script src='//maps.googleapis.com/maps/api/js?&key=AIzaSyBEsDaD7pRIfOpsO2w2V9UMQSucIl6Z6DU'></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 

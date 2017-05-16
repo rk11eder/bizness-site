@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .angular-google-map-container {
-  height: 400px;
+  height: 90vh;
 }
 
 
@@ -131,7 +131,6 @@ p{
 .texto_home span{
   font-weight: 700;
 }
-
 .contactos_holder{
   background-color:#34394f;
   display: flex;
@@ -142,13 +141,23 @@ p{
 .contactos_home_holder{
   text-align: center;
   display: flex;
-}.contactos_home_holder  p{
-   z-index: 110;
-   position: absolute;
-}.contactos_home_holder h1{
-    z-index: 110;
-    position: absolute;
 }
+.contactos_home_holder_texto{
+  z-index: 100;
+  position: absolute;
+
+  color: white;
+  margin-top: 27%;
+  font-family: 'Roboto';
+
+}
+.contactos_home_holder  p{
+  font-size: 33px;
+
+}.contactos_home_holder h1{
+   font-weight: bold;
+   font-size: 63px;
+ }
 
 .input_submit_contactos_home{
   background-color: #20222e;
@@ -170,13 +179,12 @@ p{
 }
 
 .textarea_home{
-   height: 180px;
+  height: 180px;
   background-color:#34394f;
   width: 100%;
   border:none;
   color:#ffffff;
 }
-
 .input_home::placeholder, .textarea_home::placeholder{
    color:white;
   font-family: 'Roboto';
@@ -338,10 +346,12 @@ font-family: 'Roboto';
   position: absolute;
   z-index: 110;
   color: #eb504c;
-  font-size: 45px;
-  width: 97vw;
+  font-size: 35px;
+  /* width: 97vw; */
   text-align: right;
-  margin-top: 7%;
+  margin-top: 20vh;
+  right: 27px;
+
 }
 .testo_mapa_home p{
 
@@ -504,12 +514,73 @@ overflow: hidden;
   -ms-transform:rotate(-90deg) translate3D(-100%,0,0);
   -webkit-transform:rotate(-90deg) translate3D(-100%,0,0);
   color: #7f7f7f;
-  height: 45px;
-  width: calc(100vh - 70px);
+  height: 66px;
+  width: calc(100vh - 100px);
 
 }
+.menu-list-holder2{
+  -webkit-transform-origin: left top;
+  -webkit-transform: rotate(-90deg) translate3D(-100%,0,0);
+  color: #7f7f7f;
+  height: 66px;
+  width: calc(100vh - 100px);
+  position: absolute;
+  top: 100px;
+  background: transparent;
+  pointer-events: none;
+  display: none;
+}
+.menu_holder_active{
+  display: block;
+}
+.menu_barra_red{
+  background: #eb504c;
+  width: 90%;
+  height: 100%;
+  float: left;
+  pointer-events: all;
+}
+.menu_barra_btn{
+  width: 10%;
+  height: 100%;
+  float: right;
+  background-size: contain;
+  background: white url('../img/botao_open_menu.svg') no-repeat center;
+  transform: rotate(90deg);
+  pointer-events: all;
+}
+.menu_back{
+  background: url("../img/menu_back.svg") no-repeat center;
+  background-size: contain;;
+  height: 40px;
+  width: 40px;
+  transform: rotate(90deg) translate3d(30%,20%,0);
+  float: right;
+}
+.toggle_mostrar_menu{
+  animation: menu_mostrar_animation 2s forwards ease-in-out;
+}
+@keyframes menu_mostrar_animation {
+  0%   {width: 90%;}
+  100% {width: 15%;}
+}
+.toggle_hide_menu{
+  animation: menu_fechar_animation 2s forwards ease-in-out;
+}
+@keyframes menu_fechar_animation {
+  0%   {width: 15%;}
+  100% {width: 90%;}
+}
+.fadeOut{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+  
+}
+
 .icon_menu{
-height: 70px;
+  height: 100px;
+  width: 66px;
 }
 .menu_holder ul{
   display: inline-block;
@@ -519,7 +590,7 @@ height: 70px;
     margin-right:40px;
     float:right;
     height:100%;
-    line-height:45px;
+    line-height:66px;
 }
 .nav>li>a{
   padding: 0;
@@ -538,7 +609,7 @@ height: 70px;
 .icon_menu_list{
   min-height: 10px;
   display: inline-block;
-  margin-top: 11px;
+  margin-top: 23px;
   margin-left: 15px;
   transform: rotate(90deg);
 }
