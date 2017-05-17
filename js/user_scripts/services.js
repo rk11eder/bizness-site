@@ -28,7 +28,7 @@ services.service('services',['$http','$q','$location','$window', function ($http
     this.insta = function(){
         
         var deferred = $q.defer();
-        $http.post('server/insta.php?data='+(Math.random()),{ cache: false}).success(function(data, status) {
+        $http.post('server/insta2.php?data='+(Math.random()),{ cache: false}).success(function(data, status) {
             deferred.resolve(data);
         }).error(function(data, status) {
             deferred.reject(data);

@@ -1,5 +1,2 @@
-[04-Nov-2016 14:44:24 GMT] PHP Fatal error:  Uncaught Error: Call to undefined method database::generateFriendlyName() in /Applications/MAMP/htdocs/arquiteta/classes/globalstuff.class.php:215
-Stack trace:
-#0 /Applications/MAMP/htdocs/arquiteta/cms/upload.php(31): globalstuff->CroppedThumbnail(Array, '../img/arquitet...', '1024', '720', '2016-11-04 02:4...')
-#1 {main}
-  thrown in /Applications/MAMP/htdocs/arquiteta/classes/globalstuff.class.php on line 215
+[17-May-2017 15:07:52 GMT] PHP Warning:  Division by zero in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 309
+[17-May-2017 15:07:52 GMT] PHP Warning:  Division by zero in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 310

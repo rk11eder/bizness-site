@@ -12,6 +12,7 @@ arquitetaApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$time
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('PROJECTSTART');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
+    $scope.ins = items.data;
    
 /*RESIZE WINDOW*/
 	var w = angular.element($window);

@@ -24,7 +24,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
               $rootScope.sub_area_sel = '';
             $rootScope.menu_mobile_open = false;
             $rootScope.array_tags = [];
-             var promise = services.insta();  
+             var promise = services.insta();
             return promise;
           }]
         }
