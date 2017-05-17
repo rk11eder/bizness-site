@@ -15,9 +15,14 @@ arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout'
    
 $scope.ins = items.data;
 
+<<<<<<< HEAD
   console.log($scope.ins);
   $scope.url_first_foto = $scope.ins[0].images.standard_resolution.url;
   console.log($scope.url_first_foto);
+=======
+
+  console.log($scope.ins);
+>>>>>>> 062a82f6e4998975ba363e6aa437efae4f0007da
   /*RESIZE WINDOW*/
 	var w = angular.element($window);
 	$scope.getWindowDimensions = function () {
