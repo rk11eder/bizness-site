@@ -85,6 +85,13 @@ p{
   background-position: center center;
   background-size: cover;
 }
+.imagens_insta img{
+    max-width: 100%;
+    min-height: 100%;
+}
+.imagens_insta{
+    height:25vh;
+}
 
 .holder_home_logos_holder{
   display: flex;
@@ -428,7 +435,6 @@ overflow: hidden;
 /*SOBRE NOS*/
 .fotos_sobrenos{
   width: 20%;
-  background-image: url('../img/folio2.jpg');background-size: cover;
   height: 33.33333%;
   display: block;
   margin: 0;
