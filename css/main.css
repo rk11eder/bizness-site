@@ -441,15 +441,37 @@ overflow: hidden;
   z-index: 2;
 }
 .texto_top_sobrenos{
-  text-align: right;
-  padding-right: 5%;
-  font-size: 60px;
-  font-family: 'Roboto';
-  padding-left: 40%;
-  color: #eb504c;
-  padding-top: 5%;
-  font-weight: bold;
+    text-align: right;
+    font-size: 60px;
+    font-family: 'Roboto';
+    padding-left: 40%;
+    color: #eb504c;
+    padding-top: 5%;
+    font-weight: bold;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+
+    animation-name: example;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+
 }
+
+@keyframes example {
+
+
+    0%   {width: 40%}
+
+
+
+    100%  {width: 90%}
+
+
+
+}
+
 
 .texto_middle_sobrenos {
     position: absolute;
