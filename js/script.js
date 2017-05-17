@@ -366,10 +366,10 @@ arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout'
   	PageTitle.setTitle('PROJECTSTART');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
    
-/*$scope.ins = items.data;*/
+$scope.ins = items.data;
 
-/*
-  console.log($scope.ins);*/
+
+  console.log($scope.ins);
   /*RESIZE WINDOW*/
 	var w = angular.element($window);
 	$scope.getWindowDimensions = function () {
