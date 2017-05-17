@@ -30,7 +30,10 @@ $data = json_decode(curl_exec($curl), true);
 
 
 echo json_encode($data);
+/*GET USER ID
+https://smashballoon.com/instagram-feed/find-instagram-user-id/*/
 
-
+//Get TOKEN
+//https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=token
 
 ?>
