@@ -24,7 +24,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
               $rootScope.sub_area_sel = '';
             $rootScope.menu_mobile_open = false;
             $rootScope.array_tags = [];
-             var promise = services.insta();  
+             var promise = services.insta();
             return promise;
           }]
         }
@@ -118,9 +118,7 @@ arquitetaApp.run(['$rootScope','services',function($rootScope, services){
   /*GET LANG*/
   $rootScope.lang = lang;
   $rootScope.lang_array = array_lang;
-
   $rootScope.pathgeral = pathgeral;
-  
 }]);'use strict';
 
 
@@ -151,7 +149,7 @@ services.service('services',['$http','$q','$location','$window', function ($http
     this.insta = function(){
         
         var deferred = $q.defer();
-        $http.post('server/insta.php?data='+(Math.random()),{ cache: false}).success(function(data, status) {
+        $http.post('server/insta2.php?data='+(Math.random()),{ cache: false}).success(function(data, status) {
             deferred.resolve(data);
         }).error(function(data, status) {
             deferred.reject(data);
@@ -367,9 +365,11 @@ arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout'
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
    
 $scope.ins = items.data;
-
+console.log("sad");
 
   console.log($scope.ins);
+  $scope.url_first_foto = $scope.ins[0].images.standard_resolution.url;
+  console.log($scope.url_first_foto);
   /*RESIZE WINDOW*/
 	var w = angular.element($window);
 	$scope.getWindowDimensions = function () {
@@ -382,7 +382,8 @@ $scope.ins = items.data;
    
   
 
-}]);'use strict';
+}]);
+'use strict';
 
 /*exemplo controller*/
 arquitetaApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function portfolio2Ctrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
@@ -434,26 +435,6 @@ $rootScope.hide_menu = 0;
     $rootScope.hide_botao_menu = 0;
 }]);
 'use strict';
-
-/*exemplo controller*/
-arquitetaApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function portfolio2Ctrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
-
-	/*CLICKS GOOGLE MAPS*/
-  $scope.$on('$viewContentLoaded', function(event) {
-    $window.ga('send', 'pageview', { page: $location.url() });  
-  });
-
-		
-	/*SET TITLE PAGE SEO*/
-  	PageTitle.setTitle('PROJECTSTART');
-  	PageTitle.setDesc($rootScope.lang_array.descricao_page);
-    $rootScope.hide_menu = 0;
-    $rootScope.hide_botao_menu = 0;
-
-
-  
-
-}]);'use strict';
 
 /*exemplo controller*/
 arquitetaApp.controller('portfolioCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function portfolioCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
@@ -514,6 +495,7 @@ arquitetaApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$time
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('PROJECTSTART');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
+    $scope.ins = items.data;
    
 /*RESIZE WINDOW*/
 	var w = angular.element($window);

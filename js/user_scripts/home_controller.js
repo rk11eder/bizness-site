@@ -14,6 +14,7 @@ arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout'
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
    
 $scope.ins = items.data;
+console.log("sad");
 
   console.log($scope.ins);
   $scope.url_first_foto = $scope.ins[0].images.standard_resolution.url;
