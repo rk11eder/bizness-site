@@ -1,5 +1,18 @@
 <div class="menu_holder">
+<div class="menu_mobile">
     <div class="pd0 icon_menu" style="background: url('img/logo_biz.svg')no-repeat center; background-size: contain">
+        <div class="icon_menu_list_mobile"  ng-click="changeClass()">
+            <img src="img/menu-mobile.png">
+        </div>
+    </div>
+    </div>
+    <div class="menu_mobile_list" ng-class="{menu_mobile_baixo: menuMobileControler == '1'}" id="myMenu">
+        <p id="back_mbtn">INICIO </p>
+        <p id="home_mbtn" > SOBRE </p>
+        <p id="specifications_mbtn" > PORTFOLIO </p>
+        <p id="clients_mbtn" > CONTACTOS </p>
+
+
     </div>
     <div class="menu-list-holder">
         <div class="icon_menu_list">

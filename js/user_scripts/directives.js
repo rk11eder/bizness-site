@@ -9,6 +9,13 @@ arquitetaApp.directive('menu', [ 'services','$rootScope', function (services,$ro
       scope.activeButton = function() {
         scope.isActive = !scope.isActive;
       };
+        scope.changeClass = function(){
+            if ($rootScope.menuMobileControler === 2){
+
+                $rootScope.menuMobileControler = 1;
+            }
+        };
+
 
       scope.changelangPT =  function(){
           window.location.assign(pathgeral+'pt/'+scope.area_sel)

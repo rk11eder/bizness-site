@@ -118,7 +118,7 @@ arquitetaApp.run(['$rootScope','services',function($rootScope, services){
   /*GET LANG*/
   $rootScope.lang = lang;
   $rootScope.lang_array = array_lang;
-
+  $rootScope.menuMobileControler=2;
   $rootScope.pathgeral = pathgeral;
   
 }]);
