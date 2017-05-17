@@ -16,11 +16,6 @@ arquitetaApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$tim
     PageTitle.setTitle('PROJECTSTART');
     PageTitle.setDesc($rootScope.lang_array.descricao_page);
 
-    /*$scope.ins = items.data;*/
-
-    /*
-     console.log($scope.ins);*/
-    /*RESIZE WINDOW*/
 
     var styleArray= [
         {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
@@ -106,17 +101,15 @@ arquitetaApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$tim
 
 
     $scope.map = {center: {latitude: 38.703505, longitude: -9.178821 }, zoom: 18 };
-    $scope.map = {center: {latitude: 38.703505, longitude: -9.178821 }, zoom: 18 };
     $scope.options = {scrollwheel: false, styles: styleArray, mapTypeControl: false, };
-    $scope.coordsUpdates = 0;
-    $scope.dynamicMoveCtr = 0;
+    
     $scope.marker = {
         id: 0,
         coords: {
             latitude: 38.703505,
             longitude: -9.178821
         },
-        options: {icon:"img/mapa_pin.png"},
+        /*options: {icon:"img/mapa_pin.png"},*/
 
     };
 
