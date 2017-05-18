@@ -3,7 +3,7 @@
 
 /* App Module */
 
-var arquitetaApp = angular.module('arquitetaApp', [
+var biznessApp = angular.module('biznessApp', [
   'ngRoute',
   'ngSanitize',
   'services',
@@ -12,7 +12,7 @@ var arquitetaApp = angular.module('arquitetaApp', [
 ]);
 
 /*EXEMPLO ROUTING*/
-arquitetaApp.config(['$routeProvider','$locationProvider',
+biznessApp.config(['$routeProvider','$locationProvider',
   function($routeProvider,$locationProvider) {
     $routeProvider.
       when('/'+lang+'/home', {
@@ -113,7 +113,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
 
 
 /*exemplo codigo global*/
-arquitetaApp.run(['$rootScope','services',function($rootScope, services){
+biznessApp.run(['$rootScope','services',function($rootScope, services){
   
   /*GET LANG*/
   $rootScope.lang = lang;

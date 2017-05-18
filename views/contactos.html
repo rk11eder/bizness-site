@@ -20,48 +20,50 @@
         </div>
         <div class="mapa_home_goolge">
             <ui-gmap-google-map center='map.center' zoom='map.zoom' options="options">
-                <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+                <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events"
+                                idkey="marker.id">
                 </ui-gmap-marker>
             </ui-gmap-google-map>
         </div>
 
 
+    </div>
+
+
+</div>
+<div class="circle">
+    <img src="img/seta_baixo.svg" alt="" width="100%">
+</div>
+<div class="col-xs-12 pd0 contactos_home_holder">
+
+    <div class="col-xs-7  pd0">
+        <div class="col-xs-12 pd0 contactos_home_holder_texto">
+            <h1>Contacte-nos</h1>
+            <p>Para esclarecer qualquer dúvida
+            <p> ou prestar mais onformações</p>
         </div>
 
-
-
-
-    </div>
-    <div class="circle">
-        <img src="img/seta_baixo.svg" alt="" width="100%">
-    </div>
-    <div class="col-xs-12 pd0 contactos_home_holder">
-
-        <div class="col-xs-7  pd0">
-            <div class="col-xs-12 pd0 contactos_home_holder_texto"  >
-                <h1>Contacte-nos</h1>
-                <p>Para esclarecer qualquer dúvida<p> ou prestar mais onformações</p>
-            </div>
-
-            <div class="col-xs-12 pd0"  >
-                <img src="img/contactos.jpg" alt="" width="100%">
-            </div>
-        </div>
-        <div class="col-xs-5 pd0 contactos_home_holder contactos_holder">11
-            <div class="col-xs-12 pd0">
-                <input type="text" class="input_home" placeholder="NOME">
-            </div>
-            <div class="col-xs-12 pd0">
-                <input type="text" class="input_home" placeholder="EMAIL">
-            </div>
-            <div class="col-xs-12 pd0">
-                <textarea class="textarea_home" placeholder="MENSAGEM"></textarea>
-            </div>
-            <div class="col-xs-12 pd0">
-                <input type="submit" value="ENVIAR" class="input_submit_contactos_home">
-            </div>
+        <div class="col-xs-12 pd0">
+            <img src="img/contactos.jpg" alt="" width="100%">
         </div>
     </div>
+    <div class="col-xs-5 pd0 contactos_home_holder contactos_holder">11
+        <form name="formulario">
+            <div class="col-xs-12 pd0">
+                <input type="text" ng-model="form.nome" class="input_home" placeholder="NOME" required>
+            </div>
+            <div class="col-xs-12 pd0">
+                <input type="email"  ng-model="form.email" class="input_home" placeholder="EMAIL" required>
+            </div>
+            <div class="col-xs-12 pd0">
+                <textarea class="textarea_home"  ng-model="form.mensagem" placeholder="MENSAGEM" required></textarea>
+            </div>
+            <div class="col-xs-12 pd0">
+                <input type="submit" value="ENVIAR" ng-click="send_form(form)" class="input_submit_contactos_home">
+            </div>
+        </form>
+    </div>
+</div>
 </div>
 </body>
 </html>

@@ -3,7 +3,7 @@
 
 /* App Module */
 
-var arquitetaApp = angular.module('arquitetaApp', [
+var biznessApp = angular.module('biznessApp', [
   'ngRoute',
   'ngSanitize',
   'services',
@@ -12,7 +12,7 @@ var arquitetaApp = angular.module('arquitetaApp', [
 ]);
 
 /*EXEMPLO ROUTING*/
-arquitetaApp.config(['$routeProvider','$locationProvider',
+biznessApp.config(['$routeProvider','$locationProvider',
   function($routeProvider,$locationProvider) {
     $routeProvider.
       when('/'+lang+'/home', {
@@ -113,7 +113,7 @@ arquitetaApp.config(['$routeProvider','$locationProvider',
 
 
 /*exemplo codigo global*/
-arquitetaApp.run(['$rootScope','services',function($rootScope, services){
+biznessApp.run(['$rootScope','services',function($rootScope, services){
   
   /*GET LANG*/
   $rootScope.lang = lang;
@@ -178,7 +178,7 @@ services.service('PageTitle',['$rootScope','$rootElement', function($rootScope,$
       angular.element($rootElement.find('meta[name=\'twitter:description\']')[0]).attr('content',newDesc);
     }
   };
-}]);arquitetaApp.directive('menu', [ 'services','$rootScope', function (services,$rootScope) {
+}]);biznessApp.directive('menu', [ 'services','$rootScope', function (services,$rootScope) {
   return {
     restrict: 'E',
     replace: true,
@@ -228,7 +228,7 @@ services.service('PageTitle',['$rootScope','$rootElement', function($rootScope,$
   };
 }]);
 
-arquitetaApp.directive('footer', [function () {
+biznessApp.directive('footer', [function () {
   return {
     restrict: 'E',
     replace: true,
@@ -246,7 +246,7 @@ arquitetaApp.directive('footer', [function () {
 'use strict';
 
 /*exemplo controller*/
-arquitetaApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http','uiGmapGoogleMapApi', function contactosCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http,uiGmapGoogleMapApi){
+biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http','uiGmapGoogleMapApi', function contactosCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http,uiGmapGoogleMapApi){
 
     /*CLICKS GOOGLE MAPS*/
     $scope.$on('$viewContentLoaded', function(event) {
@@ -257,6 +257,15 @@ arquitetaApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$tim
     /*SET TITLE PAGE SEO*/
     PageTitle.setTitle('PROJECTSTART');
     PageTitle.setDesc($rootScope.lang_array.descricao_page);
+    $scope.form = {};
+    $scope.send_form=function(formulario){
+        console.log($scope.formulario);
+        console.log(toString(formulario.$invalid));
+        if(!$scope.formulario.$invalid){
+            services.send_form($scope.form);
+        }
+
+    };
 
 
     var styleArray= [
@@ -362,7 +371,7 @@ arquitetaApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$tim
 }]);'use strict';
 
 /*exemplo controller*/
-arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function homeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
+biznessApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function homeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
 
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {
@@ -403,7 +412,7 @@ $scope.form = {};
 'use strict';
 
 /*exemplo controller*/
-arquitetaApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function portfolio2Ctrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
+biznessApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function portfolio2Ctrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
 
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {
@@ -454,7 +463,7 @@ $rootScope.hide_menu = 0;
 'use strict';
 
 /*exemplo controller*/
-arquitetaApp.controller('portfolioCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function portfolioCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
+biznessApp.controller('portfolioCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function portfolioCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
 
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {
@@ -501,7 +510,7 @@ arquitetaApp.controller('portfolioCtrl', ['$scope', '$rootScope','$window','$tim
 }]);'use strict';
 
 /*exemplo controller*/
-arquitetaApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function sobrenosCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
+biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function sobrenosCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
 
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {
@@ -823,7 +832,7 @@ function Trirot(x,y,a,d,dx,dy){
 }]);'use strict';
 
 /*exemplo controller*/
-arquitetaApp.controller('testeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location', function testeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location){
+biznessApp.controller('testeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location', function testeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location){
 
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {

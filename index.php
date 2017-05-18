@@ -1,14 +1,14 @@
 <?php
   $lang = $_GET['lang'];
   if ($lang && ($lang == 'pt' || $lang == 'en' || $lang == 'ge')) {
-    unset($_COOKIE['cookiesProject']);
-    $cookie_name = "cookiesProject";
+    unset($_COOKIE['cookiesBizness']);
+    $cookie_name = "cookiesBizness";
     $cookie_value = $lang;
     setcookie($cookie_name, $cookie_value, time()+((3600 * 24)*30), "/");
   }
   else{
-    if (isset($_COOKIE['cookiesProject'])) {
-      $lang = $_COOKIE['cookiesProject'];
+    if (isset($_COOKIE['cookiesBizness'])) {
+      $lang = $_COOKIE['cookiesBizness'];
     }
     else{
       $lang2 = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
@@ -46,7 +46,7 @@ $desc_page = "";
 
 ?>
 <!doctype html>
-<html class="no-js" lang="<?php echo $lang?>" ng-app="arquitetaApp" ng-cloak >
+<html class="no-js" lang="<?php echo $lang?>" ng-app="biznessApp" ng-cloak >
   <head>
     <base href="<?php echo $url_base?>">
     <meta charset="utf-8">
@@ -54,7 +54,7 @@ $desc_page = "";
     <title ng-bind="titlePage">PROJECTSTART<?php echo $titulo_page?></title>
 
     <!-- for Facebook -->
-    <meta property="og:title" content="JSH<?php echo $titulo_page?>" />
+    <meta property="og:title" content="Bizness<?php echo $titulo_page?>" />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="<?php echo $imagem_final?>" />
     <meta property="og:url" content="<?php echo $url_final?>" />
@@ -64,14 +64,14 @@ $desc_page = "";
     <meta name="description" content="<?php echo $desc_page?>" />
     <!-- <meta name="keywords" content="<?php echo $keywords_final?>" /> -->
 
-    <meta name="author" content="JSH" />
-    <meta name="copyright" content="JSH" />
-    <meta name="application-name" content="JSH<?php echo $titulo_page?>" />
+    <meta name="author" content="Bizness" />
+    <meta name="copyright" content="Bizness" />
+    <meta name="application-name" content="Bizness<?php echo $titulo_page?>" />
 
 
     <!-- for Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="JSH<?php echo $titulo_page?>" />
+    <meta name="twitter:title" content="Bizness<?php echo $titulo_page?>" />
     <meta name="twitter:url" content="<?php echo $url_final?>" />
     <meta name="twitter:description" content="<?php echo $desc_page?>" />
     <meta name="twitter:image" content="<?php echo $imagem_final?>" />

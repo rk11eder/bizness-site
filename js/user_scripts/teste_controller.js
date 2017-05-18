@@ -1,7 +1,7 @@
 'use strict';
 
 /*exemplo controller*/
-arquitetaApp.controller('testeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location', function testeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location){
+biznessApp.controller('testeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location', function testeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location){
 
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {

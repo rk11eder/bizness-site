@@ -1,4 +1,4 @@
-arquitetaApp.directive('menu', [ 'services','$rootScope', function (services,$rootScope) {
+biznessApp.directive('menu', [ 'services','$rootScope', function (services,$rootScope) {
   return {
     restrict: 'E',
     replace: true,
@@ -48,7 +48,7 @@ arquitetaApp.directive('menu', [ 'services','$rootScope', function (services,$ro
   };
 }]);
 
-arquitetaApp.directive('footer', [function () {
+biznessApp.directive('footer', [function () {
   return {
     restrict: 'E',
     replace: true,
