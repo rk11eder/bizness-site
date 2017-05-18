@@ -14,10 +14,9 @@ arquitetaApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout'
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
    
 $scope.ins = items.data;
-console.log("sad");
+$scope.form = {};
 
   console.log($scope.ins);
-  $scope.url_first_foto = $scope.ins[0].images.standard_resolution.url;
   console.log($scope.url_first_foto);
   /*RESIZE WINDOW*/
 	var w = angular.element($window);
@@ -28,7 +27,15 @@ console.log("sad");
 		};
 	};
 
-   
+
+	$scope.send_form=function(formulario){
+		console.log($scope.formulario);
+		console.log(toString(formulario.$invalid));
+		if(!$scope.formulario.$invalid){
+            services.send_form($scope.form);
+		}
+
+	}
   
 
 }]);
