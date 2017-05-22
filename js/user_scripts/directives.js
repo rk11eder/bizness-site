@@ -10,10 +10,18 @@ arquitetaApp.directive('menu', [ 'services','$rootScope', function (services,$ro
         scope.isActive = !scope.isActive;
       };
         scope.changeClass = function(){
-            if ($rootScope.menuMobileControler === 2){
+            console.log("dfsadfsafs");
+            if ($rootScope.menuMobileControler === 0){
 
                 $rootScope.menuMobileControler = 1;
+                $rootScope.interface = '1';
+
+            }else {
+                $rootScope.menuMobileControler = 0;
+
+                $rootScope.interface = '0';
             }
+
         };
 
 

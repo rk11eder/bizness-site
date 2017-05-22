@@ -658,14 +658,38 @@ overflow: hidden;
   height: 100px;
   width: 66px;
 }
-.icon_menu_list_mobile{
+.icon_open_menu_mobile {
+    position: relative;
+    float: right;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-right: 22px;
+    cursor: pointer;
+    padding: 2px 4px;
+    margin-top: 22px;
+    border: 0px solid #58585a;
+    border-radius: 3px;
+}
+.item_icon_menu_mobile {
+    position: relative;
+    float: left;
+    width: 36px;
+    height: 6px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    background: #eb504c;
+    clear: left;
+    left: 0px;
+    border-radius: 3px;
+    -webkit-transition: transform ease-out 0.2s, width ease-out 0.2s, opacity ease-out 0.2s;
+    -webkit-transition: width ease-out 0.2s, opacity ease-out 0.2s, -webkit-transform ease-out 0.2s;
+    transition: width ease-out 0.2s, opacity ease-out 0.2s, -webkit-transform ease-out 0.2s;
+    transition: transform ease-out 0.2s, width ease-out 0.2s, opacity ease-out 0.2s;
+    transition: transform ease-out 0.2s, width ease-out 0.2s, opacity ease-out 0.2s, -webkit-transform ease-out 0.2s;
     display: none;
 }
-.icon_menu_list_mobile img{
-    margin-left: 86vw;
-    margin-top: 16px;
-    width: 87%;
-}
+
 .menu_holder ul{
   display: inline-block;
   float: right;
@@ -702,11 +726,13 @@ overflow: hidden;
 }
 
 .menu_mobile_list {
+
     display: none;
-    background-color: black;
+    background-color: white;
     height: 100vh;
     top: -100vh;
     position: fixed;
+    font-family: 'Roboto';
     /* animation-name: example; */
     /* animation-duration: 4s; */
     /* animation-iteration-count: 3; */
@@ -718,7 +744,7 @@ overflow: hidden;
 
 
     animation-name: example;
-     animation-duration: 4s;
+    animation-duration: 2s;
 
     animation-fill-mode: forwards;
 
@@ -726,11 +752,25 @@ overflow: hidden;
 @keyframes example {
     0%   { top: -100vh;}
 
-    100% {top:0;}
+    100% {top:8vh;}
+}
+.menu_mobile_cima {
+
+
+    animation-name: exampleCima;
+    animation-duration: 4s;
+
+    animation-fill-mode: forwards;
+
+}
+@keyframes exampleCima {
+    0%   { top: 8vh;}
+
+    100% {top:-100vh;}
 }
 
 .menu_mobile_list p {
-    color: white;
+    color: black;
     text-align: center;
     font-size: 22px;
     font-family: textfont;
@@ -755,13 +795,13 @@ canvas{
         display: none;
     }
 
-    .icon_menu_list_mobile{
+    .item_icon_menu_mobile{
         display: block;
     }
     .menu_mobile {
         width: 100vw;
         height: 89px;
-
+        position: fixed;
         background-color: white;
         margin-left: 0px;
         z-index: 200;
