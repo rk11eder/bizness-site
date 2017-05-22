@@ -10,7 +10,7 @@ biznessApp.directive('menu', [ 'services','$rootScope', function (services,$root
         scope.isActive = !scope.isActive;
       };
         scope.changeClass = function(){
-            console.log("dfsadfsafs");
+
             if ($rootScope.menuMobileControler === 0){
 
                 $rootScope.menuMobileControler = 1;
