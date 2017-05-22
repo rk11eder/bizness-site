@@ -4,7 +4,7 @@
 'use strict';
 
 /*exemplo controller*/
-arquitetaApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http','uiGmapGoogleMapApi', function contactosCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http,uiGmapGoogleMapApi){
+biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http','uiGmapGoogleMapApi', function contactosCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http,uiGmapGoogleMapApi){
 
     /*CLICKS GOOGLE MAPS*/
     $scope.$on('$viewContentLoaded', function(event) {
@@ -15,6 +15,15 @@ arquitetaApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$tim
     /*SET TITLE PAGE SEO*/
     PageTitle.setTitle('PROJECTSTART');
     PageTitle.setDesc($rootScope.lang_array.descricao_page);
+    $scope.form = {};
+    $scope.send_form=function(formulario){
+        console.log($scope.formulario);
+        console.log(toString(formulario.$invalid));
+        if(!$scope.formulario.$invalid){
+            services.send_form($scope.form);
+        }
+
+    };
 
 
     var styleArray= [
