@@ -72,7 +72,7 @@
         <div ng-repeat="i in ins | limitTo:4" class="col-xs-6 pd0 imagens_insta">
             <div class="holder_backgrounds " style="background-color: rgba(52,57,79,0.7);"></div>
             <div class="logo_insta"><img src="img/logo_instagram_red.svg"></div>
-            <img src="{{i.images.standard_resolution.url}}" alt="">
+            <img ng-src="{{i.images.standard_resolution.url}}" alt="">
         </div>
         <!--<div class="col-xs-6 pd0">
             <div class="holder_backgrounds " style="background-color: rgba(52,57,79,0.7);"></div>
@@ -111,7 +111,7 @@
         <div ng-repeat="i in ins |  limitTo:8" ng-if="$index>3" class="col-xs-6 pd0 imagens_insta">
             <div class="holder_backgrounds " style="background-color: rgba(52,57,79,0.7);"></div>
             <div class="logo_insta"><img src="img/logo_instagram_red.svg"></div>
-            <img src="{{i.images.standard_resolution.url}}" alt="">
+            <img ng-src="{{i.images.standard_resolution.url}}" alt="">
         </div>
         <!--<div class="col-xs-6 pd0">
             <div class="holder_backgrounds " style="background-color: rgba(52,57,79,0.7);"></div>
