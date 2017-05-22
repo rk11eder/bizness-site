@@ -118,7 +118,9 @@ biznessApp.run(['$rootScope','services',function($rootScope, services){
   /*GET LANG*/
   $rootScope.lang = lang;
   $rootScope.lang_array = array_lang;
-  $rootScope.menuMobileControler=2;
+  $rootScope.menuMobileControler=0;
+  $rootScope.interface = '0';
+
   $rootScope.pathgeral = pathgeral;
   
 }]);
@@ -190,10 +192,18 @@ services.service('PageTitle',['$rootScope','$rootElement', function($rootScope,$
         scope.isActive = !scope.isActive;
       };
         scope.changeClass = function(){
-            if ($rootScope.menuMobileControler === 2){
+
+            if ($rootScope.menuMobileControler === 0){
 
                 $rootScope.menuMobileControler = 1;
+                $rootScope.interface = '1';
+
+            }else {
+                $rootScope.menuMobileControler = 0;
+
+                $rootScope.interface = '0';
             }
+
         };
 
 
@@ -371,8 +381,8 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
 }]);'use strict';
 
 /*exemplo controller*/
-biznessApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function homeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
-
+biznessApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http','$interval', function homeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http, $interval){
+    biznessApp.animation();
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {
     $window.ga('send', 'pageview', { page: $location.url() });  
@@ -387,7 +397,6 @@ $scope.ins = items.data;
 $scope.form = {};
 
   console.log($scope.ins);
-  console.log($scope.url_first_foto);
   /*RESIZE WINDOW*/
 	var w = angular.element($window);
 	$scope.getWindowDimensions = function () {
@@ -396,6 +405,34 @@ $scope.form = {};
 		   'w': w.width()
 		};
 	};
+    $scope.slides = [
+        {image: 'img/singstar.jpg', description: 'Image 00'},
+        {image: 'img/microsoft.jpg', description: 'Image 01'},
+        {image: 'img/notebook.jpg', description: 'Image 02'},
+        {image: 'img/folio2.jpg', description: 'Image 03'},
+        {image: 'img/loewe.jpg', description: 'Image 04'}
+    ];
+    console.log($scope.slides);
+    $scope.currentIndex = 0;
+    $scope.setCurrentSlideIndex = function (index) {
+        $scope.currentIndex = index;
+    };
+    $scope.isCurrentSlideIndex = function (index) {
+        return $scope.currentIndex === index;
+    };
+
+    $interval(function(){
+    	console.log($scope.currentIndex);
+    	console.log($scope.slides.length);
+    	var max_slides =$scope.slides.length-1;
+    	if($scope.currentIndex<max_slides){
+            $scope.currentIndex++;
+		}else{
+            $scope.currentIndex=0;
+		}
+
+        console.log($scope.currentIndex);
+    },8000);
 
 
 	$scope.send_form=function(formulario){
@@ -510,7 +547,35 @@ biznessApp.controller('portfolioCtrl', ['$scope', '$rootScope','$window','$timeo
 }]);'use strict';
 
 /*exemplo controller*/
-biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function sobrenosCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
+biznessApp.animation('.slide-animation', function () {
+    return {
+        beforeAddClass: function (element, className, done) {
+
+            if (className == 'ng-hide') {
+                TweenMax.to(element, 2, {left: -element.parent().width(), onComplete: done });
+            }
+            else {
+                done();
+            }
+        },
+        removeClass: function (element, className, done) {
+
+            if (className == 'ng-hide') {
+                element.removeClass('ng-hide');
+
+                /*TweenMax.set(element, { left: element.parent().width() });
+                TweenMax.to(element, 0.5, {left: 0, onComplete: done });*/
+                TweenMax.fromTo(element, 2, { left: element.parent().width() }, {left: 0, onComplete: done });
+            }
+            else {
+                done();
+            }
+        }
+    };
+});'use strict';
+
+/*exemplo controller*/
+biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http','$anchorScroll', function sobrenosCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http,$anchorScroll){
 
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {
@@ -828,6 +893,12 @@ function Trirot(x,y,a,d,dx,dy){
 	});
 
 	$scope.resize_func();
+    $scope.gotoBottom = function() {
+
+
+
+    };
+
 
 }]);'use strict';
 
