@@ -283,17 +283,37 @@ font-family: 'Roboto';
 
 /*Portfolio*/
 .holder_linha{
-  height: 400px;
+    height: 50vw;
+    overflow:hidden;
 }
 .linha_full{
-  height: 400px;
-}
-.linha_half{
-  height: 200px;
+  height:50vw;
+    background-position: center;
+    transition: transform 4s;
+
+
 }
 
+.linha_half{
+  height: 25vw;
+    background-position: center;
+    transition: transform 4s ;
+
+}
+.linha_half:hover{
+    transform: scale(1.4);
+}
+.linha_full:hover{
+    transform: scale(1.4);
+
+}
+.holder_backgrounds:hover{
+    opacity: 0;
+}
+
+
 .linha_full_bd{
-  height: 400px;
+  height: 50vw;
 
   position: absolute;
 }
@@ -301,13 +321,17 @@ font-family: 'Roboto';
   height: 100%;
   position: absolute;
   width: 100%;
+    transition:  5s;
+
+
 }
+
 .linha_half_bd{
   height: 200px;
 }
 
 .portfolio_logo img{
-
+    pointer-events: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -326,6 +350,7 @@ font-family: 'Roboto';
   font-style: italic;
   color: rgb(255, 255, 255);
 }
+
 .mapa_home img{
   height: 90vh;
   width: 100vw;
@@ -432,6 +457,8 @@ overflow: hidden;
   background-color: #3367cc;
   opacity: 0.9;
 }
+
+
 /*SOBRE NOS*/
 .fotos_sobrenos{
   width: 20%;
