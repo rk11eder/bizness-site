@@ -87,7 +87,8 @@ p{
   background-size: cover;*/
 }
 .fotos_destaques img{
-    width: 100vw;
+    min-width: 100vw;
+    min-height: 70vh;
     position: absolute;
 }
 .imagens_insta img{
@@ -401,7 +402,7 @@ font-family: 'Roboto';
 .folio2_header{
    background-image: url('../img/folio2.jpg');
    background-size: cover;
-   height: 80vh;
+   height: 90vh;
    
  }
  .conteudo_port_holder{
@@ -730,7 +731,7 @@ overflow: hidden;
   float: right;
 }
 .nav li {
-    margin-right:40px;
+    margin-right:70px;
     float:right;
     height:100%;
     line-height:66px;
