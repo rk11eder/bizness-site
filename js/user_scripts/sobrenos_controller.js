@@ -321,6 +321,8 @@ function Trirot(x,y,a,d,dx,dy){
 	$scope.resize_func();
     $scope.gotoBottom = function() {
 
+        var result = document.getElementsByClassName("fotos_sobrenos").style.animation = "float: right;";
+
 
 
     };
