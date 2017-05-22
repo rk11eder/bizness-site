@@ -1,7 +1,7 @@
 'use strict';
 
 /*exemplo controller*/
-biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function sobrenosCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http){
+biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http','$anchorScroll', function sobrenosCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http,$anchorScroll){
 
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {
@@ -319,5 +319,11 @@ function Trirot(x,y,a,d,dx,dy){
 	});
 
 	$scope.resize_func();
+    $scope.gotoBottom = function() {
+
+
+
+    };
+
 
 }]);

@@ -104,7 +104,9 @@ $desc_page = "";
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
+
     <script src="js/plugins.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
     <script src="js/user_scripts/lang/<?php echo $lang; ?>.js"></script>
     <?php
         $mydir = "js/user_scripts/";
