@@ -118,7 +118,9 @@ biznessApp.run(['$rootScope','services',function($rootScope, services){
   /*GET LANG*/
   $rootScope.lang = lang;
   $rootScope.lang_array = array_lang;
-  $rootScope.menuMobileControler=2;
+  $rootScope.menuMobileControler=0;
+  $rootScope.interface = '0';
+
   $rootScope.pathgeral = pathgeral;
   
 }]);
