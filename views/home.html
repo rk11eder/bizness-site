@@ -10,8 +10,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 pd0 fotos_destaques">
-
+        <div class="col-xs-12 pd0 fotos_destaques container slider">
+            <img ng-repeat="slide in slides" class="slide slide-animation"
+                 ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+            <!-- CODE OMITTED -->
         </div>
     </div>
 </div>

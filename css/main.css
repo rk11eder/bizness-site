@@ -81,16 +81,21 @@ p{
 
 .fotos_destaques{
   height: 70%;
-  background-image: url(../img/home_destaques.jpg);
+    overflow: hidden;
+  /*background-image: url(../img/home_destaques.jpg);
   background-position: center center;
-  background-size: cover;
+  background-size: cover;*/
+}
+.fotos_destaques img{
+    width: 100vw;
+    position: absolute;
 }
 .imagens_insta img{
     max-width: 100%;
     min-height: 100%;
 }
 .imagens_insta{
-    height:25vh;
+    height:calc(41vw / 2);
 }
 
 .holder_home_logos_holder{
@@ -134,6 +139,7 @@ p{
   font-weight: 300;
   font-size:20px;
   color:#34394f;
+    margin-left: 35px;
 }
 .texto_home span{
   font-weight: 700;
@@ -191,6 +197,7 @@ p{
   width: 100%;
   border:none;
   color:#ffffff;
+    padding-top: 15px;
 }
 .input_home::placeholder, .textarea_home::placeholder{
    color:white;
@@ -262,7 +269,7 @@ font-family: 'Roboto';
    margin-right: 10px;
     position: relative;
     float: left;
-    margin-left: 70px;
+    margin-left: 100px;
         top: 50%;
     margin-top: -30px;
 
