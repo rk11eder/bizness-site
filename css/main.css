@@ -460,6 +460,7 @@ overflow: hidden;
 
 
 /*SOBRE NOS*/
+
 .fotos_sobrenos{
   width: 20%;
   height: 33.33333%;
@@ -468,6 +469,11 @@ overflow: hidden;
   padding: 0;
   position: relative;
   float: left;
+}
+.holder_backgrounds_sobrenos{
+    height: 100%;
+    position: absolute;
+    width: 100%;
 }
 .holder_conteudo_sobrenos{
   position: absolute;
