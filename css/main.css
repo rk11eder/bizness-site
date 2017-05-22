@@ -738,9 +738,13 @@ overflow: hidden;
     font-weight: bold;
     margin-top: 64px;
 }
+
 canvas{
   border:none;
   background-color: rgba(255,102,102,0.7);
+}
+.mapa_home_goolge canvas{
+  background: transparent !important;
 }
 
 @media screen and (max-width:1200px) {
