@@ -200,11 +200,14 @@ p{
   color:#ffffff;
     padding-top: 15px;
 }
-.input_home::placeholder, .textarea_home::placeholder{
+.input_home, .textarea_home{
    color:white;
   font-family: 'Roboto';
   font-size: 18px;
   padding-left: 15px;
+}
+.input_home::placeholder, .textarea_home::placeholder{
+    color:white;
 }
 
 /*::placeholder{
