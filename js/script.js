@@ -222,8 +222,8 @@ services.service('PageTitle',['$rootScope','$rootElement', function($rootScope,$
       scope.changeMenu = function () {
           // console.log($rootScope.hide_menu);
           if ($rootScope.hide_menu === 1){
-              $rootScope.hide_menu = 2;
-              $rootScope.hide__botao_menu = 2;
+              /*$rootScope.hide_menu = 2;
+              $rootScope.hide__botao_menu = 2;*/
           }
           else {
               $rootScope.hide_menu = 1;
@@ -249,6 +249,16 @@ biznessApp.directive('footer', [function () {
     templateUrl: 'templates/footer.html'
   };
 }]);
+biznessApp.directive('scrollOnClick', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, $elm) {
+            $elm.on('click', function() {
+                angular.element("body").animate({scrollTop: $elm.offset().top}, "slow");
+            });
+        }
+    }
+});
 
 /**
  * Created by Eder Barbosa on 15/05/2017.
@@ -618,38 +628,38 @@ biznessApp.controller('portfolioCtrl', ['$scope', '$rootScope','$window','$timeo
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('PROJECTSTART');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
-   
-/*$scope.ins = items.data;*/
 
-/*
-  console.log($scope.ins);*/
-  /*RESIZE WINDOW*/
-/*	var w = angular.element($window);
-	$scope.getWindowDimensions = function () {
-		return {
-		   'h': w.height(),
-		   'w': w.width()
-		};
-	};
+    $scope.users = [{logo:'img/logo_rtp_branco.svg',Cor:'red',activo:'1',destaque:'1',titulo:'rpt'},
+					{logo:'img/logo_playstation_branco.svg',Cor:'blue',activo:'1',destaque:'0',titulo:'playstation'},
+					{logo:'img/logo_microsoft_branco.svg',Cor:'gren',activo:'1',destaque:'1',titulo:'microsoft'},
+					{logo:'img/logo_samsung_branco.svg',Cor:'yellow',activo:'1',destaque:'0',titulo:'samsung'}];
 
-   var canvas = document.querySelector('canvas');
+            $scope.imagens=[];
+            angular.forEach($scope.users, function (user, key) {
+                var img = new Image();
+                img.src = user.logo;
+                img.alt = key;
+                $scope.imagens[key]=img;
+            });
+            angular.forEach($scope.imagens, function (info, key) {
+                console.log("yo");
+                console.log(info);
+                info.onload= function () {
 
-  canvas.width = w.innerWidth();
-	canvas.height = w.innerHeight();
+                    $scope.users[key].largura = this.width;
+                    $scope.users[key].altura = this.height;
 
-  var c = canvas.getContext('2d');
-		c.beginPath();
-		c.fillStyle = 'rgba(255, 0, 0, 0.5)';
-    c.arc(200, 200, 30, 0, Math.PI * 2, false);
-		c.strokeStyle = 'blue';
-		c.stroke();
+                }
+            });
 
-
-
-  console.log(canvas);*/
+    console.log( $scope.users);
 
 
-  
+
+
+
+
+
 
 }]);'use strict';
 
