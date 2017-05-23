@@ -222,8 +222,8 @@ services.service('PageTitle',['$rootScope','$rootElement', function($rootScope,$
       scope.changeMenu = function () {
           // console.log($rootScope.hide_menu);
           if ($rootScope.hide_menu === 1){
-              $rootScope.hide_menu = 2;
-              $rootScope.hide__botao_menu = 2;
+              /*$rootScope.hide_menu = 2;
+              $rootScope.hide__botao_menu = 2;*/
           }
           else {
               $rootScope.hide_menu = 1;
@@ -249,6 +249,16 @@ biznessApp.directive('footer', [function () {
     templateUrl: 'templates/footer.html'
   };
 }]);
+biznessApp.directive('scrollOnClick', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, $elm) {
+            $elm.on('click', function() {
+                angular.element("body").animate({scrollTop: $elm.offset().top}, "slow");
+            });
+        }
+    }
+});
 
 /**
  * Created by Eder Barbosa on 15/05/2017.
@@ -362,7 +372,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
 
 
     $scope.map = {center: {latitude: 38.703505, longitude: -9.178821 }, zoom: 18 };
-    $scope.options = {scrollwheel: false, styles: styleArray, mapTypeControl: false, mapTypeId: 'satellite' };
+    $scope.options = {scrollwheel: false, styles: styleArray, mapTypeControl: false/*, mapTypeId: 'satellite' */};
     
     $scope.marker = {
         id: 0,
@@ -434,7 +444,9 @@ $scope.form = {};
         console.log($scope.currentIndex);
     },8000);
 
-
+    $scope.open_imagem_insta = function (index) {
+        $window.open($scope.ins[index].link, '_blank');
+    };
 	$scope.send_form=function(formulario){
 		console.log($scope.formulario);
 		console.log(toString(formulario.$invalid));
@@ -614,8 +626,10 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 	$scope.resize_func = function(){
 			var canvas = document.querySelector('canvas');
 
-  	canvas.width = w.width();
-	canvas.height = w.height() - (w.height() * 0.10);
+
+  	canvas.width = document.body.clientWidth;
+	// canvas.height = w.height() - (w.height() * 0.10);
+	canvas.height = w.innerHeight() * 0.9;
 
 	var c = canvas.getContext('2d');
 
@@ -894,6 +908,8 @@ function Trirot(x,y,a,d,dx,dy){
 
 	$scope.resize_func();
     $scope.gotoBottom = function() {
+
+        var result = document.getElementsByClassName("fotos_sobrenos").style.animation = "float: right;";
 
 
 

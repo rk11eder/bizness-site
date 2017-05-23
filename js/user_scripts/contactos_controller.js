@@ -110,7 +110,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
 
 
     $scope.map = {center: {latitude: 38.703505, longitude: -9.178821 }, zoom: 18 };
-    $scope.options = {scrollwheel: false, styles: styleArray, mapTypeControl: false, mapTypeId: 'satellite' };
+    $scope.options = {scrollwheel: false, styles: styleArray, mapTypeControl: false/*, mapTypeId: 'satellite' */};
     
     $scope.marker = {
         id: 0,
