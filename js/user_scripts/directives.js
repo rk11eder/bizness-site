@@ -40,8 +40,8 @@ biznessApp.directive('menu', [ 'services','$rootScope', function (services,$root
       scope.changeMenu = function () {
           // console.log($rootScope.hide_menu);
           if ($rootScope.hide_menu === 1){
-              $rootScope.hide_menu = 2;
-              $rootScope.hide__botao_menu = 2;
+              /*$rootScope.hide_menu = 2;
+              $rootScope.hide__botao_menu = 2;*/
           }
           else {
               $rootScope.hide_menu = 1;
@@ -67,4 +67,14 @@ biznessApp.directive('footer', [function () {
     templateUrl: 'templates/footer.html'
   };
 }]);
+biznessApp.directive('scrollOnClick', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, $elm) {
+            $elm.on('click', function() {
+                angular.element("body").animate({scrollTop: $elm.offset().top}, "slow");
+            });
+        }
+    }
+});
 
