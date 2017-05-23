@@ -40,8 +40,10 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 	$scope.resize_func = function(){
 			var canvas = document.querySelector('canvas');
 
-  	canvas.width = w.width();
-	canvas.height = w.height() - (w.height() * 0.10);
+
+  	canvas.width = document.body.clientWidth;
+	// canvas.height = w.height() - (w.height() * 0.10);
+	canvas.height = w.innerHeight() * 0.95;
 
 	var c = canvas.getContext('2d');
 

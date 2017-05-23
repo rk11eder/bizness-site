@@ -54,7 +54,9 @@ $scope.form = {};
         console.log($scope.currentIndex);
     },8000);
 
-
+    $scope.open_imagem_insta = function (index) {
+        $window.open($scope.ins[index].link, '_blank');
+    };
 	$scope.send_form=function(formulario){
 		console.log($scope.formulario);
 		console.log(toString(formulario.$invalid));

@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .angular-google-map-container {
-  height: 90vh;
+  height: 95vh;
 }
 
 
@@ -90,6 +90,7 @@ p{
     min-width: 100vw;
     min-height: 70vh;
     position: absolute;
+
 }
 .imagens_insta img{
     max-width: 100%;
@@ -97,6 +98,7 @@ p{
 }
 .imagens_insta{
     height:calc(41vw / 2);
+    cursor: pointer;
 }
 
 .holder_home_logos_holder{
@@ -362,28 +364,49 @@ font-family: 'Roboto';
   color: rgb(255, 255, 255);
 }
 
-.mapa_home img{
-  height: 90vh;
-  width: 100vw;
+.mapa_home {
+  height: 95vh;
+    overflow: hidden;
 }
 .circle {
-  background: rgb(255, 255, 255);
-  z-index: 100;
-  position: absolute;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  left:50%;
-    top: 90vh;
-    transform: translate(0%,-50%);
+    background: rgb(255, 255, 255);
+    z-index: 100;
+    position: absolute;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    left: 50%;
+    top: 95vh;
+    transform: translate(0%, -50%);
+    overflow: hidden;
 }
-.circle img{
-  padding-top: 20px;
-  width: 40px;
-  display: block;
-  margin: auto;
+
+.circle img {
+    padding-top: 15px;
+    width: 20px;
+    display: block;
+    margin: auto;
 
 }
+.circle:hover > img {
+    animation: animation_seta 2s linear infinite;
+}
+@keyframes animation_seta {
+    0% {transform:translateY(   0%);}
+    10% {transform:translateY( 25%);}
+    20% {transform:translateY( 50%);}
+    30% {transform:translateY( 75%);}
+    40% {transform:translateY( 100%);}
+    45% {opacity: 0}
+    46% {transform:translateY( -100%)}
+    50% {opacity: 1}
+    60% {transform:translateY( -80%);}
+    70% {transform:translateY( -60%);}
+    80% {transform:translateY( -40%);}
+    90% {transform:translateY( -20%);}
+    100% {transform:translateY(0%);}
+}
+
 .testo_mapa_home {
     position: absolute;
     z-index: 110;
@@ -405,7 +428,7 @@ font-family: 'Roboto';
 .folio2_header{
    background-image: url('../img/folio2.jpg');
    background-size: cover;
-   height: 90vh;
+   height: 95vh;
    
  }
  .conteudo_port_holder{
@@ -419,17 +442,19 @@ font-family: 'Roboto';
  }
 .titulo_folio2{
    color: white;
-   font-family: ROBOTO;
-   font-size: 47px;
-   padding-right: 50%;
-   font-weight: bold;
-   padding-top: 18px;
+    font-family: ROBOTO;
+    font-size: 52px;
+    padding-right: 50%;
+    font-weight: bold;
+    padding-top: 18px;
+    line-height: 45px;
  }
 .descricao_folio2{
-   font-size: 14px;
-   font-family: Roboto;
-   color: rgb(255, 255, 255);
-   padding-top: 15px;
+    font-size: 18px;
+    font-family: Roboto;
+    color: rgb(255, 255, 255);
+    padding-top: 15px;
+    line-height: 19px;
  }
 .linha_folio2{
   height: 50vh;
@@ -740,7 +765,7 @@ overflow: hidden;
   float: right;
 }
 .nav li {
-    margin-right:70px;
+    margin-right:8vh;
     float:right;
     height:100%;
     line-height:66px;
@@ -827,6 +852,7 @@ canvas{
   border:none;
   background-color: rgba(255,102,102,0.7);
 }
+
 .mapa_home_goolge canvas{
   background: transparent !important;
 }
