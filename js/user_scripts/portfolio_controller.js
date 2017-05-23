@@ -12,37 +12,35 @@ biznessApp.controller('portfolioCtrl', ['$scope', '$rootScope','$window','$timeo
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('PROJECTSTART');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
-   
-/*$scope.ins = items.data;*/
 
-/*
-  console.log($scope.ins);*/
-  /*RESIZE WINDOW*/
-/*	var w = angular.element($window);
-	$scope.getWindowDimensions = function () {
-		return {
-		   'h': w.height(),
-		   'w': w.width()
-		};
-	};
+    $scope.users = [{logo:'img/logo_rtp_branco.svg',Cor:'red',activo:'1',destaque:'1',titulo:'rpt'},
+					{logo:'img/logo_playstation_branco.svg',Cor:'blue',activo:'1',destaque:'0',titulo:'playstation'},
+					{logo:'img/logo_microsoft_branco.svg',Cor:'gren',activo:'1',destaque:'1',titulo:'microsoft'},
+					{logo:'img/logo_samsung_branco.svg',Cor:'yellow',activo:'1',destaque:'0',titulo:'samsung'}];
 
-   var canvas = document.querySelector('canvas');
+            $scope.imagens=[];
+            angular.forEach($scope.users, function (user, key) {
+                var img = new Image();
+                img.src = user.logo;
+                img.alt = key;
+                $scope.imagens[key]=img;
+            });
+            angular.forEach($scope.imagens, function (info, key) {
+                info.onload= function () {
 
-  canvas.width = w.innerWidth();
-	canvas.height = w.innerHeight();
+                    $scope.users[key].largura = this.width;
+                    $scope.users[key].altura = this.height;
 
-  var c = canvas.getContext('2d');
-		c.beginPath();
-		c.fillStyle = 'rgba(255, 0, 0, 0.5)';
-    c.arc(200, 200, 30, 0, Math.PI * 2, false);
-		c.strokeStyle = 'blue';
-		c.stroke();
+                }
+            });
+
+    console.log( $scope.users);
 
 
 
-  console.log(canvas);*/
 
 
-  
+
+
 
 }]);
