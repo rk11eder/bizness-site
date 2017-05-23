@@ -200,11 +200,14 @@ p{
   color:#ffffff;
     padding-top: 15px;
 }
-.input_home::placeholder, .textarea_home::placeholder{
+.input_home, .textarea_home{
    color:white;
   font-family: 'Roboto';
   font-size: 18px;
   padding-left: 15px;
+}
+.input_home::placeholder, .textarea_home::placeholder{
+    color:white;
 }
 
 /*::placeholder{
@@ -364,21 +367,22 @@ font-family: 'Roboto';
   width: 100vw;
 }
 .circle {
-  background: rgb(255, 255, 255);
-  z-index: 100;
-  position: absolute;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  left:50%;
+    background: rgb(255, 255, 255);
+    z-index: 100;
+    position: absolute;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    left: 50%;
     top: 90vh;
-    transform: translate(0%,-50%);
+    transform: translate(0%, -50%);
 }
-.circle img{
-  padding-top: 20px;
-  width: 40px;
-  display: block;
-  margin: auto;
+
+.circle img {
+    padding-top: 15px;
+    width: 20px;
+    display: block;
+    margin: auto;
 
 }
 .testo_mapa_home {
@@ -737,7 +741,7 @@ overflow: hidden;
   float: right;
 }
 .nav li {
-    margin-right:70px;
+    margin-right:8vh;
     float:right;
     height:100%;
     line-height:66px;
