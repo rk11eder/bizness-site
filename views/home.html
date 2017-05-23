@@ -11,8 +11,9 @@
             </div>
         </div>
         <div class="col-xs-12 pd0 fotos_destaques container slider">
-            <img ng-repeat="slide in slides" class="slide slide-animation"
-                 ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+
+                <img ng-repeat="slide in slides" class="slide slide-animation"
+                     ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
             <!-- CODE OMITTED -->
         </div>
     </div>
@@ -111,7 +112,7 @@
 
     <div class="col-xs-5 pd0">
         <div ng-repeat="i in ins |  limitTo:8" ng-if="$index>3" class="col-xs-6 pd0 imagens_insta">
-            <div class="holder_backgrounds " style="background-color: rgba(52,57,79,0.7);"></div>
+            <div class="holder_backgrounds " ng-click="open_imagem_insta($index)" style="background-color: rgba(52,57,79,0.7);"></div>
             <div class="logo_insta"><img src="img/logo_instagram_red.svg"></div>
             <img ng-src="{{i.images.standard_resolution.url}}" alt="">
         </div>

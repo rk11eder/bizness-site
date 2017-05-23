@@ -43,7 +43,7 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 
   	canvas.width = document.body.clientWidth;
 	// canvas.height = w.height() - (w.height() * 0.10);
-	canvas.height = w.innerHeight() * 0.9;
+	canvas.height = w.innerHeight() * 0.95;
 
 	var c = canvas.getContext('2d');
 
