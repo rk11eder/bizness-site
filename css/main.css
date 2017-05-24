@@ -296,7 +296,7 @@ font-family: 'Roboto';
 
 /*Portfolio*/
 .holder_linha{
-    height: 50vw;
+    /*height: 50vw;*/
     overflow:hidden;
 }
 .linha_full{
@@ -343,15 +343,16 @@ font-family: 'Roboto';
   height: 200px;
 }
 
-.portfolio_logo img{
+.logo_altura img{
     pointer-events: none;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(50% 0%);
   transform: translate(-50%, -50%);
-  min-height: 14%;
-  min-width: 9%;
+  /*min-height: 14%;*/
+  /*min-width: 9%;*/
+    width: 300px;
 }
 .text_portfolio{
   position: absolute;

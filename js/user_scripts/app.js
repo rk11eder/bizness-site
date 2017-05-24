@@ -38,8 +38,8 @@ biznessApp.config(['$routeProvider','$locationProvider',
                 $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
-                
-                return 1;
+                var item = services.getSize();
+                return item;
             }]
         }
     }).

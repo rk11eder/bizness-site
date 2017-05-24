@@ -36,6 +36,37 @@ services.service('services',['$http','$q','$location','$window', function ($http
 
         return deferred.promise;
     }
+    this.getSize = function(){
+
+        var users = [{logo: 'img/logo_rtp_branco.svg', Cor: 'red', activo: '1', destaque: '1', titulo: 'rpt'},
+            {logo: 'img/logo_playstation_branco.svg', Cor: 'blue', activo: '1', destaque: '1', titulo: 'playstation'},
+            {logo: 'img/logo_microsoft_branco.svg', Cor: 'gren', activo: '1', destaque: '0', titulo: 'microsoft'},
+            {logo: 'img/logo_microsoft_branco.svg', Cor: 'gren', activo: '1', destaque: '0', titulo: 'microsoft'},
+            {logo: 'img/logo_samsung_branco.svg', Cor: 'yellow', activo: '1', destaque: '1', titulo: 'samsung'},
+
+        ];
+
+       var imagens=[];
+        angular.forEach(users, function (user, key) {
+            var img = new Image();
+            img.src = user.logo;
+            img.alt = key;
+            imagens[key]=img;
+        });
+        angular.forEach(imagens, function (info, key) {
+            info.onload= function () {
+
+                users[key].largura = this.width;
+                users[key].altura = this.height;
+
+
+
+
+            }
+        });
+
+        return users;
+    }
   
 }]);
 
