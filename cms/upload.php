@@ -37,7 +37,16 @@ if ($tipo == 'imagem') {
 
 }
 else if($tipo == 'file'){
+	$files = preg_grep('/^([^.])/', scandir($folder)); 
+	$total_files = count($files)+1;
 
+	$imagem_nome_final = $total_files."-".date("Y-m-d h:i:s").$file['name'];
+	$array_extensao = explode(".",$imagem_nome_final);
+	$extensao = $array_extensao[count($array_extensao)-1];
+	$imagem_nome_final = $database->generateFriendlyName($imagem_nome_final,300).".".$extensao;
+	if (move_uploaded_file($file['tmp_name'],$folder."/".$imagem_nome_final)) {
+		echo $imagem_nome_final;
+	}
 }
 
 
