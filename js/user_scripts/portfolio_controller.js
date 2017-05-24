@@ -13,32 +13,24 @@ biznessApp.controller('portfolioCtrl', ['$scope', '$rootScope','$window','$timeo
   	PageTitle.setTitle('PROJECTSTART');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
 
-    $scope.users = [{logo:'img/logo_rtp_branco.svg',Cor:'red',activo:'1',destaque:'1',titulo:'rpt'},
-					{logo:'img/logo_playstation_branco.svg',Cor:'blue',activo:'1',destaque:'0',titulo:'playstation'},
-					{logo:'img/logo_microsoft_branco.svg',Cor:'gren',activo:'1',destaque:'1',titulo:'microsoft'},
-					{logo:'img/logo_samsung_branco.svg',Cor:'yellow',activo:'1',destaque:'0',titulo:'samsung'}];
+   $scope.users=items;
 
-            $scope.imagens=[];
-            angular.forEach($scope.users, function (user, key) {
-                var img = new Image();
-                img.src = user.logo;
-                img.alt = key;
-                $scope.imagens[key]=img;
-            });
-            angular.forEach($scope.imagens, function (info, key) {
-                info.onload= function () {
-
-                    $scope.users[key].largura = this.width;
-                    $scope.users[key].altura = this.height;
-
+           $scope.lado=0;
+            for(var i=0; i<$scope.users.length;i++){
+                if ($scope.lado==0) {
+                    $scope.users[i].lado = 0;
+                    $scope.lado = "1";
+                    console.log("grgrereg")
+                } else {
+                    $scope.users[i].lado = 1;
+                    $scope.lado = 0;
+                    console.log("dsvvds")
                 }
-            });
-
-    console.log( $scope.users);
+           }
 
 
 
-
+console.log($scope.users);
 
 
 
