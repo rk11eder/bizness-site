@@ -44,8 +44,26 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
   	canvas.width = document.body.clientWidth;
 	// canvas.height = w.height() - (w.height() * 0.10);
 	canvas.height = w.innerHeight() * 0.95;
+	canvas.addEventListener('mousemove',draw, false)
 
 	var c = canvas.getContext('2d');
+
+	function draw(event){
+		c.clearRect(0,0,canvas.width,canvas.height);
+		c.fillStyle = 'black';
+		c.fillRect(0,0,canvas.width,canvas.height);
+
+		c.fillStyle = 'white';
+		c.font = 'normal bold 2em courier';
+
+		var x = event.clientX - canvas.getBoundingClientRect().left;
+		var y = event.clientY - canvas.getBoundingClientRect().top;
+
+		var text = x + ' , ' + y ;
+		c.fillText(text,x,y);
+		console.log('x' + x);
+		console.log('y' + y);
+	}
 
 	function Circle(x,y,dx,dy,radius){
 			this.x = x;
@@ -114,7 +132,7 @@ var circleArray = [];
 			}
 
 			this.update = function(){
-					if(this.x + 10 > canvas.width || this.x <0){
+					/*if(this.x + 10 > canvas.width || this.x <0){
 						this.dx = -this.dx;
 					}
 					
@@ -124,7 +142,7 @@ var circleArray = [];
 					}
 
 					this.x += this.dx;
-					this.y += this.dy;
+					this.y += this.dy;*/
 
 					this.draw();
 			}		
@@ -143,8 +161,8 @@ var quadArray = [];
 			var y = Math.random() * (canvas.height - 10);
 			var z = 10;
 			var t = 10;
-			var dx = (Math.random() - 0.5) * 2;
-			var dy = (Math.random() - 0.5) * 2;
+			/*var dx = (Math.random() - 0.5) * 2;
+			var dy = (Math.random() - 0.5) * 2;*/
 			quadArray.push(new Quad(x,y,z,t,dx,dy));
 			
 	}
@@ -167,7 +185,7 @@ var quadArray = [];
 			}
 
 			this.update = function(){
-					if(this.x > (canvas.width - this.h/2)|| this.x <0){
+					/*if(this.x > (canvas.width - this.h/2)|| this.x <0){
 						this.dx = -this.dx 
 					}
 
@@ -176,7 +194,7 @@ var quadArray = [];
 					}
 
 					this.x += this.dx;
-					this.y += this.dy;
+					this.y += this.dy;*/
 				
 
 					this.draw();
@@ -196,8 +214,8 @@ var triArray = [];
 			var x = Math.random() * canvas.width;
 			var y = Math.random() * canvas.height;
 			var h = 10;
-			var dx = (Math.random() - 0.5) * 2;
-			var dy = (Math.random() - 0.5) * 2;
+			/*var dx = (Math.random() - 0.5) * 2;
+			var dy = (Math.random() - 0.5) * 2;*/
 			triArray.push(new Tri(x,y,h,dx,dy));
 			
 	}
@@ -245,7 +263,7 @@ function Trirot(x,y,a,d,dx,dy){
 			}
 
 			this.update = function(){
-					if(this.x > canvas.width - this.d || this.x < this.d){
+					/*if(this.x > canvas.width - this.d || this.x < this.d){
 						this.dx = -this.dx 
 					}
 
@@ -254,7 +272,7 @@ function Trirot(x,y,a,d,dx,dy){
 					}
 
 					this.x += this.dx;
-					this.y += this.dy;
+					this.y += this.dy;*/
 				
 
 					this.draw();
@@ -267,12 +285,12 @@ function Trirot(x,y,a,d,dx,dy){
 			var y = Math.random() * canvas.height;
 			var a = Math.random() * 120;
 			var d = 8;
-			var dx = (Math.random() - 0.5) * 2;
-			var dy = (Math.random() - 0.5) * 2;
+			/*var dx = (Math.random() - 0.5) * 2;
+			var dy = (Math.random() - 0.5) * 2;*/
 			trirotArray.push(new Trirot(x,y,a,d,dx,dy));
 			
 	}
-	 console.log(trirotArray);
+	 /*console.log(trirotArray);*/
 
 		
 
@@ -328,6 +346,7 @@ function Trirot(x,y,a,d,dx,dy){
 
 
     };
+
 
 
 }]);
