@@ -389,17 +389,18 @@ font-family: 'Roboto';
 
 }
 .circle:hover > img {
-    animation: animation_seta 1.5s linear infinite;
+    animation: animation_seta 1.2s linear infinite;
 }
 @keyframes animation_seta {
     0% {transform:translateY(   0%);}
     10% {transform:translateY( 50%);}
     20% {transform:translateY( 75%);}
-    30% {transform:translateY( 100%);}
+    30% {transform:translateY( 100%);opacity: 0}
     40% {opacity: 0}
     46% {transform:translateY( -100%)}
-    50% {opacity: 1}
-    60% {transform:translateY( -60%);}
+    /*50% {opacity: 1}*/
+    60% {transform:translateY( -60%);opacity: 1;}
+    65% {transform:translateY( -50%);opacity: 1;}
     70% {transform:translateY( -40%);}
     80% {transform:translateY( 0%);}
     90% {transform:translateY( 0%);}

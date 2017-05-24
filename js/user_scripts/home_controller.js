@@ -40,19 +40,66 @@ $scope.form = {};
     $scope.isCurrentSlideIndex = function (index) {
         return $scope.currentIndex === index;
     };
+    var timer = $interval(function(){
 
-    $interval(function(){
-    	console.log($scope.currentIndex);
-    	console.log($scope.slides.length);
-    	var max_slides =$scope.slides.length-1;
-    	if($scope.currentIndex<max_slides){
+        var max_slides =$scope.slides.length-1;
+        if($scope.currentIndex<max_slides){
             $scope.currentIndex++;
-		}else{
+        }else{
             $scope.currentIndex=0;
-		}
+        }
 
         console.log($scope.currentIndex);
     },8000);
+
+    var vis = (function(){
+        var stateKey,
+            eventKey,
+            keys = {
+                hidden: "visibilitychange",
+                webkitHidden: "webkitvisibilitychange",
+                mozHidden: "mozvisibilitychange",
+                msHidden: "msvisibilitychange"
+            };
+        for (stateKey in keys) {
+            if (stateKey in document) {
+                eventKey = keys[stateKey];
+                console.log(eventKey);
+                break;
+            }
+        }
+        return function(c) {
+            if (c) document.addEventListener(eventKey, c);
+            return !document[stateKey];
+        }
+    })();
+    // check if current tab is active or not
+    vis(function(){
+        console.log("asd");
+        console.log(vis());
+        if(vis()){
+            console.log("tab is visible - has focus");
+
+                timer = $interval(function(){
+
+                    var max_slides =$scope.slides.length-1;
+                    if($scope.currentIndex<max_slides){
+                        $scope.currentIndex++;
+                    }else{
+                        $scope.currentIndex=0;
+                    }
+
+                    console.log($scope.currentIndex);
+                },8000);
+
+        } else {
+            $interval.cancel(timer);
+            timer = null;
+            // tween pause() code goes here
+            console.log("tab is invisible - has blur");
+        }
+    });
+
 
     $scope.open_imagem_insta = function (index) {
         $window.open($scope.ins[index].link, '_blank');

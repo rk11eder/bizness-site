@@ -12,8 +12,8 @@ var biznessApp = angular.module('biznessApp', [
 ]);
 
 /*EXEMPLO ROUTING*/
-biznessApp.config(['$routeProvider','$locationProvider',
-  function($routeProvider,$locationProvider) {
+biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
+  function($routeProvider,$locationProvider,$animateProvider) {
     $routeProvider.
       when('/'+lang+'/home', {
         templateUrl: 'views/home.html',
@@ -108,8 +108,9 @@ biznessApp.config(['$routeProvider','$locationProvider',
       enabled: true,
       requireBase: true
     });
+      $animateProvider.classNameFilter((/ng-hide/));
 
-}]);
+  }]);
 
 
 /*exemplo codigo global*/
