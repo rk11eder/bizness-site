@@ -56,8 +56,7 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 		c.fillStyle = 'white';
 		c.font = 'normal bold 2em courier';
 
-		var x = event.clientX - canvas.getBoundingClientRect().left;
-		var y = event.clientY - canvas.getBoundingClientRect().top;
+		
 
 		var text = x + ' , ' + y ;
 		c.fillText(text,x,y);
@@ -132,6 +131,10 @@ var circleArray = [];
 			}
 
 			this.update = function(){
+				var ratox = event.clientX - canvas.getBoundingClientRect().left;
+				var ratoy = event.clientY - canvas.getBoundingClientRect().top;
+				console.log(ratox+"x");
+				
 					/*if(this.x + 10 > canvas.width || this.x <0){
 						this.dx = -this.dx;
 					}
