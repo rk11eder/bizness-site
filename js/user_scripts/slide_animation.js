@@ -2,17 +2,24 @@
 
 /*exemplo controller*/
 biznessApp.animation('.slide-animation', function () {
+    var i =0;
     return {
         addClass: function (element, className, done) {
             console.log("before");
+            if(i>8){
+                if (className == 'ng-hide' ) {
+                    TweenMax.set(element,{css:{zIndex:0}});
+                    TweenMax.to(element, 2, {left: -(element.parent().width()), onComplete: done });
+                }
+                else {
+                    done();
+                }
 
-            if (className == 'ng-hide' ) {
-                TweenMax.set(element,{css:{zIndex:0}});
-                TweenMax.to(element, 2, {left: -element.parent().width(), onComplete: done });
+            }else{
+                TweenMax.set(element,{left:(element.parent().width())});
             }
-            else {
-                done();
-            }
+
+            i++;
         },
         removeClass: function (element, className, done) {
             console.log("remove");

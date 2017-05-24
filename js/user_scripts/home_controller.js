@@ -26,11 +26,11 @@ $scope.form = {};
 		};
 	};
     $scope.slides = [
-        {image: 'img/singstar.jpg', description: 'Image 00'},
-        {image: 'img/microsoft.jpg', description: 'Image 01'},
-        {image: 'img/notebook.jpg', description: 'Image 02'},
-        {image: 'img/folio2.jpg', description: 'Image 03'},
-        {image: 'img/loewe.jpg', description: 'Image 04'}
+        {image: 'img/singstar.jpg', titulo: 'SAMSUNG KNOX'},
+        {image: 'img/microsoft.jpg', titulo: 'PLAYSTATION SING'},
+        {image: 'img/notebook.jpg', titulo: 'SLIDES RTP'},
+        {image: 'img/folio2.jpg', titulo: 'SAMSUNG'},
+        {image: 'img/loewe.jpg', titulo: 'FACEBOOK'}
     ];
     console.log($scope.slides);
     $scope.currentIndex = 0;
