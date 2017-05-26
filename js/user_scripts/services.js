@@ -47,40 +47,41 @@ services.service('services',['$http','$q','$location','$window', function ($http
         return deferred.promise;
     }
     this.getSize = function(){
-        var users;
 
+        var users;
         var deferred = $q.defer();
         $http.get('server/portfolio_get_data.php?data=' + (Math.random()), {cache: false}).success(function (data, status) {
             deferred.resolve(data);
              users =data;
+            var imagens=[];
+            angular.forEach(users, function (user, key) {
+                var img = new Image();
+                img.src = "img/projetos/2/"+users.logo;
+                img.alt = key;
+                imagens[key]=img;
+            });
+            angular.forEach(imagens, function (info, key) {
+                info.onload= function () {
 
-                console.log(data);
+                    users[key].largura = this.width;
+                    users[key].altura = this.height;
+
+
+
+
+                }
+
+            });
+            console.log(users);
+            return users;
+
+
         }).error(function (data, status) {
             deferred.reject(data);
 
         });
 
 
-
-       var imagens=[];
-        angular.forEach(users, function (user, key) {
-            var img = new Image();
-            img.src = "img/projetos/2/"+users.logo;
-            img.alt = key;
-            imagens[key]=img;
-        });
-        angular.forEach(imagens, function (info, key) {
-            info.onload= function () {
-
-                users[key].largura = this.width;
-                users[key].altura = this.height;
-
-
-
-
-            }
-            return users;
-        });
 
 
     }
