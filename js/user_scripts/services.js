@@ -69,6 +69,7 @@ services.service('services',['$http','$q','$location','$window', function ($http
             img.alt = key;
             imagens[key]=img;
         });
+        var imagens=[];
         angular.forEach(imagens, function (info, key) {
             info.onload= function () {
 
