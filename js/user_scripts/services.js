@@ -50,19 +50,20 @@ services.service('services',['$http','$q','$location','$window', function ($http
 
 
         var deferred = $q.defer();
-        var users="";
-        $http.get('server/portfolio_get_data.php?data=' + (Math.random()), {cache: false}).success(function (data, status) {
-            deferred.resolve(data);
+         var users;
+     var result= $http.get('server/portfolio_get_data.php?data=' + (Math.random()), {cache: false}).success(function (data, status) {
 
 
-
+             users =data;
+             return users;
 
         }).error(function (data, status) {
             deferred.reject(data);
 
         });
 
-        console.log(deferred.resolve);
+        users=result.users;
+        console.log(users);
 
         angular.forEach(users, function (user, key) {
             var img = new Image();
