@@ -15,7 +15,8 @@ $database = new database();
 
 
 
-$res_select = $database->query_simple_prepare("SELECT * FROM ".$database->array_tables[1],array(""),"");
+$res_select_projectos = $database->query_simple_prepare("SELECT projetos.id, projetos.activo, projetos.logo, projetos.cor, projetos.destaque, projetos_fotos.id, projetos_foto.foto FROM ".$database->array_tables[1].", ".$database->array_tables[2]. "WHERE " .$database->array_tables[1].".id" ."=". $database->array_tables[2].".id_projeto"  ,array(),"");
+
 
 
 
@@ -27,6 +28,8 @@ $res_select = $database->query_simple_prepare("SELECT * FROM ".$database->array_
 
 
 
-echo json_encode($res_select, JSON_UNESCAPED_UNICODE);
+echo json_encode($res_select_projectos, JSON_UNESCAPED_UNICODE);
+
+
 
 ?>
