@@ -32,6 +32,7 @@ class database extends globalstuff{
 
         $this->array_tables = array(
             "1" => "projetos",
+            "2" => "projetos_fotos",
 
         );
 

@@ -15,7 +15,8 @@ $database = new database();
 
 
 
-$res_select = $database->query_simple_prepare("SELECT * FROM ".$database->array_tables[1],array(""),"");
+$res_select_projectos = $database->query_simple_prepare("SELECT * FROM ".$database->array_tables[1],array(""),"");
+$res_select_projectosFotos = $database->query_simple_prepare("SELECT * FROM ".$database->array_tables[1],array(""),"");
 
 
 
@@ -28,5 +29,7 @@ $res_select = $database->query_simple_prepare("SELECT * FROM ".$database->array_
 
 
 echo json_encode($res_select, JSON_UNESCAPED_UNICODE);
+echo json_encode($res_select_projectosFotos, JSON_UNESCAPED_UNICODE);
+
 
 ?>
