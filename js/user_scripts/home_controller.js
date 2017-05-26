@@ -15,6 +15,12 @@ biznessApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','
    
 $scope.ins = items.data;
 $scope.form = {};
+    var promise = services.get_destaques();
+    promise.then(
+        function(response){
+            $scope.destaques = response;
+            console.log($scope.destaques);
+        });
 
   console.log($scope.ins);
   /*RESIZE WINDOW*/
@@ -25,14 +31,14 @@ $scope.form = {};
 		   'w': w.width()
 		};
 	};
-    $scope.slides = [
+    /*$scope.slides = [
         {image: 'img/singstar.jpg', titulo: 'SAMSUNG KNOX'},
         {image: 'img/microsoft.jpg', titulo: 'PLAYSTATION SING'},
         {image: 'img/notebook.jpg', titulo: 'SLIDES RTP'},
         {image: 'img/folio2.jpg', titulo: 'SAMSUNG'},
         {image: 'img/loewe.jpg', titulo: 'FACEBOOK'}
-    ];
-    console.log($scope.slides);
+    ];*/
+    // console.log($scope.slides);
     $scope.currentIndex = 0;
     $scope.setCurrentSlideIndex = function (index) {
         $scope.currentIndex = index;
@@ -42,7 +48,7 @@ $scope.form = {};
     };
     var timer = $interval(function(){
 
-        var max_slides =$scope.slides.length-1;
+        var max_slides =$scope.destaques.length-1;
         if($scope.currentIndex<max_slides){
             $scope.currentIndex++;
         }else{
