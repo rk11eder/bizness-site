@@ -1620,3 +1620,17 @@ Stack trace:
 [29-Mar-2017 14:11:55 GMT] PHP Notice:  Undefined index: tipo in /Applications/MAMP/htdocs/proactive/cms/upload.php on line 15
 [29-Mar-2017 14:11:55 GMT] PHP Notice:  Undefined index: pasta in /Applications/MAMP/htdocs/proactive/cms/upload.php on line 16
 [29-Mar-2017 14:11:55 GMT] PHP Notice:  Undefined index: nome_pasta in /Applications/MAMP/htdocs/proactive/cms/upload.php on line 17
+[24-May-2017 14:56:12 GMT] PHP Warning:  include(config/database_config.php): failed to open stream: No such file or directory in C:\xampp\htdocs\bizness\classes\database.class.php on line 26
+[24-May-2017 14:56:12 GMT] PHP Warning:  include(): Failed opening 'config/database_config.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\bizness\classes\database.class.php on line 26
+[24-May-2017 14:56:12 GMT] PHP Notice:  Undefined variable: database_name in C:\xampp\htdocs\bizness\classes\database.class.php on line 28
+[24-May-2017 14:56:12 GMT] PHP Notice:  Undefined variable: database_user in C:\xampp\htdocs\bizness\classes\database.class.php on line 29
+[24-May-2017 14:56:12 GMT] PHP Notice:  Undefined variable: database_pass in C:\xampp\htdocs\bizness\classes\database.class.php on line 30
+[24-May-2017 14:56:12 GMT] PHP Notice:  Undefined variable: database_host in C:\xampp\htdocs\bizness\classes\database.class.php on line 31
+[24-May-2017 14:56:12 GMT] PHP Notice:  Undefined variable: array_tables in C:\xampp\htdocs\bizness\classes\database.class.php on line 33
+[24-May-2017 15:04:16 GMT] PHP Warning:  include(config/database_config.php): failed to open stream: No such file or directory in C:\xampp\htdocs\bizness\classes\database.class.php on line 26
+[24-May-2017 15:04:16 GMT] PHP Warning:  include(): Failed opening 'config/database_config.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\bizness\classes\database.class.php on line 26
+[24-May-2017 15:04:16 GMT] PHP Notice:  Undefined variable: database_name in C:\xampp\htdocs\bizness\classes\database.class.php on line 28
+[24-May-2017 15:04:16 GMT] PHP Notice:  Undefined variable: database_user in C:\xampp\htdocs\bizness\classes\database.class.php on line 29
+[24-May-2017 15:04:16 GMT] PHP Notice:  Undefined variable: database_pass in C:\xampp\htdocs\bizness\classes\database.class.php on line 30
+[24-May-2017 15:04:16 GMT] PHP Notice:  Undefined variable: database_host in C:\xampp\htdocs\bizness\classes\database.class.php on line 31
+[24-May-2017 15:04:16 GMT] PHP Notice:  Undefined variable: array_tables in C:\xampp\htdocs\bizness\classes\database.class.php on line 33

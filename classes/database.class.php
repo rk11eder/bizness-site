@@ -30,7 +30,10 @@ class database extends globalstuff{
    	$this->database_pass = $database_pass;
    	$this->database_host = $database_host;
 
-   	$this->array_tables = $array_tables;
+        $this->array_tables = array(
+            "1" => "projetos",
+
+        );
 
    }
 
