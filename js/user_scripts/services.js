@@ -48,6 +48,16 @@ services.service('services',['$http','$q','$location','$window', function ($http
     }
     this.getSize = function(){
 
+        var deferred = $q.defer();
+        $http.get('server/portfolio_get_data.php?data=' + (Math.random()), {cache: false}).success(function (data, status) {
+            deferred.resolve(data);
+            console.log(data);
+        }).error(function (data, status) {
+            deferred.reject(data);
+            console.log(data);
+        });
+
+
         var users = [{logo: 'img/logo_rtp_branco.svg', Cor: 'red', activo: '1', destaque: '1', titulo: 'rpt'},
             {logo: 'img/logo_playstation_branco.svg', Cor: 'blue', activo: '1', destaque: '1', titulo: 'playstation'},
             {logo: 'img/logo_microsoft_branco.svg', Cor: 'gren', activo: '1', destaque: '0', titulo: 'microsoft'},
