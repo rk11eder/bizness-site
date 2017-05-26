@@ -51,7 +51,7 @@ services.service('services',['$http','$q','$location','$window', function ($http
         var deferred = $q.defer();
         $http.get('server/portfolio_get_data.php?data=' + (Math.random()), {cache: false}).success(function (data, status) {
             deferred.resolve(data);
-            var users =data;
+             users =data;
 
                 console.log(data);
         }).error(function (data, status) {
@@ -64,7 +64,7 @@ services.service('services',['$http','$q','$location','$window', function ($http
        var imagens=[];
         angular.forEach(users, function (user, key) {
             var img = new Image();
-            img.src = users.logo;
+            img.src = "img/projetos/2/"+users.logo;
             img.alt = key;
             imagens[key]=img;
         });
