@@ -21,12 +21,17 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
         resolve:{
           items: ['$rootScope','services', function($rootScope,services){
             $rootScope.area_sel = 'home';
-            $rootScope.sub_area_sel = '';
+              $rootScope.sub_area_sel = '';
             $rootScope.menu_mobile_open = false;
             $rootScope.array_tags = [];
-            var promise2 = services.get_destaques();
-            $rootScope.destaques = promise2.response;
-             var promise = services.insta();
+              var promise2 = services.get_destaques();
+              promise2.then(
+                  function(response){
+                      $rootScope.destaques = response;
+                      console.log($rootScope.destaques);
+                  });
+
+             var promise = services.insta($rootScope.destaques);
             return promise;
 
           }]
