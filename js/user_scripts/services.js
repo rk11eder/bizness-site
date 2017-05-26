@@ -48,6 +48,7 @@ services.service('services',['$http','$q','$location','$window', function ($http
     }
     this.getSize = function(){
         var users;
+
         var deferred = $q.defer();
         $http.get('server/portfolio_get_data.php?data=' + (Math.random()), {cache: false}).success(function (data, status) {
             deferred.resolve(data);
@@ -78,9 +79,10 @@ services.service('services',['$http','$q','$location','$window', function ($http
 
 
             }
+            return users;
         });
 
-        return users;
+
     }
   
 }]);
