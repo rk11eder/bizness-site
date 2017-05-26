@@ -47,29 +47,24 @@ services.service('services',['$http','$q','$location','$window', function ($http
         return deferred.promise;
     }
     this.getSize = function(){
-
+        var users;
         var deferred = $q.defer();
         $http.get('server/portfolio_get_data.php?data=' + (Math.random()), {cache: false}).success(function (data, status) {
             deferred.resolve(data);
-            console.log(data);
+            var users =data;
+
+                console.log(data);
         }).error(function (data, status) {
             deferred.reject(data);
-            console.log(data);
+
         });
 
 
-        var users = [{logo: 'img/logo_rtp_branco.svg', Cor: 'red', activo: '1', destaque: '1', titulo: 'rpt'},
-            {logo: 'img/logo_playstation_branco.svg', Cor: 'blue', activo: '1', destaque: '1', titulo: 'playstation'},
-            {logo: 'img/logo_microsoft_branco.svg', Cor: 'gren', activo: '1', destaque: '0', titulo: 'microsoft'},
-            {logo: 'img/logo_microsoft_branco.svg', Cor: 'gren', activo: '1', destaque: '0', titulo: 'microsoft'},
-            {logo: 'img/logo_samsung_branco.svg', Cor: 'yellow', activo: '1', destaque: '1', titulo: 'samsung'},
-
-        ];
 
        var imagens=[];
         angular.forEach(users, function (user, key) {
             var img = new Image();
-            img.src = user.logo;
+            img.src = users.logo;
             img.alt = key;
             imagens[key]=img;
         });
