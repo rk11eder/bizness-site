@@ -5,9 +5,8 @@ ini_set("display_errors","on");
 
 header('Content-Type: application/json');
 
-include("classes/database.class.php");
-include("classes/mail.class.php");
 
+require_once '../classes/database.class.php';
 
 
 
