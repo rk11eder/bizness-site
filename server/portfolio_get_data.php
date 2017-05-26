@@ -15,7 +15,7 @@ $database = new database();
 
 
 
-$res_select_projectos = $database->query_simple_prepare("SELECT projetos.id, projetos.ativo, projetos.logo, projetos.cor, projetos.destaque, projetos_fotos.foto FROM ".$database->array_tables[1].", ".$database->array_tables[2]." WHERE " .$database->array_tables[1].".id" ."=". $database->array_tables[2].".id_projeto AND projetos.ativo = 1 ORDER BY ?" ,array("id"),"s");
+$res_select_projectos = $database->query_simple_prepare("SELECT projetos.id, projetos.ativo, projetos.logo, projetos.cor, projetos.destaque, projetos_fotos.foto FROM ".$database->array_tables[1].", ".$database->array_tables[2]." WHERE projetos.ativo=1 AND " .$database->array_tables[1].".id" ."=". $database->array_tables[2].".id_projeto ORDER BY ?" ,array("id"),"s");
 
 //$res = $database->query_simple_prepare("SELECT
 //    projetos.id, projetos.activo, projetos.logo, projetos.cor, projetos.destaque, projetos_fotos.id, projetos_foto.foto
