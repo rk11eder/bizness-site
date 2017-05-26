@@ -18,8 +18,8 @@ $scope.form = {};
     var promise = services.get_destaques();
     promise.then(
         function(response){
-            $scope.destaques = response;
-            console.log($scope.destaques);
+            $rootScope.destaques = response;
+            console.log($rootScope.destaques);
         });
 
   console.log($scope.ins);
@@ -48,7 +48,7 @@ $scope.form = {};
     };
     var timer = $interval(function(){
 
-        var max_slides =$scope.destaques.length-1;
+        var max_slides =$rootScope.destaques.length-1;
         if($scope.currentIndex<max_slides){
             $scope.currentIndex++;
         }else{
@@ -88,7 +88,7 @@ $scope.form = {};
 
                 timer = $interval(function(){
 
-                    var max_slides =$scope.slides.length-1;
+                    var max_slides =$rootScope.destaques.length-1;
                     if($scope.currentIndex<max_slides){
                         $scope.currentIndex++;
                     }else{

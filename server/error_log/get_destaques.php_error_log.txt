@@ -4,3 +4,5 @@
 
 2017-05-26 10:50:04: Prepare failed: (1046) No database selected
 
+2017-05-26 11:29:50: Prepare failed: (1046) No database selected
+
