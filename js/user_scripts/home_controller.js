@@ -15,12 +15,6 @@ biznessApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','
    
 $scope.ins = items.data;
 $scope.form = {};
-    var promise = services.get_destaques();
-    promise.then(
-        function(response){
-            $rootScope.destaques = response;
-            console.log($rootScope.destaques);
-        });
 
   console.log($scope.ins);
   /*RESIZE WINDOW*/

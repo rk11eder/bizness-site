@@ -1,3 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
 js/script.js
+classes/config/database_config.php
