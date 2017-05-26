@@ -65,7 +65,7 @@ services.service('services',['$http','$q','$location','$window', function ($http
 
         angular.forEach(users, function (user, key) {
             var img = new Image();
-            img.src = "img/projetos/2/"+users.logo;
+            img.src = "/img/projetos/4/"+users.logo;
             img.alt = key;
             imagens[key]=img;
         });
