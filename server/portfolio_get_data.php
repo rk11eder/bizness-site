@@ -27,7 +27,7 @@ $res_select_projectos = $database->query_simple_prepare("SELECT projetos.id, pro
 //
 //	",array(),"");
 
-echo json_encode($res);
+echo json_encode($res_select_projectos);
 
 
 /*foreach ($res_select as $key => $value) {
