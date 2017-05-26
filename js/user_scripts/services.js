@@ -62,7 +62,7 @@ services.service('services',['$http','$q','$location','$window', function ($http
 
         });
 
-        users=result;
+        users=result.users;
         console.log(users);
 
         angular.forEach(users, function (user, key) {
