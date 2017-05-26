@@ -63,6 +63,7 @@ services.service('services',['$http','$q','$location','$window', function ($http
         });
 
         users=result;
+        console.log(users);
 
         angular.forEach(users, function (user, key) {
             var img = new Image();
