@@ -31,7 +31,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
                       console.log($rootScope.destaques);
                   });
 
-             var promise = services.insta($rootScope.destaques);
+             var promise = services.insta();
             return promise;
 
           }]

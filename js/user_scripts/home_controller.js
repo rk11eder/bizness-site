@@ -49,7 +49,7 @@ $scope.form = {};
             $scope.currentIndex=0;
         }
 
-        console.log($scope.currentIndex);
+
     },8000);
 
     var vis = (function(){
