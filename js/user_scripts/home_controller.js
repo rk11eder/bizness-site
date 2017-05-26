@@ -88,7 +88,7 @@ $scope.form = {};
 
                 timer = $interval(function(){
 
-                    var max_slides =$scope.slides.length-1;
+                    var max_slides =$rootScope.destaques.length-1;
                     if($scope.currentIndex<max_slides){
                         $scope.currentIndex++;
                     }else{
