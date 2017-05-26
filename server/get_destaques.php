@@ -26,15 +26,13 @@ $res = $database->query_simple_prepare("SELECT
  	destaques, 
  	destaques_idiomas 
  	WHERE 
- 	destaques.activo=1 
+ 	destaques.ativo=1 
  	AND 
  	destaques_idiomas.id_destaque = destaques.id 
  	AND 
  	destaques_idiomas.sigla='pt' ORDER BY id DESC
 
 	",array(),"");
-
-	
 
   echo json_encode($res);
 

@@ -1,0 +1,2 @@
+2017-05-26 09:36:01: Prepare failed: (1054) Unknown column 'destaques.activo' in 'where clause'
+
