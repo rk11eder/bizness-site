@@ -48,21 +48,29 @@ services.service('services',['$http','$q','$location','$window', function ($http
     }
     this.getSize = function(){
 
-        var users = [{logo: 'img/logo_rtp_branco.svg', Cor: 'red', activo: '1', destaque: '1', titulo: 'rpt'},
-            {logo: 'img/logo_playstation_branco.svg', Cor: 'blue', activo: '1', destaque: '1', titulo: 'playstation'},
-            {logo: 'img/logo_microsoft_branco.svg', Cor: 'gren', activo: '1', destaque: '0', titulo: 'microsoft'},
-            {logo: 'img/logo_microsoft_branco.svg', Cor: 'gren', activo: '1', destaque: '0', titulo: 'microsoft'},
-            {logo: 'img/logo_samsung_branco.svg', Cor: 'yellow', activo: '1', destaque: '1', titulo: 'samsung'},
 
-        ];
+        var deferred = $q.defer();
+        var users="";
+        $http.get('server/portfolio_get_data.php?data=' + (Math.random()), {cache: false}).success(function (data, status) {
+            deferred.resolve(data);
 
-       var imagens=[];
+
+
+
+        }).error(function (data, status) {
+            deferred.reject(data);
+
+        });
+
+        console.log(deferred.resolve);
+
         angular.forEach(users, function (user, key) {
             var img = new Image();
-            img.src = user.logo;
+            img.src = "/img/projetos/4/"+users.logo;
             img.alt = key;
             imagens[key]=img;
         });
+        var imagens=[];
         angular.forEach(imagens, function (info, key) {
             info.onload= function () {
 
@@ -73,9 +81,12 @@ services.service('services',['$http','$q','$location','$window', function ($http
 
 
             }
-        });
 
+        });
+        console.log(users);
         return users;
+
+
     }
   
 }]);

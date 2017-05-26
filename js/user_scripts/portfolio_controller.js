@@ -14,6 +14,7 @@ biznessApp.controller('portfolioCtrl', ['$scope', '$rootScope','$window','$timeo
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
 
    $scope.users=items;
+   console.log($scope.users);
 
            $scope.lado=0;
             for(var i=0; i<$scope.users.length;i++){
