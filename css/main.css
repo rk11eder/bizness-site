@@ -1061,4 +1061,11 @@ canvas{
 
         font-size: 15px;
     }
+    .mapa_home{
+        height: 85vh;
+    }
+    .circle{
+        top: 85vh;
+        transform: translate(-50%, -50%);
+    }
 }
