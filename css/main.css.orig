@@ -5,10 +5,6 @@
 .angular-google-map-container {
   height: 95vh;
 }
-.gm-style-pbc{
-    display: none !important
-}
-
 
 
 /* ==========================================================================
@@ -41,7 +37,7 @@ body, html{
 	padding: 0px;
    width:  100%;
   height: 100%;
-  /*overflow: auto;*/
+  overflow: auto;
 }
 
 
@@ -250,9 +246,7 @@ p{
 
 
 /*FOOTER*/
-.footer_holder_responsive{
-    display: block;
-}
+
 .footer_holder{
   height: 170px;
   background-color: #34394f;
@@ -346,7 +340,7 @@ font-family: 'Roboto';
   position: absolute;
   width: 100%;
     transition:  5s;
-    opacity:0.9;
+
 
 }
 
@@ -756,8 +750,8 @@ overflow: hidden;
 .item_icon_menu_mobile {
     position: relative;
     float: left;
-    width: 30px;
-    height: 2px;
+    width: 36px;
+    height: 6px;
     margin-top: 3px;
     margin-bottom: 2px;
     background: #eb504c;
@@ -822,36 +816,11 @@ overflow: hidden;
     z-index: 50;
 
 }
-.menu_mobile_list ul{
-    display: inline-block;
-    /* float: right; */
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-}
-
-.menu_mobile_list li {
-
-    height:100%;
-    line-height:90px;
-    list-style: none;
-    padding: 10px;
-}
-.menu_mobile_list>li>a{
-    padding: 0;
-    color: inherit;
-}
-.menu_mobile_list span{
-    color: inherit;
-}
-
-.menu_mobile_open {
+.menu_mobile_baixo {
 
 
     animation-name: example;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
 
     animation-fill-mode: forwards;
 
@@ -862,8 +831,10 @@ overflow: hidden;
     100% {top:8vh;}
 }
 .menu_mobile_cima {
+
+
     animation-name: exampleCima;
-    animation-duration: 1s;
+    animation-duration: 4s;
 
     animation-fill-mode: forwards;
 
@@ -873,22 +844,8 @@ overflow: hidden;
 
     100% {top:-100vh;}
 }
-.icon_fechar_menu_mobile > .item_icon_menu_mobile1{
-    transform: translateX(4px) rotateZ(45deg);
-    transform-origin: 0% 0%;
-    width: 21px;
 
-}
-.icon_fechar_menu_mobile > .item_icon_menu_mobile2{
-    opacity: 0;
-}
-.icon_fechar_menu_mobile > .item_icon_menu_mobile3{
-    transform-origin: 0% 100%;
-    transform: translateX(4px) rotateZ(-45deg);
-    width: 21px;
-}
-
-.menu_mobile_list a {
+.menu_mobile_list p {
     color: black;
     text-align: center;
     font-size: 22px;
@@ -916,229 +873,148 @@ canvas{
 
 @media screen and (max-width:768px) {
 
-    .container_website {
-        margin-top: 55px;
+    .container_website{
+        margin-top: 65px;
     }
-
-    .menu-list-holder {
+    .menu-list-holder{
         display: none;
     }
 
-    .item_icon_menu_mobile {
+    .item_icon_menu_mobile{
         display: block;
     }
-
-    .icon_menu {
-        height: 38px;
+    .icon_menu{
+        height: 65px;
     }
-
     .menu_mobile {
         width: 100vw;
-        height: 55px;
+        height: 65px;
         position: fixed;
         background-color: white;
         margin-left: 0px;
         z-index: 200;
     }
-
     .menu_holder {
 
         margin-left: 0px;
     }
-
     .icon_menu {
-        margin: 10px;
-        width: 55px;
-    }
 
-    .menu_mobile_list {
+        margin-left: 17px;
+
+    }
+    .menu_mobile_list{
         display: block;
     }
-
+<<<<<<< HEAD
     /*HOME*/
-    .holder_destaques_home {
+    .holder_destaques_home{
         height: 70vh;
     }
-
-    .titulo_destaques {
+    .titulo_destaques{
         height: 30%;
         background-color: #33384e;
         display: flex;
         align-items: center;
         overflow: hidden;
     }
-
-    .home_tipo {
+    .home_tipo{
         font-size: 14px;
     }
-
-    .home_titulo {
+    .home_titulo{
         font-size: 52px;
     }
-
-    .holder_titulo_home {
+    .holder_titulo_home{
         padding-left: 10px;
     }
 
-    .fotos_destaques {
+    .fotos_destaques{
         height: 70%;
         overflow: hidden;
     }
-
-    .fotos_destaques img {
+    .fotos_destaques img{
         min-width: 100vw;
         position: absolute;
         height: 100%;
         min-height: 0;
     }
-
     .holder_home_logos_holder {
         display: block;
     }
 
-    .insta2 {
+    .insta2{
         display: none;
     }
-
-    .holder_texto_home {
+    .holder_texto_home{
         display: block;
 
     }
-
-    .holder_home_logos_holder_esquerda {
+    .holder_home_logos_holder_esquerda{
         padding: 50px 0;
     }
-
-    .holder_texto_home_esquerda {
+    .holder_texto_home_esquerda{
         padding: 50px 0;
     }
-
-    .imagens_insta {
+    .contactos_home_holder{
+        display: block;
+    }
+    .imagens_insta{
         display: none;
     }
-
-    .imagens_insta_responsive {
+    .imagens_insta_responsive{
         display: block;
         height: calc(100vw / 3);
-        overflow: hidden;
     }
-
-    .imagens_insta_responsive img {
+    .imagens_insta_responsive img{
         max-width: calc(100vw / 3);
     }
-
-    .logo_insta {
+    .logo_insta{
         margin: 5px;
     }
 
-    .logo_insta img {
+    .logo_insta img{
         max-height: 20px;
     }
-
-    .texto_home {
+    .texto_home{
         margin-left: 14px;
         font-size: 15px;
     }
-
-    .contactos_home_holder h1 {
+    .contactos_home_holder h1{
         font-size: 30px;
     }
-
-    .contactos_home_holder p {
+    .contactos_home_holder p{
         font-size: 16px;
     }
-
-    .holder_logos_home {
+    .holder_logos_home{
         justify-content: center;
     }
-
-    .holder_logos_home div {
+    .holder_logos_home div{
         width: calc(100% / 3);
     }
-
-    .holder_logos_home img {
+    .holder_logos_home img{
         max-width: 85%;
     }
-
-    /*FORM CONTACTOS*/
-    .contactos_home_holder {
-        display: block;
-        height: calc(100vh - 55px);
-    }
-
-    .input_home, .textarea_home {
-        font-size: 12px;
+    .input_home, .textarea_home{
+        font-size: 15px;
         padding-left: 10px;
     }
-
-    .input_submit_contactos_home {
-        height: 100%;
-    }
-
-    .contatos_input {
-        height: 20%;
-    }
-
-    .holder_botao_submit {
-        height: 25%;
-    }
-
-    .contactos_imagem_holder {
-        height: 35%;
-    }
-
-    .contactos_holder {
-        height: 65%;
-    }
-
-    .contactos_holder form {
-        height: 100%;
-    }
-
-    .contatos_textarea {
-        height: 35%;
-    }
-
-    .input_home {
-        height: 100%;
-    }
-
-    .textarea_home {
-        height: 100%;
-    }
-
-    /*FOOTER*/
-    .footer_holder {
-        display: none;
-    }
-
-    .footer_holder_responsive {
+    .footer_holder{
+        height: auto;
         display: block;
-        height: 170px;
-        background-color: #34394f;
     }
-
-    /*.footer_holder_responsive span{
-        padding: 5px;
-    }*/
-    .footer_titls {
-        padding-left: 10px;
-    }
-
-    .footer_esquerda {
+    .footer_esquerda{
         font-family: 'Roboto';
         font-weight: 300;
-        font-size: 13px;
+        font-size: 15px;
         position: relative;
         color: #ffffff;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        /* margin-top: 15px; */
         padding-top: 19px;
-        text-align: center;
     }
-
-    .tit_footer_texto {
+    .tit_footer_texto{
         margin-right: 10px;
         position: relative;
         /* float: left; */
@@ -1149,68 +1025,22 @@ canvas{
         margin-top: 0;
         margin-left: 0;
     }
-
-    .contactos_footer_texto {
+    .contactos_footer_texto{
         position: relative;
         display: inline-block;
         margin-top: 0;
     }
-
-    .enderesso_footer_texto {
+    .enderesso_footer_texto{
         position: relative;
         padding-top: 20px;
         text-align: center;
         margin: 0;
     }
-
-    .footer_direita {
+    .footer_direita{
         padding-top: 20px;
     }
 
-    /*CONTACTOS*/
-    .testo_mapa_home {
-        font-size: 15px;
-    }
-
-    .mapa_home {
-        height: calc(95vh - 55px);
-    }
-
-    .circle {
-        top: calc(95vh - 55px);
-        transform: translate(-50%, -50%)!important;
-        height: 55px;
-        width: 55px;
-    }
-
-    .circle img {
-        padding-top: 12px;
-    }
-
-    .texto_botttom_left_sobrenos {
-        font-size: 18px;
-
-    }
-
-    .texto_botttom_right_sobrenos {
-        font-size: 13px;
-    }
-
-    .holder_backgrounds_sobrenos {
-        top: 0px;
-    }
-
-    .texto_middle_sobrenos {
-        top: 50%;
-        transform: translate(0, 0);
-        font-size: 20px;
-        text-align: center;
-        margin-top: -56px;
-    }
-
-    .texto_top_sobrenos p, .texto_top_sobrenos p:nth-child(2), .texto_top_sobrenos p:nth-child(3) {
-        font-size: 20px;
-        width: 100%;
-        margin-left: 0px;
-    }
 }
+=======
+}
+>>>>>>> 793ebfcf3b5fa71d079d388226c3fb1f264464ea

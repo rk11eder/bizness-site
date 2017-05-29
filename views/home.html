@@ -149,7 +149,7 @@
 
 
 <div class="col-xs-12 pd0 contactos_home_holder">
-    <div class="col-sm-7 col-xs-12 pd0">
+    <div class="col-sm-7 col-xs-12 pd0 contactos_imagem_holder">
         <div class="col-xs-12 pd0 contactos_home_holder_texto">
             <h1>Contacte-nos</h1>
             <p>Para esclarecer qualquer dúvida
@@ -157,21 +157,21 @@
         </div>
 
         <div class="col-xs-12 pd0">
-            <img src="img/contactos.jpg" alt="" width="100%">
+            <img src="img/contactos.jpg" alt="" height="100%" width="100%">
         </div>
     </div>
     <div class="col-sm-5 col-xs-12 pd0 contactos_holder">
         <form id="formulario" name="formulario">
-            <div class="col-xs-12 pd0">
+            <div class="col-xs-12 pd0 contatos_input">
                 <input id="nome" type="text" ng-model="form.nome" class="input_home" placeholder="NOME" required>
             </div>
-            <div class="col-xs-12 pd0">
+            <div class="col-xs-12 pd0 contatos_input">
                 <input id="email" type="email" ng-model="form.email" class="input_home" placeholder="EMAIL" required>
             </div>
-            <div class="col-xs-12 pd0">
+            <div class="col-xs-12 pd0 contatos_textarea">
                 <textarea id="mensagem" ng-model="form.mensagem" class="textarea_home" placeholder="MENSAGEM" required></textarea>
             </div>
-            <div class="col-xs-12 pd0">
+            <div class="col-xs-12 pd0 holder_botao_submit">
                 <input type="submit" ng-click="send_form(form)" value="ENVIAR" class="input_submit_contactos_home">
             </div>
         </form>

@@ -10,16 +10,17 @@ biznessApp.directive('menu', [ 'services','$rootScope', function (services,$root
         scope.isActive = !scope.isActive;
       };
         scope.changeClass = function(){
+            console.log("change class");
 
-            if ($rootScope.menuMobileControler === 0){
+            if ($rootScope.menuMobileControler === 0 || $rootScope.menuMobileControler === 2){
 
                 $rootScope.menuMobileControler = 1;
-                $rootScope.interface = '1';
+                // $rootScope.interface = '1';
 
             }else {
-                $rootScope.menuMobileControler = 0;
+                $rootScope.menuMobileControler = 2;
 
-                $rootScope.interface = '0';
+                // $rootScope.interface = '2';
             }
 
         };
