@@ -53,17 +53,14 @@ services.service('services',['$http','$q','$location','$window', function ($http
          var users;
      var result= $http.get('server/portfolio_get_data.php?data=' + (Math.random()), {cache: false}).success(function (data, status) {
 
-
-             users =data;
-             return users;
+console.log(data);
 
         }).error(function (data, status) {
             deferred.reject(data);
 
         });
 
-        users=result.users;
-        console.log(users);
+
 
         angular.forEach(users, function (user, key) {
             var img = new Image();
