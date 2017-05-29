@@ -217,14 +217,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
 
 
     $scope.map = {center: {latitude: 38.703505, longitude: -9.178821 }, zoom: 18 };
-    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-
-    var isDraggable = w > 768 ? true : false;
-
-    if(isDraggable){
-        console.log("true drag");
-    }
-    $scope.options = {scrollwheel: false, styles: styleArray, mapTypeControl: false, draggable:isDraggable};
+    $scope.options = {scrollwheel: false, styles: styleArray, mapTypeControl: false, gestureHandling:"cooperative"};
     
     $scope.marker = {
         id: 0,
