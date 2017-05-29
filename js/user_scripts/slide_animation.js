@@ -5,7 +5,7 @@ biznessApp.animation('.slide-animation', ['$rootScope', function ($rootScope) {
     var i = 0;
     return {
         addClass: function (element, className, done) {
-            console.log("before");
+
 
             var numeroRepeticoes = $rootScope.destaques.length*2;
             if(i>numeroRepeticoes){
@@ -24,7 +24,7 @@ biznessApp.animation('.slide-animation', ['$rootScope', function ($rootScope) {
             i++;
         },
         removeClass: function (element, className, done) {
-            console.log("remove");
+
             if (className == 'ng-hide' ) {
                 element.removeClass('ng-hide');
 
