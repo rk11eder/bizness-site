@@ -1178,7 +1178,7 @@ canvas{
 
     .circle {
         top: calc(95vh - 55px);
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%)!important;
         height: 55px;
         width: 55px;
     }
