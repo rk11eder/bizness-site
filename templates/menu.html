@@ -15,10 +15,16 @@
     <div class="menu_mobile_list"
          ng-class="{menu_mobile_open: menuMobileControler == '1',menu_mobile_cima: menuMobileControler == '2'}"
          id="myMenu">
-        <p id="back_mbtn">INICIO </p>
-        <p id="home_mbtn"> SOBRE </p>
-        <p id="specifications_mbtn"> PORTFOLIO </p>
-        <p id="clients_mbtn"> CONTACTOS </p>
+        <ul class="pd0">
+            <li ><a ng-href="{{lang}}/home" ng-click="changeClass()"><span>INICIO</span></a>
+            </li>
+            <li ><a ng-href="{{lang}}/sobrenos" ng-click="changeClass()"><span>SOBRE</span></a>
+            </li>
+            <li ><a
+                    ng-href="{{lang}}/portfolio" ng-click="changeClass()"><span>PORTFOLIO</span></a></li>
+            <li><a
+                    ng-href="{{lang}}/contactos" ng-click="changeClass()"><span>CONTACTOS</span></a></li>
+        </ul>
 
 
     </div>

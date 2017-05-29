@@ -246,7 +246,9 @@ p{
 
 
 /*FOOTER*/
-
+.footer_holder_responsive{
+    display: block;
+}
 .footer_holder{
   height: 170px;
   background-color: #34394f;
@@ -816,6 +818,31 @@ overflow: hidden;
     z-index: 50;
 
 }
+.menu_mobile_list ul{
+    display: inline-block;
+    /* float: right; */
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+}
+
+.menu_mobile_list li {
+
+    height:100%;
+    line-height:90px;
+    list-style: none;
+    padding: 10px;
+}
+.menu_mobile_list>li>a{
+    padding: 0;
+    color: inherit;
+}
+.menu_mobile_list span{
+    color: inherit;
+}
+
 .menu_mobile_open {
 
 
@@ -845,7 +872,7 @@ overflow: hidden;
 .icon_fechar_menu_mobile > .item_icon_menu_mobile1{
     transform: translateX(4px) rotateZ(45deg);
     transform-origin: 0% 0%;
-    width: 27px;
+    width: 21px;
 
 }
 .icon_fechar_menu_mobile > .item_icon_menu_mobile2{
@@ -854,10 +881,10 @@ overflow: hidden;
 .icon_fechar_menu_mobile > .item_icon_menu_mobile3{
     transform-origin: 0% 100%;
     transform: translateX(4px) rotateZ(-45deg);
-    width: 27px;
+    width: 21px;
 }
 
-.menu_mobile_list p {
+.menu_mobile_list a {
     color: black;
     text-align: center;
     font-size: 22px;
@@ -965,9 +992,7 @@ canvas{
     .holder_texto_home_esquerda{
         padding: 50px 0;
     }
-    .contactos_home_holder{
-        display: block;
-    }
+
     .imagens_insta{
         display: none;
     }
@@ -1004,31 +1029,70 @@ canvas{
     .holder_logos_home img{
         max-width: 85%;
     }
+    /*FORM CONTACTOS*/
+    .contactos_home_holder{
+        display: block;
+        height: calc(100vh - 55px);
+    }
     .input_home, .textarea_home{
-        font-size: 15px;
+        font-size: 12px;
         padding-left: 10px;
     }
+    .input_submit_contactos_home{
+        height: 100%;
+    }
+    .contatos_input{
+        height: 20%;
+    }
+    .holder_botao_submit{
+        height: 25%;
+    }
+    .contactos_imagem_holder{
+        height: 35%;
+    }
+    .contactos_holder{
+        height: 65%;
+    }
+    .contactos_holder form{
+        height:100%;
+    }
+    .contatos_textarea{
+        height: 35%;
+    }
+
     .input_home{
-        height: 75px;
+        height: 100%;
     }
     .textarea_home{
-        height: 130px
+        height: 100%;
     }
+
+    /*FOOTER*/
     .footer_holder{
-        height: auto;
+        display: none;
+    }
+    .footer_holder_responsive{
         display: block;
+        height: 170px;
+        background-color: #34394f;
+    }
+    /*.footer_holder_responsive span{
+        padding: 5px;
+    }*/
+    .footer_titls{
+        padding-left: 10px;
     }
     .footer_esquerda{
         font-family: 'Roboto';
         font-weight: 300;
-        font-size: 15px;
+        font-size: 13px;
         position: relative;
         color: #ffffff;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        /* margin-top: 15px; */
         padding-top: 19px;
+        text-align: center;
     }
     .tit_footer_texto{
         margin-right: 10px;
@@ -1058,7 +1122,6 @@ canvas{
 
     /*CONTACTOS*/
     .testo_mapa_home {
-
         font-size: 15px;
     }
     .mapa_home{
