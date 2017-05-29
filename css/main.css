@@ -1062,10 +1062,15 @@ canvas{
         font-size: 15px;
     }
     .mapa_home{
-        height: 85vh;
+        height: calc(95vh - 55px );
     }
     .circle{
-        top: 85vh;
+        top:calc(95vh - 55px );
         transform: translate(-50%, -50%);
+        height: 55px;
+        width: 55px;
+    }
+    .circle img{
+        padding-top: 12px;
     }
 }
