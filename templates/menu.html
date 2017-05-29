@@ -1,7 +1,7 @@
 <div class="menu_holder">
     <div class="menu_mobile">
         <div class="icon_open_menu_mobile" ng-click="changeClass()"
-             ng-class="{menu_mobile_baixo: menuMobileControler == '1',icon_open_menu_mobile: menuMobileControler == '0'}">
+             ng-class="{icon_fechar_menu_mobile: menuMobileControler == '1'}">
             <div class="item_icon_menu_mobile item_icon_menu_mobile1"></div>
             <div class="item_icon_menu_mobile item_icon_menu_mobile2"></div>
             <div class="item_icon_menu_mobile item_icon_menu_mobile3"></div>
@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="menu_mobile_list"
-         ng-class="{menu_mobile_open: menuMobileControler == '1',menu_mobile_cima: menuMobileControler == '0'}"
+         ng-class="{menu_mobile_open: menuMobileControler == '1',menu_mobile_cima: menuMobileControler == '2'}"
          id="myMenu">
         <p id="back_mbtn">INICIO </p>
         <p id="home_mbtn"> SOBRE </p>

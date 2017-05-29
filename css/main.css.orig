@@ -750,8 +750,8 @@ overflow: hidden;
 .item_icon_menu_mobile {
     position: relative;
     float: left;
-    width: 30px;
-    height: 4px;
+    width: 36px;
+    height: 6px;
     margin-top: 3px;
     margin-bottom: 2px;
     background: #eb504c;
@@ -816,11 +816,11 @@ overflow: hidden;
     z-index: 50;
 
 }
-.menu_mobile_open {
+.menu_mobile_baixo {
 
 
     animation-name: example;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
 
     animation-fill-mode: forwards;
 
@@ -831,8 +831,10 @@ overflow: hidden;
     100% {top:8vh;}
 }
 .menu_mobile_cima {
+
+
     animation-name: exampleCima;
-    animation-duration: 1s;
+    animation-duration: 4s;
 
     animation-fill-mode: forwards;
 
@@ -841,20 +843,6 @@ overflow: hidden;
     0%   { top: 8vh;}
 
     100% {top:-100vh;}
-}
-.icon_fechar_menu_mobile > .item_icon_menu_mobile1{
-    transform: translateX(4px) rotateZ(45deg);
-    transform-origin: 0% 0%;
-    width: 27px;
-
-}
-.icon_fechar_menu_mobile > .item_icon_menu_mobile2{
-    opacity: 0;
-}
-.icon_fechar_menu_mobile > .item_icon_menu_mobile3{
-    transform-origin: 0% 100%;
-    transform: translateX(4px) rotateZ(-45deg);
-    width: 27px;
 }
 
 .menu_mobile_list p {
@@ -886,7 +874,7 @@ canvas{
 @media screen and (max-width:768px) {
 
     .container_website{
-        margin-top: 55px;
+        margin-top: 65px;
     }
     .menu-list-holder{
         display: none;
@@ -896,11 +884,11 @@ canvas{
         display: block;
     }
     .icon_menu{
-        height: 38px;
+        height: 65px;
     }
     .menu_mobile {
         width: 100vw;
-        height: 55px;
+        height: 65px;
         position: fixed;
         background-color: white;
         margin-left: 0px;
@@ -911,12 +899,14 @@ canvas{
         margin-left: 0px;
     }
     .icon_menu {
-        margin: 10px;
-        width: 55px;
+
+        margin-left: 17px;
+
     }
     .menu_mobile_list{
         display: block;
     }
+<<<<<<< HEAD
     /*HOME*/
     .holder_destaques_home{
         height: 70vh;
@@ -1008,12 +998,6 @@ canvas{
         font-size: 15px;
         padding-left: 10px;
     }
-    .input_home{
-        height: 75px;
-    }
-    .textarea_home{
-        height: 130px
-    }
     .footer_holder{
         height: auto;
         display: block;
@@ -1056,9 +1040,7 @@ canvas{
         padding-top: 20px;
     }
 
-    /*CONTACTOS*/
-    .testo_mapa_home {
-
-        font-size: 15px;
-    }
 }
+=======
+}
+>>>>>>> 793ebfcf3b5fa71d079d388226c3fb1f264464ea
