@@ -862,7 +862,10 @@ canvas{
 }
 
 @media screen and (max-width:992px) {
-
+ /*SOBRE NOS*/
+ .texto_top_sobrenos p{
+   font-size: 23px;
+ }
 }
 
 @media screen and (max-width:768px) {
@@ -892,5 +895,31 @@ canvas{
     }
     .menu_mobile_list{
         display: block;
+    }
+
+
+    .texto_botttom_left_sobrenos{
+      font-size:16px;
+    }
+    .texto_botttom_right_sobrenos{
+      font-size:16px;
+    }
+
+    .texto_middle_sobrenos {
+    position: absolute;
+    /* bottom: 132%; */
+    transform: translate(0, 0);
+    color: rgba(52, 57, 79, 0.9);
+    font-family: 'Roboto';
+    font-size: 23px;
+    font-weight: bold;
+    top: 50%;
+    text-align: center;
+    }
+    .holder_backgrounds_sobrenos{
+      top:0px;
+    }
+    .texto_top_sobrenos{
+      margin-top:50%;
     }
 }
