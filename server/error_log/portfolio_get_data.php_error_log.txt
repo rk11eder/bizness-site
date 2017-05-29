@@ -1,0 +1,10 @@
+2017-05-26 15:47:09: Prepare failed: (1046) No database selected
+
+2017-05-29 10:02:47: Prepare failed: (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'projetos.id=projetos_fotos.id_projeto ORDER BY ?' at line 1
+
+2017-05-29 10:03:27: Prepare failed: (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'projetos.id=projetos_fotos.id_projeto ORDER BY ?' at line 1
+
+2017-05-29 10:03:29: Prepare failed: (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'projetos.id=projetos_fotos.id_projeto ORDER BY ?' at line 1
+
+2017-05-29 10:03:40: Prepare failed: (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'projetos.id=projetos_fotos.id_projeto ORDER BY ?' at line 1
+

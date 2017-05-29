@@ -15,31 +15,37 @@ $database = new database();
 
 
 
-$res_select_projectos = $database->query_simple_prepare("SELECT projetos.id, projetos.ativo, projetos.logo, projetos.cor, projetos.destaque, projetos_fotos.foto FROM ".$database->array_tables[1].", ".$database->array_tables[2]." WHERE projetos.ativo=1 AND " .$database->array_tables[1].".id" ."=". $database->array_tables[2].".id_projeto ORDER BY ?" ,array("id"),"s");
+$res = $database->query_simple_prepare("SELECT projetos.id, projetos.ativo, projetos.logo, projetos.cor, projetos.destaque FROM ".$database->array_tables[1]. " WHERE projetos.ativo=1   ORDER BY ?" ,array("id"),"s");
 
-//$res = $database->query_simple_prepare("SELECT
-//    projetos.id, projetos.activo, projetos.logo, projetos.cor, projetos.destaque, projetos_fotos.id, projetos_foto.foto
-// 	FROM
-// 	projetos,
-// 	projetos_fotos
-// 	WHERE
-// 	projetos.id = projetos_fotos.id_destaque
-//
-//	",array(),"");
 
-echo json_encode($res_select_projectos);
+//$res_select_projectos_fotos = $database->query_simple_prepare("SELECT * FROM projetos_fotos  ORDER BY ?" ,array("id"),"s");
 
+
+$return_array = array();
+if ($res != $database->flag_error) {
+
+    $return_array["projetos"] = $res;
+    $return_array['response'] = $database->flag_success;
+
+    foreach ( $return_array["projetos"] as $key => $value) {
+        $res_select_projectos_fotos = $database->query_simple_prepare("SELECT * FROM projetos_fotos WHERE projetos_fotos.id_projeto=? ORDER BY ?  ", array($value["id"],"id"), "is");
+        $return_array["projetos"][$key]["fotos"]=$res_select_projectos_fotos;
+    }
+
+
+} else {
+    $return_array['response'] = $database->flag_error;
+}
 
 /*foreach ($res_select as $key => $value) {
     $res_select[$key]["perguntapt"]=utf8_encode($value["perguntapt"]);
     $res_select[$key]["perguntaen"]=utf8_encode($value["perguntaen"]);
 }
 */
-
+echo json_encode($return_array);
 
 
 /*echo json_encode($res_select_projectos, JSON_UNESCAPED_UNICODE);*/
-
 
 
 ?>

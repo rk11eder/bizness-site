@@ -46,32 +46,33 @@ services.service('services',['$http','$q','$location','$window', function ($http
 
         return deferred.promise;
     }
-    this.getSize = function(){
 
-
+    this.getPortefolio = function () {
         var deferred = $q.defer();
-         var users;
-     var result= $http.get('server/portfolio_get_data.php?data=' + (Math.random()), {cache: false}).success(function (data, status) {
-
-
-             users =data;
-             return users;
+        $http.get('server/portfolio_get_data.php?data=' + (Math.random()), {cache: false}).success(function (data, status) {
+            deferred.resolve(data);
 
         }).error(function (data, status) {
             deferred.reject(data);
-
         });
+        return deferred.promise;
+    }
 
-        users=result.users;
-        console.log(users);
+
+
+    this.getSize = function(dataPortfolio){
+
+        var users = dataPortfolio;
+
+console.log(users);
+        var imagens=[];
 
         angular.forEach(users, function (user, key) {
             var img = new Image();
-            img.src = "/img/projetos/4/"+users.logo;
+            img.src = user.logo;
             img.alt = key;
             imagens[key]=img;
         });
-        var imagens=[];
         angular.forEach(imagens, function (info, key) {
             info.onload= function () {
 
@@ -81,15 +82,13 @@ services.service('services',['$http','$q','$location','$window', function ($http
 
 
 
+
             }
-
         });
-        console.log(users);
+
         return users;
-
-
     }
-  
+
 }]);
 
 /*servico para mudar page title (SEO)*/

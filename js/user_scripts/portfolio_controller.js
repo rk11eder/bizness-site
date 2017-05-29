@@ -13,8 +13,9 @@ biznessApp.controller('portfolioCtrl', ['$scope', '$rootScope','$window','$timeo
   	PageTitle.setTitle('PROJECTSTART');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
 
+
    $scope.users=items;
-   console.log($scope.users);
+    console.log(items);
 
            $scope.lado=0;
             for(var i=0; i<$scope.users.length;i++){
@@ -30,8 +31,6 @@ biznessApp.controller('portfolioCtrl', ['$scope', '$rootScope','$window','$timeo
            }
 
 
-
-console.log($scope.users);
 
 
 
