@@ -1,12 +1,14 @@
 'use strict';
 
 /*exemplo controller*/
-biznessApp.animation('.slide-animation', function () {
-    var i =0;
+biznessApp.animation('.slide-animation', ['$rootScope', function ($rootScope) {
+    var i = 0;
     return {
         addClass: function (element, className, done) {
-            console.log("before");
-            if(i>8){
+
+
+            var numeroRepeticoes = $rootScope.destaques.length*2;
+            if(i>numeroRepeticoes){
                 if (className == 'ng-hide' ) {
                     TweenMax.set(element,{css:{zIndex:0}});
                     TweenMax.to(element, 2, {left: -(element.parent().width()), onComplete: done });
@@ -22,7 +24,7 @@ biznessApp.animation('.slide-animation', function () {
             i++;
         },
         removeClass: function (element, className, done) {
-            console.log("remove");
+
             if (className == 'ng-hide' ) {
                 element.removeClass('ng-hide');
 
@@ -36,4 +38,4 @@ biznessApp.animation('.slide-animation', function () {
             }
         }
     };
-});
+}]);

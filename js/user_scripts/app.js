@@ -24,8 +24,16 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
               $rootScope.sub_area_sel = '';
             $rootScope.menu_mobile_open = false;
             $rootScope.array_tags = [];
+              var promise2 = services.get_destaques();
+              promise2.then(
+                  function(response){
+                      $rootScope.destaques = response;
+                      console.log($rootScope.destaques);
+                  });
+
              var promise = services.insta();
             return promise;
+
           }]
         }
       }).
@@ -38,8 +46,11 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
                 $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
-                
-                return 1;
+                var promise = services.getPortefolio();
+
+                return promise;
+
+
             }]
         }
     }).
