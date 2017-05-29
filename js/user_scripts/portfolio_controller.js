@@ -14,23 +14,24 @@ biznessApp.controller('portfolioCtrl', ['$scope', '$rootScope','$window','$timeo
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
 
 
-   $scope.users=items;
-    console.log(items);
+   $rootScope.users=items.projetos;
+
+
 
            $scope.lado=0;
+
             for(var i=0; i<$scope.users.length;i++){
+
                 if ($scope.lado==0) {
-                    $scope.users[i].lado = 0;
+                    $rootScope.users[i].lado = 0;
                     $scope.lado = "1";
-                    console.log("grgrereg")
+
                 } else {
-                    $scope.users[i].lado = 1;
+                    $rootScope.users[i].lado = 1;
                     $scope.lado = 0;
-                    console.log("dsvvds")
+
                 }
            }
-
-
 
 
 

@@ -54,17 +54,20 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
             }]
         }
     }).
-    when('/'+lang+'/portfolio2', {
+    when('/'+lang+'/portfolio2/:id', {
         templateUrl: 'views/portfolio2.html',
         controller: 'portfolio2Ctrl',
         resolve:{
-            items: ['$rootScope','services', function($rootScope,services){
+            items: ['$rootScope','services','$route', function($rootScope,services,$route){
                 $rootScope.area_sel = 'portfolio';
                 $rootScope.sub_area_sel = 'portfolio2';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
-                
-                return 1;
+
+                return services.getPortefolio2($route.current.params.id,lang);
+
+
+
             }]
         }
     }).
@@ -92,6 +95,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
                 var promise = services.insta();
+
                 return promise;
             }]
         }

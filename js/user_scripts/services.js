@@ -58,6 +58,16 @@ services.service('services',['$http','$q','$location','$window', function ($http
         return deferred.promise;
     }
 
+    this.getPortefolio2 = function (url,lang) {
+
+        var deferred = $q.defer();
+        $http.post('server/portfolio_id_get_data.php?lang='+lang+'&data='+(Math.random()),{'url':url},{ cache: false}).success(function(data, status) {
+            deferred.resolve(data);
+        }).error(function(data, status) {
+            deferred.reject(data);
+        });
+        return deferred.promise;
+    }
 
 
     this.getSize = function(dataPortfolio){
