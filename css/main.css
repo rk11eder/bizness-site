@@ -1073,4 +1073,28 @@ canvas{
     .circle img{
         padding-top: 12px;
     }
-}
+
+
+    .texto_botttom_left_sobrenos{
+        font-size:18px;
+        
+    }
+    .texto_botttom_right_sobrenos{
+        font-size:13px;
+    }
+    .holder_backgrounds_sobrenos{
+        top:0px;
+    }
+    .texto_middle_sobrenos{
+        top:  50%;
+        transform:translate(0,0);
+        font-size: 20px;
+        text-align: center;
+        margin-top:-56px;
+    }
+
+    .texto_top_sobrenos p, .texto_top_sobrenos p:nth-child(2),.texto_top_sobrenos p:nth-child(3){  
+        font-size:20px;
+        width:100%;
+        margin-left: 0px;
+    }
