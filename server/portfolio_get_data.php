@@ -28,12 +28,9 @@ if ($res != $database->flag_error) {
     $return_array['response'] = $database->flag_success;
 
     foreach ( $return_array["projetos"] as $key => $value) {
-        $res_select_projectos_fotos = array();
         $res_select_projectos_fotos = $database->query_simple_prepare("SELECT * FROM projetos_fotos WHERE projetos_fotos.id_projeto=? ORDER BY ?  ", array($value["id"],"id"), "is");
-       // $res[$key]["fotos"]=$res_select_projectos_fotos;
-        $return_array[$key]["fotos"] = $res_select_projectos_fotos;
+        $return_array["projetos"][$key]["fotos"]=$res_select_projectos_fotos;
     }
-
 
 
 } else {
