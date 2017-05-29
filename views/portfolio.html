@@ -3,7 +3,7 @@
         <div  ng-repeat="user in users" ng-if="user.lado===0" class="col-xs-12 pd0 holder_linha">
 
             <div ng-class="{linha_full: user.destaque == '1',linha_half: user.destaque == '0'}"
-                 style="background-image: url('img/playstation.png');background-size: cover;">
+                 style="background-image: url('img/projetos/{{user.id}}/{{user.foto}}');background-size: cover;">
                 <div class="holder_backgrounds"
 
                      style="height: 100%;width: 100%;background-color: rgba(100,102,102,0.9); position: absolute"></div>
@@ -11,8 +11,8 @@
 
             </div>
 
-            <div ng-class="{logo_altura: user.largura/user.altura < 1, logo_altura: user.largura/user.altura > 1 }">
-                <img  src="{{user.logo}}">
+            <div  class="logo_altura">
+                <img src="img/projetos/{{user.id}}/{{user.logo}}">
                 <div class="text_portfolio">{{user.altura}}{{user.titulo}}</div>
             </div>
 
@@ -23,14 +23,14 @@
         <div ng-repeat="user in users" ng-if="user.lado===1" class="col-xs-12 pd0 holder_linha">
 
             <div ng-class="{linha_full: user.destaque == '1',linha_half: user.destaque == '0'}"
-                 style="background-image: url('img/playstation.png');background-size: cover;">
+                 style="background-image: url('img/projetos/{{user.id}}/{{user.foto}}');background-size: cover;">
                 <div class="holder_backgrounds"
                      style="height: 100%;width: 100%;background-color: rgba(150,102,102,0.9); position: absolute"></div>
             </div>
 
-            <div  ng-class="{logo_altura: user.largura/user.altura < 1, logo_altura: user.largura/user.altura > 1 }">
-                <img src="{{user.logo}}">
-                <div class="text_portfolio">{{user.altura}}{{user.titulo}}</div>
+            <div  class="logo_altura">
+                <img src="img/projetos/{{user.id}}/{{user.logo}}">
+                <div class="text_portfolio">{{user.titulo}}</div>
             </div>
 
         </div>
