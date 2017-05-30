@@ -27,7 +27,7 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 
 
 			/*RESIZE WINDOW*/
-	var w = angular.element("canvas");
+	var w = angular.element($window);
 	$scope.getWindowDimensions = function () {
 		return {
 		   'h': w.height(),
@@ -39,9 +39,10 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 
 	$scope.resize_func = function(){
 		var canvas = document.querySelector('canvas');
-
+        var parent = angular.element(document.querySelector('#parent_canvas'));
+        console.log(parent.height());
 		canvas.width = document.body.clientWidth;
-		canvas.height = w.parent().height();
+		canvas.height = parent.height();
 		var c = canvas.getContext('2d');
 
 		var canvasPos = getPosition(canvas);
