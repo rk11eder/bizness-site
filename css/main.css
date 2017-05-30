@@ -41,7 +41,7 @@ body, html{
 	padding: 0px;
    width:  100%;
   height: 100%;
-  overflow: auto;
+  /*overflow: auto;*/
 }
 
 
@@ -251,7 +251,7 @@ p{
 
 /*FOOTER*/
 .footer_holder_responsive{
-    display: block;
+    display: none;
 }
 .footer_holder{
   height: 170px;
@@ -346,7 +346,7 @@ font-family: 'Roboto';
   position: absolute;
   width: 100%;
     transition:  5s;
-
+    opacity:0.9;
 
 }
 
@@ -1020,6 +1020,7 @@ canvas{
     .imagens_insta_responsive {
         display: block;
         height: calc(100vw / 3);
+        overflow: hidden;
     }
 
     .imagens_insta_responsive img {
@@ -1177,7 +1178,7 @@ canvas{
 
     .circle {
         top: calc(95vh - 55px);
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%)!important;
         height: 55px;
         width: 55px;
     }
