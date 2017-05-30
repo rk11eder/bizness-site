@@ -973,16 +973,20 @@ canvas{
     }
 
     .home_titulo {
-        font-size: 52px;
+        font-size: 46px;
+        padding-right: 10px;
     }
 
     .holder_titulo_home {
         padding-left: 10px;
+        flex-direction: row;
+        justify-content: flex-end;
     }
 
     .fotos_destaques {
         height: 70%;
         overflow: hidden;
+
     }
 
     .fotos_destaques img {
