@@ -41,6 +41,7 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 		var canvas = document.querySelector('canvas');
         var parent = angular.element(document.querySelector('#parent_canvas'));
         console.log(parent.height());
+        console.log("fez log");
 		canvas.width = document.body.clientWidth;
 		canvas.height = parent.height();
 		var c = canvas.getContext('2d');
