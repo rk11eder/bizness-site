@@ -69,7 +69,7 @@ function getPosition(el) {
       var yScroll = el.scrollTop || document.documentElement.scrollTop;
  
       xPos += (el.offsetLeft - xScroll + el.clientLeft);
-      yPos += (el.offsetTop - yScroll + el.clientTop);
+      yPos += (el.offsetTop - yScroll  + el.clientTop);
     } else {
       // for all other non-BODY elements
       xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
