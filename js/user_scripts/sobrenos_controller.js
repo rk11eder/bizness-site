@@ -10,7 +10,7 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 
 		
 	/*SET TITLE PAGE SEO*/
-  	PageTitle.setTitle('PROJECTSTART');
+  	PageTitle.setTitle('Bizness');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
     $scope.ins = items.data;
    
@@ -23,25 +23,15 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 		};
 	};
 
-   
-
-
-			/*RESIZE WINDOW*/
-	var w = angular.element($window);
-	$scope.getWindowDimensions = function () {
-		return {
-		   'h': w.height(),
-		   'w': w.width()
-		};
-	};
-
 
 
 	$scope.resize_func = function(){
 		var canvas = document.querySelector('canvas');
-
+        var parent = angular.element(document.querySelector('#parent_canvas'));
+        console.log(parent.height());
+        console.log("fez log");
 		canvas.width = document.body.clientWidth;
-		canvas.height = w.innerHeight() * 0.90;
+		canvas.height = parent.height();
 		var c = canvas.getContext('2d');
 
 		var canvasPos = getPosition(canvas);
@@ -79,7 +69,7 @@ function getPosition(el) {
       var yScroll = el.scrollTop || document.documentElement.scrollTop;
  
       xPos += (el.offsetLeft - xScroll + el.clientLeft);
-      yPos += (el.offsetTop - yScroll + el.clientTop);
+      yPos += (el.offsetTop - yScroll  + el.clientTop);
     } else {
       // for all other non-BODY elements
       xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
@@ -258,6 +248,7 @@ function Trirot(x,y,a,d,dx,dy){
 	};
 
 	$scope.$watch($scope.getWindowDimensions, function (newValue, oldValue) {
+		console.log("resize");
 	   $scope.resize_func();
 	}, true);
 

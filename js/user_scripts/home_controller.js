@@ -10,11 +10,12 @@ biznessApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','
 
 		
 	/*SET TITLE PAGE SEO*/
-  	PageTitle.setTitle('PROJECTSTART');
+  	PageTitle.setTitle('Bizness');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
    
 $scope.ins = items.data;
 $scope.form = {};
+    $rootScope.contador_animation = 0;
 
   console.log($scope.ins);
   /*RESIZE WINDOW*/
@@ -48,6 +49,7 @@ $scope.form = {};
         }else{
             $scope.currentIndex=0;
         }
+        console.log($scope.currentIndex);
 
 
     },8000);
@@ -98,6 +100,12 @@ $scope.form = {};
             // tween pause() code goes here
             console.log("tab is invisible - has blur");
         }
+    });
+    $scope.$on('$destroy',function(){
+        if(timer){
+            $interval.cancel(timer);
+        }
+
     });
 
 

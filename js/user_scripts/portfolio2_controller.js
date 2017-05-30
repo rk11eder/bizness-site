@@ -10,7 +10,7 @@ biznessApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$time
 
 		
 	/*SET TITLE PAGE SEO*/
-  	PageTitle.setTitle('PROJECTSTART');
+  	PageTitle.setTitle('Bizness');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
 	  var currentScroll2 = $('.holder_folio2_header').offset().top; // get current position
 
