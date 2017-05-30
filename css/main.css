@@ -309,12 +309,7 @@ font-family: 'Roboto';
 }
 
 /*Portfolio*/
-.portfolio_desktop{
-    display: none;
-}
-.portfolio_responsive{
-    display: block;
-}
+
 .holder_linha{
     /*height: 50vw;*/
     overflow:hidden;
@@ -1263,5 +1258,18 @@ canvas{
         padding: 10%;
         transform: none;
         text-align:center;
+    }
+    /*PORTFOLIO*/
+    .portfolio_desktop{
+        display: none;
+    }
+    .portfolio_responsive{
+        display: block;
+    }
+    .linha_full{
+        height: 100vw;
+    }
+    .linha_half{
+        height: 50vw;
     }
 }
