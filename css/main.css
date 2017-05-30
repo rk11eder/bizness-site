@@ -251,7 +251,7 @@ p{
 
 /*FOOTER*/
 .footer_holder_responsive{
-    display: block;
+    display: none;
 }
 .footer_holder{
   height: 170px;
