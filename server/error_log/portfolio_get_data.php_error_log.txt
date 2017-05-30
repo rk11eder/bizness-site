@@ -8,3 +8,7 @@
 
 2017-05-29 10:03:40: Prepare failed: (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'projetos.id=projetos_fotos.id_projeto ORDER BY ?' at line 1
 
+2017-05-30 09:40:08: Failed to connect to MySQL: (2002) Nenhuma ligação pôde ser feita porque o computador de destino
+as recusou ativamente.
+
+
