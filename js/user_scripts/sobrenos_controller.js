@@ -41,7 +41,7 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 		var canvas = document.querySelector('canvas');
 
 		canvas.width = document.body.clientWidth;
-		canvas.height = w.innerHeight() * 0.90;
+		canvas.height = w.height() * 0.90;
 		var c = canvas.getContext('2d');
 
 		var canvasPos = getPosition(canvas);
