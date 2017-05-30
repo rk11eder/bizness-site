@@ -6,3 +6,9 @@
 
 2017-05-29 17:23:58: Execute failed: (2031) No data supplied for parameters in prepared statement
 
+2017-05-30 11:16:37: Prepare failed: (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'projetos_fotos_idiomas.id_projeto_foto=projetos_fotos.id   ORDER BY ?' at line 1
+
+2017-05-30 11:18:04: Prepare failed: (1054) Unknown column 'projetos_fotos.id_projecto' in 'field list'
+
+2017-05-30 11:18:27: Prepare failed: (1054) Unknown column 'projetos_fotos.id_projecto' in 'field list'
+

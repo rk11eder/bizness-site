@@ -14,8 +14,8 @@ biznessApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$time
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
 	  var currentScroll2 = $('.holder_folio2_header').offset().top; // get current position
 
-    $rootScope.users=items.projetos;
-	console.log($rootScope.users);
+    $rootScope.projetosPortfolio=items.projetos;
+	console.log($rootScope.projetosPortfolio);
 
 
 		angular.element('body').bind("scroll", function(){
