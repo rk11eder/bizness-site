@@ -248,6 +248,7 @@ function Trirot(x,y,a,d,dx,dy){
 	};
 
 	$scope.$watch($scope.getWindowDimensions, function (newValue, oldValue) {
+		console.log("resize");
 	   $scope.resize_func();
 	}, true);
 
