@@ -23,18 +23,6 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 		};
 	};
 
-   
-
-
-			/*RESIZE WINDOW*/
-	var w = angular.element($window);
-	$scope.getWindowDimensions = function () {
-		return {
-		   'h': w.height(),
-		   'w': w.width()
-		};
-	};
-
 
 
 	$scope.resize_func = function(){
