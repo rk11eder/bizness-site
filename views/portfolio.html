@@ -13,7 +13,7 @@
             </div>
             </a>
 
-            <div  class="logo_altura">
+            <div ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
                 <img src="img/projetos/{{user.id}}/{{user.logo}}">
                 <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}</div>
             </div>
@@ -31,7 +31,7 @@
                      style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute"></div>
             </div>
             </a>
-            <div  class="logo_altura">
+            <div  ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
                 <img src="img/projetos/{{user.id}}/{{user.logo}}">
                 <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}{{user.titulo}}</div>
             </div>

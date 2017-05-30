@@ -35,6 +35,7 @@ if ($res != $database->flag_error) {
         $res_select_projectos_idiomas = $database->query_simple_prepare("SELECT * FROM projetos_idiomas WHERE projetos_idiomas.id_projeto=? AND projetos_idiomas.sigla=?  ORDER BY ?  ", array($value["id"],$lang,"id"), "iss");
 
         $return_array["projetos"][$key]["fotos"]=$res_select_projectos_fotos;
+
         //  $return_array["projetos"][$key]["fotos_idiomas"]=$res_select_projectos_fotos_idiomas;
         $return_array["projetos"][$key]["projectos_idiomas"]=$res_select_projectos_idiomas;
     }

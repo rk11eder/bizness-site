@@ -11,7 +11,9 @@ require_once '../classes/database.class.php';
 
 
 $database = new database();
+
 $lang = $_GET['lang'];
+
 
 
 
@@ -35,6 +37,17 @@ if ($res != $database->flag_error) {
 
         $res_select_projectos_idiomas = $database->query_simple_prepare("SELECT * FROM projetos_idiomas WHERE projetos_idiomas.id_projeto=? AND projetos_idiomas.sigla= ?  ORDER BY ?  ", array($value["id"],$lang,"id"), "iss");
 
+       $imgUrl=$res[$key]["logo"];
+       $imgid=$res[$key]["id"];
+
+        $xml = simplexml_load_file('../img/projetos/'.$imgid.'/'.$imgUrl);
+        $attr = $xml->attributes();
+        $width=$attr->width;
+        $height=$attr->height;
+        $width= substr($width, 0, -2);
+        $height= substr($height, 0, -2);
+        $return_array["projetos"][$key]["width"]=$width;
+        $return_array["projetos"][$key]["height"]=$height;
         $return_array["projetos"][$key]["fotos"]=$res_select_projectos_fotos;
         $return_array["projetos"][$key]["fotos_idiomas"]=$res_select_projectos_fotos_idiomas;
         $return_array["projetos"][$key]["projectos_idiomas"]=$res_select_projectos_idiomas;
@@ -45,15 +58,16 @@ if ($res != $database->flag_error) {
     $return_array['response'] = $database->flag_error;
 }
 
-/*foreach ($res_select as $key => $value) {
-    $res_select[$key]["perguntapt"]=utf8_encode($value["perguntapt"]);
-    $res_select[$key]["perguntaen"]=utf8_encode($value["perguntaen"]);
-}
-*/
-echo json_encode($return_array);
 
 
-/*echo json_encode($res_select_projectos, JSON_UNESCAPED_UNICODE);*/
+
+echo json_encode ($return_array);
+
+
+
+
+
 
 
 ?>
+

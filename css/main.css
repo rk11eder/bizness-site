@@ -354,7 +354,7 @@ font-family: 'Roboto';
   height: 200px;
 }
 
-.logo_altura img{
+.logo_horizontal img{
     pointer-events: none;
   position: absolute;
   top: 50%;
@@ -363,7 +363,19 @@ font-family: 'Roboto';
   transform: translate(-50%, -50%);
   /*min-height: 14%;*/
   /*min-width: 9%;*/
-    width: 300px;
+    width: 25%;
+}
+
+.logo_vertical img{
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50% 0%);
+    transform: translate(-50%, -50%);
+    /*min-height: 14%;*/
+    /*min-width: 9%;*/
+    height: 25%;
 }
 .text_portfolio{
   position: absolute;
