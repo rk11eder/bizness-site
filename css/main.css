@@ -309,9 +309,21 @@ font-family: 'Roboto';
 }
 
 /*Portfolio*/
+.portfolio_desktop{
+    display: none;
+}
+.portfolio_responsive{
+    display: block;
+}
 .holder_linha{
     /*height: 50vw;*/
     overflow:hidden;
+}
+.portfolio_desktop{
+    display: block;
+}
+.portfolio_responsive{
+    display: none;
 }
 .linha_full{
   height:50vw;
