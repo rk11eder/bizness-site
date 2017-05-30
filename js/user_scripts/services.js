@@ -47,10 +47,14 @@ services.service('services',['$http','$q','$location','$window', function ($http
         return deferred.promise;
     }
 
-    this.getPortefolio = function () {
+    this.getPortefolio = function (lang) {
+
+
         var deferred = $q.defer();
-        $http.get('server/portfolio_get_data.php?data=' + (Math.random()), {cache: false}).success(function (data, status) {
+
+        $http.get('server/portfolio_get_data.php?lang='+lang+'&data=' + (Math.random()), {cache: false}).success(function (data, status) {
             deferred.resolve(data);
+
 
         }).error(function (data, status) {
             deferred.reject(data);
