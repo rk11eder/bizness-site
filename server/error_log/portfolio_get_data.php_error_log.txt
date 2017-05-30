@@ -1,0 +1,208 @@
+2017-05-26 15:47:09: Prepare failed: (1046) No database selected
+
+2017-05-29 10:02:47: Prepare failed: (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'projetos.id=projetos_fotos.id_projeto ORDER BY ?' at line 1
+
+2017-05-29 10:03:27: Prepare failed: (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'projetos.id=projetos_fotos.id_projeto ORDER BY ?' at line 1
+
+2017-05-29 10:03:29: Prepare failed: (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'projetos.id=projetos_fotos.id_projeto ORDER BY ?' at line 1
+
+2017-05-29 10:03:40: Prepare failed: (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'projetos.id=projetos_fotos.id_projeto ORDER BY ?' at line 1
+
+2017-05-29 14:15:19: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:19: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:19: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:38: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:38: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:38: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:42: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:42: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:42: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:17:27: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:17:27: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:17:27: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:19:07: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:19:07: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:19:07: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:19:18: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:19:18: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:19:18: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:20:07: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:20:07: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:20:07: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:21:03: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:21:03: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:21:04: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:21:07: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:21:07: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:21:07: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:22:43: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:22:43: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:22:43: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:28: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:28: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:28: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:52: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:52: Prepare failed: (1054) Unknown column 'projetos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:52: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:52: Prepare failed: (1054) Unknown column 'projetos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:52: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:52: Prepare failed: (1054) Unknown column 'projetos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:24:47: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:24:47: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:24:47: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:24:50: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:24:50: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:24:50: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:03: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:03: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:03: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:19: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:19: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:19: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:21: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:21: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:21: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:22: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:22: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:22: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-30 13:33:41: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-30 13:33:41: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-30 13:33:41: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-30 13:33:41: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-30 13:33:41: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-30 13:33:42: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-30 13:34:24: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:26: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:34:26: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:29: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:34:29: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:31: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:34:31: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:34: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:34:34: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:36: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:34:36: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:38: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:34:38: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:41: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:34:41: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:42: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:43: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:34:43: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:45: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:34:45: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:45: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:34:47: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:34:47: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:49: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:34:51: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:53: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:34:53: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:55: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:34:55: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:34:58: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:35:47: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:35:50: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:35:50: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:35:52: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+
+2017-05-30 13:35:52: Prepare failed: (1054) Unknown column 'user_db' in 'field list'
+
+2017-05-30 13:35:54: Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: Este anfitrião não é conhecido. 
+

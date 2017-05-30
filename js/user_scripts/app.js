@@ -47,7 +47,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
 
-                var promise = services.getPortefolio();
+                var promise = services.getPortefolio(lang);
 
                 return promise;
 
