@@ -1,0 +1,8 @@
+2017-05-29 17:05:34: Prepare failed: (1054) Unknown column 'projetos' in 'where clause'
+
+2017-05-29 17:05:58: Prepare failed: (1054) Unknown column 'projetos' in 'where clause'
+
+2017-05-29 17:06:55: Prepare failed: (1054) Unknown column 'projetos' in 'where clause'
+
+2017-05-29 17:23:58: Execute failed: (2031) No data supplied for parameters in prepared statement
+

@@ -8,7 +8,117 @@
 
 2017-05-29 10:03:40: Prepare failed: (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'projetos.id=projetos_fotos.id_projeto ORDER BY ?' at line 1
 
-2017-05-30 09:40:08: Failed to connect to MySQL: (2002) Nenhuma ligação pôde ser feita porque o computador de destino
-as recusou ativamente.
+2017-05-29 14:15:19: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
 
+2017-05-29 14:15:19: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:19: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:38: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:38: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:38: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:42: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:42: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:15:42: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:17:27: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:17:27: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:17:27: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:19:07: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:19:07: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:19:07: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:19:18: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:19:18: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:19:18: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:20:07: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:20:07: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:20:07: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:21:03: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:21:03: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:21:04: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:21:07: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:21:07: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:21:07: Execute failed: (2031) No data supplied for parameters in prepared statement
+
+2017-05-29 14:22:43: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:22:43: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:22:43: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:28: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:28: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:28: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:52: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:52: Prepare failed: (1054) Unknown column 'projetos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:52: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:52: Prepare failed: (1054) Unknown column 'projetos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:52: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:23:52: Prepare failed: (1054) Unknown column 'projetos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:24:47: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:24:47: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:24:47: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:24:50: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:24:50: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:24:50: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:03: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:03: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:03: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:19: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:19: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:19: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:21: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:21: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:21: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:22: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:22: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
+
+2017-05-29 14:25:22: Prepare failed: (1054) Unknown column 'projetos_fotos_idiomas.id_projeto' in 'where clause'
 
