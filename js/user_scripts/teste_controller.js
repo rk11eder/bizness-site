@@ -10,7 +10,7 @@ biznessApp.controller('testeCtrl', ['$scope', '$rootScope','$window','$timeout',
 
 		
 	/*SET TITLE PAGE SEO*/
-  	PageTitle.setTitle('PROJECTSTART');
+  	PageTitle.setTitle('Bizness');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
 
     // var promise_preco = services.get_preco();

@@ -10,7 +10,7 @@ biznessApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','
 
 		
 	/*SET TITLE PAGE SEO*/
-  	PageTitle.setTitle('PROJECTSTART');
+  	PageTitle.setTitle('Bizness');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
    
 $scope.ins = items.data;

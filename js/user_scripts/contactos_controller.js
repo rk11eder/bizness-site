@@ -13,7 +13,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
 
 
     /*SET TITLE PAGE SEO*/
-    PageTitle.setTitle('PROJECTSTART');
+    PageTitle.setTitle('Bizness');
     PageTitle.setDesc($rootScope.lang_array.descricao_page);
     $scope.form = {};
     $scope.send_form=function(formulario){
