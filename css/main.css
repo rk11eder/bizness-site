@@ -1294,4 +1294,18 @@ canvas{
     .folio2_header {
         height: calc(95vh - 55px);
     }
+    .texto_folio2{
+        height: 50px;
+        text-align: center;
+        padding: 0;
+        font-family: Roboto;
+        vertical-align: middle;
+        /* display: table-cell; */
+        line-height: 50px;
+    }
+    .imagem_folio2 {
+        height: calc(100% - 50px);
+        background-size: cover;
+        background-position: center;
+    }
 }
