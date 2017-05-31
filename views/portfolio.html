@@ -1,4 +1,4 @@
-<div class="col-xs-12 pd0">
+<div class="col-xs-12 pd0" style="background-color:#34394f ">
     <div class="portfolio_desktop">
     <div class="col-xs-6 pd0">
         <div  ng-repeat="user in users" ng-if="user.lado===0" class="col-xs-12 pd0 holder_linha">
@@ -54,7 +54,7 @@
                     </div>
                 </a>
 
-                <div  class="logo_altura">
+                <div  ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
                     <img src="img/projetos/{{user.id}}/{{user.logo}}">
                     <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}</div>
                 </div>
