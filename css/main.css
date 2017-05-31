@@ -478,7 +478,6 @@ font-family: 'Roboto';
    color: white;
     font-family: ROBOTO;
     font-size: 52px;
-    padding-right: 50%;
     font-weight: bold;
     padding-top: 18px;
     line-height: 45px;
@@ -873,7 +872,7 @@ overflow: hidden;
 
 
     animation-name: example;
-    animation-duration: 1.5s;
+    animation-duration: 0.8s;
 
     animation-fill-mode: forwards;
 
@@ -885,7 +884,7 @@ overflow: hidden;
 }
 .menu_mobile_cima {
     animation-name: exampleCima;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 
     animation-fill-mode: forwards;
 
