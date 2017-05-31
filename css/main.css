@@ -931,6 +931,12 @@ canvas{
     }
 
     .menu-list-holder {
+         display: none;
+     }
+    .menu-list-holder2 {
+        display: none;
+    }
+    .menu_holder_active{
         display: none;
     }
 
@@ -1208,7 +1214,8 @@ canvas{
 
     }
     .fotos_sobrenos {
-        width: calc(100vw / 3);
+
+        width: calc(100% / 3);
         height: calc(100vw / 3);
     }
 
@@ -1271,5 +1278,9 @@ canvas{
     }
     .linha_half{
         height: 50vw;
+    }
+    /*PORTFOLIO2*/
+    .folio2_header {
+        height: calc(95vh - 55px);
     }
 }
