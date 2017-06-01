@@ -676,6 +676,12 @@ overflow: hidden;
   font-family: 'Roboto';
 }
 
+.contactos_imagem_holder{
+    background-image: url('../img/contactos.jpg');
+    background-position: center center;
+    background-size:cover;
+}
+
 /*MENU*/
 
 /*.menu_holder{
@@ -982,6 +988,10 @@ canvas{
 }
 
 @media screen and (max-width:768px) {
+
+    .holde_sobre_baixo{
+        
+    }
 
     .container_website {
         margin-top: 55px;

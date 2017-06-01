@@ -60,6 +60,5 @@ $rootScope.hide_menu = 0;
     $rootScope.hide_botao_menu = 0;
 }]);
 
-/*$scope.$on('$destroy',function(){
-        angular.element('body').unbind( "scroll" );
-});*/
+	
+
