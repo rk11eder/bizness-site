@@ -335,7 +335,7 @@ font-family: 'Roboto';
 .enderesso_footer_texto{
   position: relative;
   float:left;
-  margin-left: 70px;
+  margin-left: 4%;
       top: 50%;
     margin-top: -30px;
 }
@@ -975,7 +975,7 @@ overflow: hidden;
 @keyframes example {
     0%   { top: -100vh;}
 
-    100% {top:8vh;}
+    100% {top:55px;}
 }
 .menu_mobile_cima {
     animation-name: exampleCima;
@@ -1028,7 +1028,10 @@ canvas{
     }
     .contactos_home_holder p{
     font-size: 26px;
-    }   
+    }
+    .footer_esquerda{
+        font-size: 13px;
+    }
 
 }
 
@@ -1291,6 +1294,7 @@ canvas{
         display: inline-block;
         margin-top: 0;
         margin-left: 0;
+        width: 100%;
     }
 
     .contactos_footer_texto {
@@ -1304,6 +1308,7 @@ canvas{
         padding-top: 20px;
         text-align: center;
         margin: 0;
+        width: 100%;
     }
 
     .footer_direita {
