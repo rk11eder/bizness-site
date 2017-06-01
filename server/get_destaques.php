@@ -34,7 +34,14 @@ $res = $database->query_simple_prepare("SELECT
 
 	",array(),"");
 
-  echo json_encode($res);
 
 
+foreach ( $res as $key => $value) {
+    $res[$key]['titulo'] = explode(' ',$res[$key]['titulo']);
+    if(count($res[$key]['titulo'])==1){
+//        echo count($res[$key]['titulo']);
+        $res[$key]['titulo'][1]="&nbsp;";
+    }
+}
+echo json_encode($res);
 ?>

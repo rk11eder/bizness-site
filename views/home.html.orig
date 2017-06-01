@@ -2,8 +2,13 @@
     <div class="col-xs-12 pd0 holder_destaques_home">
         <div class="col-xs-12 pd0 titulo_destaques">
             <div ng-repeat="slide in destaques"
+<<<<<<< HEAD
                  class="col-sm-6 col-sm-offset-6 col-xs-12 pd0 holder_titulo_home  slide slide-animation-titulo"
                  style="position: absolute" ng-hide="!isCurrentSlideIndex($index)" ng-class="{primeiro_destaque: $index == 0}">
+=======
+                 class="col-sm-6 col-sm-offset-6 col-xs-12 pd0 holder_titulo_home  slide slide-animation"
+         style="position: absolute" ng-hide="!isCurrentSlideIndex($index)">
+>>>>>>> beed9abfd80dd51bb8fd64ada6483498bc6856a4
                 <div class="home_tipo">
                     {{slide.tipo}}
                 </div>

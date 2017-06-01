@@ -12,6 +12,13 @@ biznessApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('Bizness');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
+
+      var promise = services.get_logos();
+              promise.then(
+                  function(response){
+                     $scope.logos = response;
+                      console.log($scope.logos);
+                  });
    
 $scope.ins = items.data;
 $scope.form = {};
@@ -107,6 +114,25 @@ $scope.form = {};
         }
 
     });
+    $scope.stopSlides= function () {
+        console.log("stop slides");
+        if(timer){
+            $interval.cancel(timer);
+            timer= null;
+        }else{
+            timer = $interval(function(){
+
+                var max_slides =$rootScope.destaques.length-1;
+                if($scope.currentIndex<max_slides){
+                    $scope.currentIndex++;
+                }else{
+                    $scope.currentIndex=0;
+                }
+
+                console.log($scope.currentIndex);
+            },8000);
+        }
+    }
 
 
     $scope.open_imagem_insta = function (index) {

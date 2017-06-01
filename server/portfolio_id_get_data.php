@@ -38,6 +38,18 @@ if ($res != $database->flag_error) {
 
         //  $return_array["projetos"][$key]["fotos_idiomas"]=$res_select_projectos_fotos_idiomas;
         $return_array["projetos"][$key]["projectos_idiomas"]=$res_select_projectos_idiomas;
+
+
+        $imgUrl=$res[$key]["logo"];
+        $imgid=$res[$key]["id"];
+        $xml = simplexml_load_file('../img/projetos/'.$imgid.'/'.$imgUrl);
+        $attr = $xml->attributes();
+        $width=$attr->width;
+        $height=$attr->height;
+        $width= substr($width, 0, -2);
+        $height= substr($height, 0, -2);
+        $return_array["projetos"][$key]["width"]=$width;
+        $return_array["projetos"][$key]["height"]=$height;
     }
 
 

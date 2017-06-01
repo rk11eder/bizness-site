@@ -72,6 +72,16 @@ services.service('services',['$http','$q','$location','$window', function ($http
         });
         return deferred.promise;
     }
+    this.get_logos = function () {
+        var deferred = $q.defer();
+        $http.get('server/get_logos.php?data=' + (Math.random()), {cache: false}).success(function (data, status) {
+            deferred.resolve(data);
+        }).error(function (data, status) {
+            deferred.reject(data);
+        });
+
+        return deferred.promise;
+    }
 
 
     this.getSize = function(dataPortfolio){
