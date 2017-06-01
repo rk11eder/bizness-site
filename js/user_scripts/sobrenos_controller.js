@@ -236,7 +236,6 @@ function Trirot(x,y,a,d,dx,dy){
 					quadArray[i].update();
 			}
 			
-			console.log(mouseY);
 
 			/*for (var i = 0; i < triArray.length; i++){
 					triArray[i].update();
