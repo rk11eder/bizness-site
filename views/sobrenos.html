@@ -9,9 +9,9 @@
             <div class="fotos_sobrenos" ng-repeat="i in ins|limitTo:20"
                  ng-if="$index>4" style="background-image: url({{i.images.standard_resolution.url}});background-size: cover;"></div>
         </div><div class="col-xs-12 pd0" style="height: 90vh">
-            <div class="fotos_sobrenos" ng-repeat="i in ins|limitTo:30"
-                 ng-if="$index>29" style="background-image: url({{i.images.standard_resolution.url}});background-size: cover;"></div>
-        </div>
+        <div class="fotos_sobrenos" ng-repeat="i in ins|limitTo:30"
+             ng-if="$index>29" style="background-image: url({{i.images.standard_resolution.url}});background-size: cover;"></div>
+    </div>
     </div>
 
     <div class="col-xs-12 pd0 holder_conteudo_sobrenos">
@@ -46,9 +46,6 @@
                 </div>
             </div>
         </div>
-
-    </div>
-</div>
 
         <div class="circle" style="top: 90vh;transform: translate(0%,-50%);" ng-click="gotoBottom()">
             <img  src="img/seta_baixo.svg" alt="" width="100%">
