@@ -111,9 +111,6 @@ p{
 .imagens_insta_responsive{
     display: none;
 }
-.imagens_insta_ultra{
-    display: none;
-}
 
 .holder_home_logos_holder{
   display: flex;
@@ -920,34 +917,22 @@ canvas{
 .mapa_home_goolge canvas{
   background: transparent !important;
 }
-@media screen and (min-width:1900px) {
-    /*HOME*/
-    .imagens_insta_responsive{
-        display: block;
-        height: calc(41vw / 3);
-    } .imagens_insta_ultra{
-        display: block;
-        height: calc(41vw / 3);
-    }
-    .imagens_insta_responsive img{
-        max-width: calc(41vw / 3);
-    }
 
-    .imagens_insta{
-        display: none;
-    }
-
-}
 @media screen and (max-width:1200px) {
-    .contactos_home_holder h1{
-        font-size:50px;
+    .pClassSobre p{
+
+        font-size: 55px;
+
     }
+<<<<<<< HEAD
     .contactos_home_holder p{
     font-size: 26px;
     }
     .footer_esquerda{
         font-size: 13px;
     }
+=======
+>>>>>>> 4708b1adfaf524d0be28f4424c95783c8228f8dc
 
 }
 
