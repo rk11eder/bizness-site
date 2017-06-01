@@ -51,7 +51,7 @@ $desc_page = "";
     <base href="<?php echo $url_base?>">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title ng-bind="titlePage">PROJECTSTART<?php echo $titulo_page?></title>
+    <title ng-bind="titlePage">Bizness<?php echo $titulo_page?></title>
 
     <!-- for Facebook -->
     <meta property="og:title" content="Bizness<?php echo $titulo_page?>" />

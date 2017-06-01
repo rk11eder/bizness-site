@@ -12,6 +12,13 @@ biznessApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('Bizness');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
+
+      var promise = services.get_logos();
+              promise.then(
+                  function(response){
+                     $scope.logos = response;
+                      console.log($scope.logos);
+                  });
    
 $scope.ins = items.data;
 $scope.form = {};
