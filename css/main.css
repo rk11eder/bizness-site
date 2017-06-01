@@ -1242,19 +1242,26 @@ canvas{
         margin-top: -56px;
     }
 
-    .texto_top_sobrenos p, .texto_top_sobrenos p:nth-child(2), .texto_top_sobrenos p:nth-child(3) {
-        font-size: 20px;
+    .pClassSobre {
+        width: 66vw;
+        margin-top: 31vh;
+    }
+    .texto_top_sobrenos p{
+        font-size: 30px;
         width: 100%;
-        margin: 0 auto;
+
         overflow: visible;
         animation: none;
-        padding-left: -10vw;
+
         text-align: center;
         opacity: 1;
+
     }
     .texto_top_sobrenos{
-        margin-top: 40vh;
+        width: 50vw;
+        animation: none !important;
     }
+
     .texto_botttom_left_sobrenos {
         top:0;
         padding-top: 36px;
@@ -1304,4 +1311,5 @@ canvas{
         background-size: cover;
         background-position: center;
     }
+
 }
