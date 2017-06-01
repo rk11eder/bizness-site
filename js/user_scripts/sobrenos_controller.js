@@ -28,8 +28,8 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 	$scope.resize_func = function(){
 		var canvas = document.querySelector('canvas');
         var parent = angular.element(document.querySelector('#parent_canvas'));
-        console.log(parent.height());
-        console.log("fez log");
+
+
 		canvas.width = document.body.clientWidth;
 		canvas.height = parent.height();
 		var c = canvas.getContext('2d');
@@ -216,7 +216,7 @@ function Trirot(x,y,a,d,dx,dy){
 			trirotArray.push(new Trirot(x,y,a,d,dx,dy));
 			
 	}
-	 /*console.log(trirotArray);*/
+
 
 		
 
@@ -248,7 +248,7 @@ function Trirot(x,y,a,d,dx,dy){
 	};
 
 	$scope.$watch($scope.getWindowDimensions, function (newValue, oldValue) {
-		console.log("resize");
+
 	   $scope.resize_func();
 	}, true);
 
@@ -273,6 +273,8 @@ function Trirot(x,y,a,d,dx,dy){
 
 
     };
+
+
 
 
 
