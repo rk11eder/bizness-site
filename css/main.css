@@ -86,6 +86,18 @@ p{
   align-items: center;
     overflow: hidden;
 }
+.first_titulo{
+    z-index: 2;
+}
+.scnd_titulo{
+    background-color: #33384e;
+    display: inline-block;
+  }
+.scndline{
+    width:100%;
+    position: relative;
+    background: url("../img/seta_destaques.svg") right center no-repeat;
+}
 
 .fotos_destaques{
   height: 70%;
@@ -99,6 +111,17 @@ p{
     min-height: 70vh;
     position: absolute;
 
+}
+.primeiro_destaque{
+    z-index: 1;
+}
+
+.seta_destaques{
+    position: absolute;
+    height: 30px;
+    right: 83px;
+    z-index: -1;
+    top: 16vh;
 }
 .imagens_insta img{
     max-width: 100%;
@@ -233,6 +256,8 @@ p{
 
 .holder_titulo_home{
   display:flex;
+    padding: 10px 83px 10px 0;
+    justify-content: flex-end;
 }
 
 .home_titulo{
@@ -240,7 +265,7 @@ p{
   font-size: 108px;
   font-family: 'Roboto';
   font-weight: 700;
-  line-height: 100px;
+    line-height: 100px;
 }
 
 .home_tipo{
@@ -249,6 +274,7 @@ p{
   font-weight: 400;
   color:#ffffff;
   padding-top: 6px;
+    background-color: #34394f;
 }
 
 
@@ -1002,12 +1028,14 @@ canvas{
     .home_titulo {
         font-size: 46px;
         padding-right: 10px;
+        line-height: normal;
     }
 
     .holder_titulo_home {
         padding-left: 10px;
         flex-direction: row;
         justify-content: flex-end;
+        padding-right: 20px;
     }
 
     .fotos_destaques {

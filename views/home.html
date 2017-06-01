@@ -2,20 +2,25 @@
     <div class="col-xs-12 pd0 holder_destaques_home">
         <div class="col-xs-12 pd0 titulo_destaques">
             <div ng-repeat="slide in destaques"
-                 class="col-sm-6 col-sm-offset-6 col-xs-12 pd0 holder_titulo_home  slide slide-animation"
-                 style="position: absolute" ng-hide="!isCurrentSlideIndex($index)">
+                 class="col-sm-6 col-sm-offset-6 col-xs-12 pd0 holder_titulo_home  slide slide-animation-titulo"
+                 style="position: absolute" ng-hide="!isCurrentSlideIndex($index)" ng-class="{primeiro_destaque: $index == 0}">
                 <div class="home_tipo">
                     {{slide.tipo}}
                 </div>
                 <div class="home_titulo">
-                    {{slide.titulo}}
+                    <span class="first_titulo">{{slide.titulo[0]}}</span><br>
+                    <div class="scndline">
+                        <span class="scnd_titulo" ng-bind-html="slide.titulo[1]"></span> <!--<img class="seta_destaques" src="img/seta_destaques.svg">-->
+                    </div>
+
+
                 </div>
             </div>
         </div>
         <div class="col-xs-12 pd0 fotos_destaques container slider">
 
                 <img ng-repeat="slide in destaques" class="slide slide-animation"
-                     ng-hide="!isCurrentSlideIndex($index)" ng-src="img/destaques/{{slide.id}}/{{slide.imagem}}">
+                     ng-hide="!isCurrentSlideIndex($index)" ng-click="stopSlides()" ng-src="img/destaques/{{slide.id}}/{{slide.imagem}}">
             <!-- CODE OMITTED -->
         </div>
     </div>
