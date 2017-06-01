@@ -86,6 +86,18 @@ p{
   align-items: center;
     overflow: hidden;
 }
+.first_titulo{
+    z-index: 2;
+}
+.scnd_titulo{
+    background-color: #33384e;
+    display: inline-block;
+}
+.scndline{
+    width:100%;
+    position: relative;
+    background: url("../img/seta_destaques.svg") right center no-repeat;
+}
 
 .fotos_destaques{
   height: 70%;
@@ -99,6 +111,17 @@ p{
     min-height: 70vh;
     position: absolute;
 
+}
+.primeiro_destaque{
+    z-index: 1;
+}
+
+.seta_destaques{
+    position: absolute;
+    height: 30px;
+    right: 83px;
+    z-index: -1;
+    top: 16vh;
 }
 .imagens_insta img{
     max-width: 100%;
@@ -236,6 +259,8 @@ p{
 
 .holder_titulo_home{
   display:flex;
+    padding: 10px 83px 10px 0;
+    justify-content: flex-end;
 }
 
 .home_titulo{
@@ -252,6 +277,7 @@ p{
   font-weight: 400;
   color:#ffffff;
   padding-top: 6px;
+    background-color: #34394f;
 }
 
 
@@ -654,6 +680,12 @@ overflow: hidden;
   font-family: 'Roboto';
 }
 
+.contactos_imagem_holder{
+    background-image: url('../img/contactos.jpg');
+    background-position: center center;
+    background-size:cover;
+}
+
 /*MENU*/
 
 /*.menu_holder{
@@ -974,6 +1006,10 @@ canvas{
 
 @media screen and (max-width:768px) {
 
+    .holde_sobre_baixo{
+        
+    }
+
     .container_website {
         margin-top: 55px;
     }
@@ -1039,12 +1075,14 @@ canvas{
     .home_titulo {
         font-size: 46px;
         padding-right: 10px;
+        line-height: normal;
     }
 
     .holder_titulo_home {
         padding-left: 10px;
         flex-direction: row;
         justify-content: flex-end;
+        padding-right: 20px;
     }
 
     .fotos_destaques {
@@ -1106,6 +1144,7 @@ canvas{
     .texto_home {
         margin-left: 14px;
         font-size: 15px;
+
     }
 
     .contactos_home_holder h1 {
@@ -1339,6 +1378,7 @@ canvas{
     /*PORTFOLIO2*/
     .folio2_header {
         height: calc(95vh - 55px);
+        text-align: center;
     }
     .texto_folio2{
         height: 50px;
@@ -1354,5 +1394,17 @@ canvas{
         background-size: cover;
         background-position: center;
     }
-
+    .holder_folio2_header{
+        /* top: 50%; */
+        position: absolute;
+        text-align: center;
+        /* transform: translate(0%, -50%); */
+        margin: auto;
+        /* height: 100%; */
+        width: 100%;
+        top: 50%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }
