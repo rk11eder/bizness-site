@@ -323,6 +323,10 @@ font-family: 'Roboto';
 .portfolio_responsive{
     display: none;
 }
+.portfolio_desktop_big{
+    display: none;
+
+}
 .linha_full{
   height:50vw;
     background-position: center;
@@ -936,6 +940,19 @@ canvas{
     .imagens_insta{
         display: none;
     }
+    /*Porfolio*/
+
+        .portfolio_desktop{
+            display: none;
+        }
+        .portfolio_responsive{
+            display: none;
+        }
+        .portfolio_desktop_big{
+            display: block;
+
+        }
+
 
 }
 @media screen and (max-width:1200px) {
