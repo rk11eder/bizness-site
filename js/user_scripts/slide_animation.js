@@ -7,7 +7,7 @@ biznessApp.animation('.slide-animation-titulo', ['$rootScope', function ($rootSc
         addClass: function (element, className, done) {
 
             var numeroRepeticoes = $rootScope.destaques.length;
-            if($rootScope.contador_animation>numeroRepeticoes){
+            if($rootScope.contador_animation>=numeroRepeticoes){
                 if (className == 'ng-hide' ) {
                     TweenMax.set(element,{css:{zIndex:0}});
                     TweenMax.to(element, 2, {right: element.parent().width(), onComplete: done });
@@ -50,7 +50,7 @@ biznessApp.animation('.slide-animation', ['$rootScope', function ($rootScope) {
         addClass: function (element, className, done) {
 
             var numeroRepeticoes = $rootScope.destaques.length;
-            if($rootScope.contador_animation>numeroRepeticoes){
+            if($rootScope.contador_animation>=numeroRepeticoes){
                 if (className == 'ng-hide' ) {
                     TweenMax.set(element,{css:{zIndex:0}});
                     TweenMax.to(element, 2, {left: -(element.parent().width()), onComplete: done });
