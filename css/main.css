@@ -309,9 +309,16 @@ font-family: 'Roboto';
 }
 
 /*Portfolio*/
+
 .holder_linha{
     /*height: 50vw;*/
     overflow:hidden;
+}
+.portfolio_desktop{
+    display: block;
+}
+.portfolio_responsive{
+    display: none;
 }
 .linha_full{
   height:50vw;
@@ -357,7 +364,7 @@ font-family: 'Roboto';
   height: 200px;
 }
 
-.logo_altura img{
+.logo_horizontal img{
     pointer-events: none;
   position: absolute;
   top: 50%;
@@ -366,7 +373,19 @@ font-family: 'Roboto';
   transform: translate(-50%, -50%);
   /*min-height: 14%;*/
   /*min-width: 9%;*/
-    width: 300px;
+    width: 25%;
+}
+
+.logo_vertical img{
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50% 0%);
+    transform: translate(-50%, -50%);
+    /*min-height: 14%;*/
+    /*min-width: 9%;*/
+    height: 25%;
 }
 .text_portfolio{
   position: absolute;
@@ -459,7 +478,6 @@ font-family: 'Roboto';
    color: white;
     font-family: ROBOTO;
     font-size: 52px;
-    padding-right: 50%;
     font-weight: bold;
     padding-top: 18px;
     line-height: 45px;
@@ -854,7 +872,7 @@ overflow: hidden;
 
 
     animation-name: example;
-    animation-duration: 1.5s;
+    animation-duration: 0.8s;
 
     animation-fill-mode: forwards;
 
@@ -866,7 +884,7 @@ overflow: hidden;
 }
 .menu_mobile_cima {
     animation-name: exampleCima;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 
     animation-fill-mode: forwards;
 
@@ -924,6 +942,12 @@ canvas{
     }
 
     .menu-list-holder {
+         display: none;
+     }
+    .menu-list-holder2 {
+        display: none;
+    }
+    .menu_holder_active{
         display: none;
     }
 
@@ -1201,7 +1225,8 @@ canvas{
 
     }
     .fotos_sobrenos {
-        width: calc(100vw / 3);
+
+        width: calc(100% / 3);
         height: calc(100vw / 3);
     }
 
@@ -1251,5 +1276,36 @@ canvas{
         padding: 10%;
         transform: none;
         text-align:center;
+    }
+    /*PORTFOLIO*/
+    .portfolio_desktop{
+        display: none;
+    }
+    .portfolio_responsive{
+        display: block;
+    }
+    .linha_full{
+        height: 100vw;
+    }
+    .linha_half{
+        height: 50vw;
+    }
+    /*PORTFOLIO2*/
+    .folio2_header {
+        height: calc(95vh - 55px);
+    }
+    .texto_folio2{
+        height: 50px;
+        text-align: center;
+        padding: 0;
+        font-family: Roboto;
+        vertical-align: middle;
+        /* display: table-cell; */
+        line-height: 50px;
+    }
+    .imagem_folio2 {
+        height: calc(100% - 50px);
+        background-size: cover;
+        background-position: center;
     }
 }
