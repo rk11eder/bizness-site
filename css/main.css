@@ -252,6 +252,12 @@ p{
 }
 
 
+.contactos_imagem_holder{
+    background-image: url('../img/contactos.jpg');
+    background-position: center center;
+    background-size:cover;
+}
+
 /*FOOTER*/
 .footer_holder_responsive{
     display: none;
@@ -968,11 +974,25 @@ canvas{
 }
 
 @media screen and (max-width:1200px) {
+    .contactos_home_holder h1{
+        font-size:50px;
+    }
+    .contactos_home_holder p{
+    font-size: 26px;
+    }   
 
 }
 
 @media screen and (max-width:992px) {
-
+    .contactos_home_holder h1 {
+        font-size: 38px;
+    }
+    .contactos_home_holder p {
+        font-size: 18px;
+    }
+    .texto_home {
+        font-size:15px;
+    }
 }
 
 @media screen and (max-width:768px) {
