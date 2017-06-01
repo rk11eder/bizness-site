@@ -1,4 +1,4 @@
-biznessApp.directive('menu', [ 'services','$rootScope', function (services,$rootScope) {
+biznessApp.directive('menu', [ 'services','$rootScope','$timeout', function (services,$rootScope,$timeout) {
   return {
     restrict: 'E',
     replace: true,
@@ -20,8 +20,15 @@ biznessApp.directive('menu', [ 'services','$rootScope', function (services,$root
             }else {
                 $rootScope.menuMobileControler = 2;
 
+                $timeout(function(){
+                    if($rootScope.menuMobileControler===2){
+                        $rootScope.menuMobileControler =0;
+                    }
+
+                    }, 1000);
                 // $rootScope.interface = '2';
             }
+            console.log($rootScope.menuMobileControler);
 
         };
 
