@@ -1046,6 +1046,10 @@ canvas{
 
 @media screen and (max-width:768px) {
 
+    .holde_sobre_baixo{
+        
+    }
+
     .container_website {
         margin-top: 55px;
     }
