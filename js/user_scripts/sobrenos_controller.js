@@ -28,8 +28,6 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 	$scope.resize_func = function(){
 		var canvas = document.querySelector('canvas');
         var parent = angular.element(document.querySelector('#parent_canvas'));
-
-
 		canvas.width = document.body.clientWidth;
 		canvas.height = parent.height();
 		var c = canvas.getContext('2d');
@@ -43,11 +41,14 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 		var dX = 0;
 		var dY = 0;
 
+
+
 		canvas.addEventListener("mousemove", setMousePosition, false);
  
 		function setMousePosition(e) {
 		mouseX = e.clientX - canvasPos.x;
 		mouseY = e.clientY - canvasPos.y;
+		
 	}
 	
 	window.addEventListener("scroll", updatePosition, false);
@@ -105,7 +106,7 @@ function getPosition(el) {
 			this.update = function(){
 
 					
-				
+				/*
 					if(this.x + 10 > canvas.width || this.x <0){
 						this.dx = -this.dx;
 					}
@@ -116,11 +117,13 @@ function getPosition(el) {
 					}
 
 					this.dx = mouseX - this.x;
-					this.dy = mouseY - this.y;
+					this.dy = (mouseY-300) - this.y;*/
+					
+			/*		this.x += (this.dx / 1000);
+					this.y += (this.dy / 1000);*/
 
-					this.x += (this.dx / 1000);
-					this.y += (this.dy / 1000);
-
+					this.x = mouseX;
+					this.y = mouseY + 300;
 					/*this.x += this.dx;
 					this.y += this.dy;*/
 
@@ -216,7 +219,7 @@ function Trirot(x,y,a,d,dx,dy){
 			trirotArray.push(new Trirot(x,y,a,d,dx,dy));
 			
 	}
-
+	 /*console.log(trirotArray);*/
 
 		
 
@@ -232,6 +235,8 @@ function Trirot(x,y,a,d,dx,dy){
 			for (var i = 0; i < quadArray.length; i++){
 					quadArray[i].update();
 			}
+			
+			console.log(mouseY);
 
 			/*for (var i = 0; i < triArray.length; i++){
 					triArray[i].update();
@@ -248,7 +253,6 @@ function Trirot(x,y,a,d,dx,dy){
 	};
 
 	$scope.$watch($scope.getWindowDimensions, function (newValue, oldValue) {
-
 	   $scope.resize_func();
 	}, true);
 
@@ -273,8 +277,6 @@ function Trirot(x,y,a,d,dx,dy){
 
 
     };
-
-
 
 
 
