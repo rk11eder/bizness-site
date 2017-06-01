@@ -1646,3 +1646,16 @@ Stack trace:
 [26-May-2017 14:28:26 GMT] PHP Notice:  Undefined variable: database_user in C:\xampp\htdocs\bizness\classes\database.class.php on line 29
 [26-May-2017 14:28:26 GMT] PHP Notice:  Undefined variable: database_pass in C:\xampp\htdocs\bizness\classes\database.class.php on line 30
 [26-May-2017 14:28:26 GMT] PHP Notice:  Undefined variable: database_host in C:\xampp\htdocs\bizness\classes\database.class.php on line 31
+[01-Jun-2017 14:46:48 GMT] PHP Warning:  Division by zero in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 309
+[01-Jun-2017 14:46:48 GMT] PHP Warning:  Division by zero in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 310
+[01-Jun-2017 14:48:19 GMT] PHP Warning:  Division by zero in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 309
+[01-Jun-2017 14:48:19 GMT] PHP Warning:  Division by zero in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 310
+[01-Jun-2017 14:48:52 GMT] PHP Warning:  Division by zero in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 309
+[01-Jun-2017 14:48:52 GMT] PHP Warning:  Division by zero in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 310
+[01-Jun-2017 14:49:00 GMT] PHP Warning:  Division by zero in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 310
+[01-Jun-2017 14:49:00 GMT] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 346
+[01-Jun-2017 14:49:00 GMT] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 347
+[01-Jun-2017 14:49:00 GMT] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 348
+[01-Jun-2017 14:49:00 GMT] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 349
+[01-Jun-2017 14:49:00 GMT] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 350
+[01-Jun-2017 14:49:00 GMT] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /Applications/MAMP/htdocs/bizness/classes/globalstuff.class.php on line 352
