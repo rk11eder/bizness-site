@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(E_ALL|E_STRICT);
-ini_set("display_errors","on");
+ini_set("display_errors","off");
 
 header('Content-Type: application/json');
 
@@ -19,7 +19,7 @@ $lang = $_GET['lang'];
 
 
 
-$res = $database->query_simple_prepare("SELECT projetos.id, projetos.ativo, projetos.url, projetos.logo, projetos.cor, projetos.destaque FROM ".$database->array_tables[1]. " WHERE projetos.ativo=1   ORDER BY ? ASC " ,array("ordem"),"s");
+$res = $database->query_simple_prepare("SELECT projetos.id, projetos.ativo, projetos.url, projetos.logo, projetos.cor, projetos.destaque, projetos.ordem  FROM ".$database->array_tables[1]. " WHERE projetos.ativo=1 ORDER BY projetos.ordem ASC " ,array(),"");
 
 
 //$res_select_projectos_fotos = $database->query_simple_prepare("SELECT * FROM projetos_fotos  ORDER BY ?" ,array("id"),"s");
