@@ -126,6 +126,36 @@ p{
     z-index: -1;
     top: 16vh;
 }
+.holder_barras{
+    display: inline-block;
+    position: absolute;
+    right: 83px;
+    top: 25px;
+}
+.barra_destaque{
+    height: 2px;
+    width: 88px;
+    background-color: white;
+    float: left;
+    margin-left: 10px;
+}
+.slide_activo{
+    background-color: #eb504c;
+    animation: barra_destaque_animation 8s forwards;
+    visibility: visible!important;
+}
+@keyframes barra_destaque_animation {
+    0% {width: 0}
+    100%{width: 88px}
+}
+.barra_destaque_red{
+    height: 2px;
+    width: 88px;
+    background-color: #eb504c;
+    float: left;
+    margin-left: 10px;
+    visibility: hidden;
+}
 .imagens_insta img{
     max-width: 100%;
     min-height: 100%;
