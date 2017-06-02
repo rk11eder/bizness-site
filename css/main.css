@@ -584,6 +584,15 @@ overflow: hidden;
     position: relative;
     width: 100%;
 }
+.holder_backgrounds_sobrenos_canvas{
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .holder_conteudo_sobrenos{
   position: absolute;
   z-index: 2;
@@ -662,13 +671,11 @@ overflow: hidden;
 
 
 .texto_middle_sobrenos {
-    position: absolute;
-    bottom: 132%;
-    transform: translate(20%, -50%);
+    position: relative;
     color: rgba(52, 57, 79, 0.9);
     font-family: 'Roboto';
     font-size: 31px;
-    font-weight:bold;
+    font-weight: bold;
 }
 .texto_botttom_left_sobrenos{
   top: 50%;
@@ -1343,11 +1350,8 @@ canvas{
     }
 
     .texto_middle_sobrenos {
-        top: 50%;
-        transform: translate(0, 0);
         font-size: 20px;
         text-align: center;
-        margin-top: -56px;
     }
 
     .pClassSobre {
