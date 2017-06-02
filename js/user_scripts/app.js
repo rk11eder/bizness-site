@@ -20,6 +20,8 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
         controller: 'homeCtrl',
         resolve:{
           items: ['$rootScope','services', function($rootScope,services){
+          
+            $rootScope.flag_loading = 1;
             $rootScope.area_sel = 'home';
               $rootScope.sub_area_sel = '';
             $rootScope.menu_mobile_open = false;
@@ -42,6 +44,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
         controller: 'portfolioCtrl',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
+                $rootScope.flag_loading = 1;
                 $rootScope.area_sel = 'portfolio';
                 $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
@@ -60,6 +63,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
         controller: 'portfolio2Ctrl',
         resolve:{
             items: ['$rootScope','services','$route', function($rootScope,services,$route){
+                 $rootScope.flag_loading = 1;
                 $rootScope.area_sel = 'portfolio';
                 $rootScope.sub_area_sel = 'portfolio2';
                 $rootScope.menu_mobile_open = false;
@@ -77,6 +81,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
         controller: 'contactosCtrl',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
+                $rootScope.flag_loading = 1;
                 $rootScope.area_sel = 'contactos';
                 $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
@@ -91,6 +96,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
         controller: 'sobrenosCtrl',
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
+                $rootScope.flag_loading = 1;
                 $rootScope.area_sel = 'sobrenos';
                 $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
@@ -139,5 +145,7 @@ biznessApp.run(['$rootScope','services',function($rootScope, services){
   $rootScope.interface = '0';
 
   $rootScope.pathgeral = pathgeral;
+  $rootScope.flag_loading = 0;
+  
   
 }]);

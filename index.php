@@ -90,7 +90,12 @@ $desc_page = "";
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   </head>
   <body >
-
+      <div class="loading" ng-class="{loading_display: flag_loading == 1 || flag_loading == 2}">
+          <div class="linha_loading_holder">
+            <div class="linha_loading" ng-class="{linha_loading1: flag_loading == 1,linha_loading2: flag_loading == 2 }">
+            </div>
+        </div>
+      </div>
     <!-- MENU -->
     <menu></menu>
 
@@ -99,6 +104,8 @@ $desc_page = "";
 
     <!-- FOOTER -->
     <footer></footer>
+  
+    
 
    <script src='//maps.googleapis.com/maps/api/js?&key=AIzaSyBEsDaD7pRIfOpsO2w2V9UMQSucIl6Z6DU'></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
