@@ -1,6 +1,6 @@
 <div class="col-xs-12 pd0">
 
-    <div class="col-xs-12 pd0">
+    <div class="col-xs-12 pd0 bd_sobrenos">
         <div class="col-xs-12 pd0" style="height: 90vh">
             <div class="fotos_sobrenos" ng-repeat="i in ins| limitTo:15"
                  style="background-image: url({{i.images.standard_resolution.url}});background-size: cover;"></div>
@@ -8,6 +8,24 @@
         <div class="col-xs-12 pd0" style="height: 90vh">
             <div class="fotos_sobrenos" ng-repeat="i in ins|limitTo:20"
                  ng-if="$index>4" style="background-image: url({{i.images.standard_resolution.url}});background-size: cover;"></div>
+        </div><div class="col-xs-12 pd0" style="height: 90vh">
+        <div class="fotos_sobrenos" ng-repeat="i in ins|limitTo:30"
+             ng-if="$index>29" style="background-image: url({{i.images.standard_resolution.url}});background-size: cover;"></div>
+    </div>
+    </div>
+
+    <div class="col-xs-12 pd0 bd_sobrenos_ultra">
+        <div class="col-xs-12 pd0" style="height: 90vh">
+            <div class="fotos_sobrenos" ng-repeat="i in ins| limitTo:12"
+                 style="background-image: url({{i.images.standard_resolution.url}});background-size: cover;"></div>
+            <div class="fotos_sobrenos" ng-repeat="i in ins| limitTo:20" ng-if="$index>7"
+                 style="background-image: url({{i.images.standard_resolution.url}});background-size: cover;"></div>
+        </div>
+        <div class="col-xs-12 pd0" style="height: 90vh">
+            <div class="fotos_sobrenos" ng-repeat="i in ins| limitTo:12"
+                 style="background-image: url({{i.images.standard_resolution.url}});background-size: cover;"></div>
+            <div class="fotos_sobrenos" ng-repeat="i in ins| limitTo:20" ng-if="$index>7"
+                 style="background-image: url({{i.images.standard_resolution.url}});background-size: cover;"></div>
         </div><div class="col-xs-12 pd0" style="height: 90vh">
         <div class="fotos_sobrenos" ng-repeat="i in ins|limitTo:30"
              ng-if="$index>29" style="background-image: url({{i.images.standard_resolution.url}});background-size: cover;"></div>
