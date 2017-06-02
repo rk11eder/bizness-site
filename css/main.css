@@ -562,7 +562,9 @@ overflow: hidden;
 
 
 /*SOBRE NOS*/
-
+.bd_sobrenos_ultra{
+    display: none;
+}
 .fotos_sobrenos{
   width: 20%;
   height: 33.33333%;
@@ -968,7 +970,12 @@ canvas{
     .imagens_insta_responsive img{
         max-width: calc(41vw / 3);
     }
-
+    .bd_sobrenos_ultra{
+        display: block;
+    }
+    .bd_sobrenos{
+        display: none;
+    }
     .imagens_insta{
         display: none;
     }
@@ -984,6 +991,12 @@ canvas{
             display: block;
 
         }
+
+        /*SOBRE NOS*/
+    .fotos_sobrenos{
+        width: calc(100% / 6);
+        height: 25%;
+    }
 
 
 }
