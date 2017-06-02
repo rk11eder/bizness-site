@@ -47,7 +47,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "labels.text.fill",
             "stylers": [
                 {
-                    "color": "#757575"
+                    "color": "#ffffff"
                 }
             ]
         },
@@ -73,7 +73,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "labels.text.fill",
             "stylers": [
                 {
-                    "color": "#9e9e9e"
+                    "color": "#ffffff"
                 }
             ]
         },
@@ -99,7 +99,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "labels.text.fill",
             "stylers": [
                 {
-                    "color": "#757575"
+                    "color": "#ffffff"
                 }
             ]
         },
@@ -153,7 +153,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "geometry",
             "stylers": [
                 {
-                    "color": "#373737"
+                    "color": "#34394f"
                 }
             ]
         },
@@ -162,7 +162,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "geometry",
             "stylers": [
                 {
-                    "color": "#3c3c3c"
+                    "color": "#464b5f"
                 }
             ]
         },
@@ -171,7 +171,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "geometry",
             "stylers": [
                 {
-                    "color": "#4e4e4e"
+                    "color": "#464b5f"
                 }
             ]
         },
@@ -180,7 +180,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "labels.text.fill",
             "stylers": [
                 {
-                    "color": "#616161"
+                    "color": "#34394f"
                 }
             ]
         },
