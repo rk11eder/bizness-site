@@ -581,6 +581,7 @@ overflow: hidden;
     height: 100%;
     position: relative;
     width: 100%;
+
 }
 .holder_conteudo_sobrenos{
   position: absolute;
@@ -590,15 +591,17 @@ overflow: hidden;
 
 .pClassSobre p{
     text-align: right;
-    font-size: 75px;
+    font-size: 130px;
 
     font-family: 'Roboto';
     color: #eb504c;
     font-weight: bold;
     /*white-space: nowrap;*/
     /*overflow: hidden;*/
-    width: 800px;
+    width: 1300px;
     float: left;
+    margin-bottom: -19px;
+    margin-top: -41px;
 }
 
 
@@ -606,7 +609,7 @@ overflow: hidden;
 
 .pClassSobre{
 
-    width: 800px;
+    width: 1400px;
     float: right;
     position: relative;
 
@@ -615,19 +618,19 @@ overflow: hidden;
 @keyframes sobrenos {
     0%   { width: 0px;}
 
-    100% { width: 800px;}
+    100% { width: 1400px;}
 }
 .texto_top_sobrenos{
     width: 0px;
     overflow: hidden;
     float: left;
-    margin-right: 3%;
+
     position: relative;
     animation-name: sobrenos;
-    animation-duration: 10s;
-
+    animation-duration: 1s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
-    right: 10%;
+    right: 1%;
 
 }
 
@@ -638,22 +641,22 @@ overflow: hidden;
 .texto_top_sobrenos2 {
 
 
-    animation-delay: 4s;
+    animation-delay: 2.5s;
 
 }
 .texto_top_sobrenos3 {
-    animation-delay: 8s;
+    animation-delay: 2.8s;
 
 
 }
 .texto_top_sobrenos4 {
 
-    animation-delay: 12s;
+    animation-delay: 3.1s;
 
 }
 
 .texto_top_sobrenos5 {
-    animation-delay: 16s;
+    animation-delay: 3.4s;
 
 }
 
@@ -999,6 +1002,13 @@ canvas{
             display: block;
 
         }
+        .linha_half {
+            height: calc(100vw / 6);
+        }
+        .linha_full{
+            height: calc(100vw / 3);
+
+        }
 
         /*SOBRE NOS*/
     .fotos_sobrenos{
@@ -1008,15 +1018,44 @@ canvas{
 
 
 }
+@media screen and (max-width:1400px) {
+    .pClassSobre p {
+        text-align: right;
+        font-size: 80px;
+
+        font-family: 'Roboto';
+        color: #eb504c;
+        font-weight: bold;
+        /* white-space: nowrap; */
+        /* overflow: hidden; */
+        width: 1300px;
+        float: left;
+        margin-bottom: 1px;
+        margin-top: -26px;
+    }
+}
 @media screen and (max-width:1200px) {
-    .contactos_home_holder h1{
-        font-size:50px;
-    }
-    .contactos_home_holder p{
-    font-size: 26px;
-    }
+
+
     .footer_esquerda{
         font-size: 13px;
+    }
+    .pClassSobre p {
+        text-align: right;
+        font-size: 70px;
+
+        font-family: 'Roboto';
+        color: #eb504c;
+        font-weight: bold;
+        /* white-space: nowrap; */
+        /* overflow: hidden; */
+        width: 1300px;
+        float: left;
+        margin-bottom: 1px;
+        margin-top: -26px;
+    }
+    .texto_top_sobrenos{
+        right: 4%;
     }
 
 }
@@ -1024,6 +1063,14 @@ canvas{
 @media screen and (max-width:992px) {
 
 }
+@media screen and (max-height:650px) {
+    .nav li {
+        margin-right: 5vh;
+
+    }
+
+}
+
 
 @media screen and (max-width:768px) {
 
