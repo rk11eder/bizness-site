@@ -68,6 +68,16 @@ $rootScope.hide_menu = 0;
         $rootScope.$apply();
           clearTimeout(tempo);
      }, 1000);
+
+    $scope.goDown = function() {
+
+        $location.hash('bottom');
+
+      
+        $anchorScroll();
+    };
+
+
 }]);
 
 	
