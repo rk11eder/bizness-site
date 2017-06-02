@@ -1076,6 +1076,7 @@ canvas{
 }
 
 @media screen and (max-width:992px) {
+<<<<<<< HEAD
 
 }
 @media screen and (max-height:650px) {
@@ -1138,6 +1139,8 @@ canvas{
         display: block;
     }
 
+=======
+>>>>>>> da24d92ab9829d3cc33756bb6db9ce08be5bef47
     /*HOME*/
     .holder_destaques_home {
         height: 70vh;

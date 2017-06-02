@@ -122,10 +122,22 @@ function getPosition(el) {
 			/*		this.x += (this.dx / 1000);
 					this.y += (this.dy / 1000);*/
 
-					this.x = mouseX;
-					this.y = mouseY + 300;
+					/*this.x = mouseX;
+					this.y = mouseY + 300;*/
 					/*this.x += this.dx;
 					this.y += this.dy;*/
+
+
+					if(this.x > canvas.width - this.d || this.x < this.d){
+						this.dx = -this.dx 
+					}
+
+					if( this.y > canvas.height -this.d  || this.y < this.d){
+						this.dy = -this.dy;
+					}
+
+					this.x += this.dx;
+					this.y += this.dy;
 
 					this.draw();
 			}		
