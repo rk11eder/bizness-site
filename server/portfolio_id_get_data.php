@@ -42,12 +42,23 @@ if ($res != $database->flag_error) {
 
         $imgUrl=$res[$key]["logo"];
         $imgid=$res[$key]["id"];
-        $xml = simplexml_load_file('../img/projetos/'.$imgid.'/'.$imgUrl);
-        $attr = $xml->attributes();
-        $width=$attr->width;
-        $height=$attr->height;
-        $width= substr($width, 0, -2);
-        $height= substr($height, 0, -2);
+
+        $ext = pathinfo($imgUrl, PATHINFO_EXTENSION);
+
+        if($ext=="svg"){
+            $xml = simplexml_load_file('../img/projetos/'.$imgid.'/'.$imgUrl);
+            $attr = $xml->attributes();
+            $width=$attr->width;
+            $height=$attr->height;
+            $width= substr($width, 0, -2);
+            $height= substr($height, 0, -2);
+
+        }else{
+            $data = getimagesize('../img/projetos/'.$imgid.'/'.$imgUrl);
+            $width = $data[0];
+            $height = $data[1];
+        }
+
         $return_array["projetos"][$key]["width"]=$width;
         $return_array["projetos"][$key]["height"]=$height;
     }
