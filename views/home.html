@@ -1,6 +1,9 @@
 <div class="col-sm-12 pd0">
     <div class="col-sm-12 pd0 holder_destaques_home">
         <div class="col-sm-12 pd0 titulo_destaques">
+            <div class="holder_barras"><div class="barra_destaque" ng-repeat="slide in destaques" ng-click="setCurrentSlideIndex($index)"> </div></div>
+            <div class="holder_barras"><div class="barra_destaque_red"  ng-class="{slide_activo:isCurrentSlideIndex($index)}"  ng-repeat="slide in destaques"> </div></div>
+
             <div ng-repeat="slide in destaques"
                  class="col-md-6 col-md-offset-6 col-sm-12 pd0 holder_titulo_home  slide slide-animation-titulo"
                  style="position: absolute" ng-hide="!isCurrentSlideIndex($index)" ng-class="{primeiro_destaque: $index == 0}">
