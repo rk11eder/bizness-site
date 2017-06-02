@@ -33,7 +33,6 @@ $rootScope.contador_animation = 0;
 			    	var currentScroll2 = $('.fotos_destaques').offset().top; 
                 
                /* console.log(currentScroll);*/
-                console.log(currentScroll2);
 
                 
 				
@@ -80,7 +79,24 @@ $rootScope.contador_animation = 0;
     // console.log($scope.slides);
     $scope.currentIndex = 0;
     $scope.setCurrentSlideIndex = function (index) {
+        console.log(timer);
+
+        if(index!==$scope.currentIndex){
+            $interval.cancel(timer);
+            timer= null;
+            timer = $interval(function(){
+                var max_slides =$rootScope.destaques.length-1;
+                if($scope.currentIndex<max_slides){
+                    $scope.currentIndex++;
+                }else{
+                    $scope.currentIndex=0;
+                }
+
+                console.log($scope.currentIndex);
+            },8000);
+        }
         $scope.currentIndex = index;
+
     };
     $scope.isCurrentSlideIndex = function (index) {
         return $scope.currentIndex === index;

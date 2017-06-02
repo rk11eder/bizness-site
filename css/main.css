@@ -132,29 +132,36 @@ p{
     right: 83px;
     top: 25px;
 }
+.holder_barra{
+    padding-top: 25px;
+    float: left;
+    cursor: pointer;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
 .barra_destaque{
     height: 2px;
     width: 88px;
     background-color: white;
     float: left;
     margin-left: 10px;
+    overflow: hidden;
+}
+
+
+.barra_destaque_red{
+    height: 100%;
+    width: 100%;
+    background-color: #eb504c;
+    transform: translateX(-100%);
 }
 .slide_activo{
     background-color: #eb504c;
-    animation: barra_destaque_animation 8s forwards;
-    visibility: visible!important;
+    animation: barra_destaque_animation 8s;
 }
 @keyframes barra_destaque_animation {
-    0% {width: 0}
-    100%{width: 88px}
-}
-.barra_destaque_red{
-    height: 2px;
-    width: 88px;
-    background-color: #eb504c;
-    float: left;
-    margin-left: 10px;
-    visibility: hidden;
+    0% {transform: translateX(-100%)}
+    100%{transform: translateX(0%)}
 }
 .imagens_insta img{
     max-width: 100%;
@@ -295,6 +302,7 @@ p{
   display:flex;
     padding: 10px 83px 10px 0;
     justify-content: flex-end;
+    pointer-events: none;
 }
 
 .home_titulo{
@@ -428,7 +436,7 @@ font-family: 'Roboto';
     transition:  5s;
     opacity:0.9;
     filter: contrast(100%) brightness(100%);
-    pointer-events: none;
+    pointer-events: visible;
 
 }
 
