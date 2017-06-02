@@ -140,6 +140,7 @@ p{
 
 .holder_home_logos_holder{
   display: flex;
+  background-color: white;
 }
 .holder_home_logos_holder_esquerda{
   display: flex;

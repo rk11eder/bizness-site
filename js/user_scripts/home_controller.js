@@ -22,7 +22,44 @@ biznessApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','
    
 $scope.ins = items.data;
 $scope.form = {};
-    $rootScope.contador_animation = 0;
+$rootScope.contador_animation = 0;
+
+    angular.element('body').bind("scroll", function(){
+
+				
+				var currentScroll = $('.holder_destaques_home').offset().top; 
+               
+
+			    	var currentScroll2 = $('.fotos_destaques').offset().top; 
+                
+               /* console.log(currentScroll);*/
+                console.log(currentScroll2);
+
+                
+				
+						
+						
+						var parallaximage = $('.holder_destaques_home');
+						/*var parallaxtexto = $('.contactos_home_holder');*/
+
+				parallaximage.css('transform','translateY('+ -(currentScroll * .4) + 'px)' );
+
+				/*parallaxtexto.css('transform','translateY('+ -(currentScroll2 * .4) + 'px)' );*/
+					
+
+
+
+
+            $scope.$apply();
+        });
+
+
+
+
+
+
+
+
 
   console.log($scope.ins);
   /*RESIZE WINDOW*/
