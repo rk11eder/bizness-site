@@ -454,9 +454,9 @@ a:hover .la{
   left: 50%;
   transform: translate(50% 0%);
   transform: translate(-50%, -50%);
-  /*min-height: 14%;*/
-  /*min-width: 9%;*/
-    width: 25%;
+
+    max-width: 24%;
+    min-width: 18%;
 }
 
 .logo_vertical img{
@@ -468,7 +468,24 @@ a:hover .la{
     transform: translate(-50%, -50%);
     /*min-height: 14%;*/
     /*min-width: 9%;*/
-  height: 25%;
+    max-height: 25%;
+    min-height: 10%;
+}
+.logo_vertical_portfolio2 img{
+    position: absolute;
+    max-height: 36%;
+    min-height: 35%;
+    bottom: 120%;
+
+    bottom: 120%;
+
+}
+.logo_horizontal_portfolio2 img{
+    position: absolute;
+    max-width: 25%;
+    min-width: 10%;
+    bottom: 120%;
+
 }
 .text_portfolio{
   position: absolute;

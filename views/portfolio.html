@@ -32,7 +32,7 @@
                
                     <div class="holder_backgrounds"
                         style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute"></div>
-                    <div  ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
+                    <div  ng-class="{logo_horizontal: user.width / user.height <2,logo_vertical:user.width / user.height >2}">
                         <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
                         <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}{{user.titulo}}</div>
                     </div>
@@ -55,7 +55,7 @@
 
                     </div>
 
-                    <div  ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
+                    <div  ng-class="{logo_horizontal: user.width / user.height <2,logo_vertical:user.width / user.height >2}">
                         <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
                         <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}</div>
                     </div>
@@ -80,7 +80,7 @@
 
                     </div>
 
-                    <div ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
+                    <div ng-class="{logo_horizontal: user.width / user.height <2,logo_vertical:user.width / user.height >2}">
                         <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
                         <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}</div>
                     </div>
@@ -99,7 +99,7 @@
                 
                     <div class="holder_backgrounds"
                         style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute"></div>
-                    <div  ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
+                    <div  ng-class="{logo_horizontal: user.width / user.height <2,logo_vertical:user.width / user.height >2}">
                         <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
                         <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}{{user.titulo}}</div>
                     </div>
@@ -120,7 +120,7 @@
                 
                     <div class="holder_backgrounds"
                         style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute"></div>
-                    <div  ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
+                    <div  ng-class="{logo_horizontal: user.width / user.height <2,logo_vertical:user.width / user.height >2}">
                         <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
                         <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}{{user.titulo}}</div>
                     </div>
