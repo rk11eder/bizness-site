@@ -126,36 +126,6 @@ p{
     z-index: -1;
     top: 16vh;
 }
-.holder_barras{
-    display: inline-block;
-    position: absolute;
-    right: 83px;
-    top: 25px;
-}
-.barra_destaque{
-    height: 2px;
-    width: 88px;
-    background-color: white;
-    float: left;
-    margin-left: 10px;
-}
-.slide_activo{
-    background-color: #eb504c;
-    animation: barra_destaque_animation 8s forwards;
-    visibility: visible!important;
-}
-@keyframes barra_destaque_animation {
-    0% {width: 0}
-    100%{width: 88px}
-}
-.barra_destaque_red{
-    height: 2px;
-    width: 88px;
-    background-color: #eb504c;
-    float: left;
-    margin-left: 10px;
-    visibility: hidden;
-}
 .imagens_insta img{
     max-width: 100%;
     min-height: 100%;
@@ -428,7 +398,6 @@ font-family: 'Roboto';
     transition:  5s;
     opacity:0.9;
     filter: contrast(100%) brightness(100%);
-    pointer-events: none;
 
 }
 
@@ -1098,7 +1067,7 @@ canvas{
         width: 1300px;
         float: left;
         margin-bottom: 1px;
-        margin-top: -23px;
+        margin-top: -26px;
     }
     .texto_top_sobrenos{
         right: 4%;
@@ -1107,9 +1076,8 @@ canvas{
 }
 
 @media screen and (max-width:992px) {
-    .texto_top_sobrenos{
-        right: 1%;
-    }
+<<<<<<< HEAD
+
 }
 @media screen and (max-height:650px) {
     .nav li {
@@ -1171,6 +1139,8 @@ canvas{
         display: block;
     }
 
+=======
+>>>>>>> da24d92ab9829d3cc33756bb6db9ce08be5bef47
     /*HOME*/
     .holder_destaques_home {
         height: 70vh;
@@ -1501,17 +1471,18 @@ canvas{
     }
 
     .pClassSobre {
-        width: 74vw;
-        margin-top: 50vh;
-        transform: translate(0%, -50%);
+        width: 66vw;
+        margin-top: 31vh;
     }
     .texto_top_sobrenos p{
-        font-size: 20px;
+        font-size: 17px;
         width: 100%;
+
+        overflow: visible;
         animation: none;
+
         text-align: center;
         opacity: 1;
-        margin-top: 0;
 
     }
     .texto_top_sobrenos{

@@ -55,7 +55,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
             }]
         }
     }).
-    when('/'+lang+'/portfolio2/:id', {
+    when('/'+lang+'/portfolio/:url', {
         templateUrl: 'views/portfolio2.html',
         controller: 'portfolio2Ctrl',
         resolve:{
@@ -65,7 +65,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
 
-                return services.getPortefolio2($route.current.params.id,lang);
+                return services.getPortefolio2($route.current.params.url,lang);
 
 
 

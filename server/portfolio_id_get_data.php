@@ -16,7 +16,7 @@ $dados = json_decode(file_get_contents("php://input"));
 $lang = $_GET['lang'];
 
 $url = $dados->url;
-$res = $database->query_simple_prepare("SELECT projetos.id, projetos.ativo, projetos.logo, projetos.cor, projetos.destaque FROM ".$database->array_tables[1]. " WHERE projetos.ativo=1 AND projetos.id=?  ORDER BY ?" ,array($url,"id"),"is");
+$res = $database->query_simple_prepare("SELECT projetos.id, projetos.ativo, projetos.logo, projetos.cor, projetos.destaque FROM ".$database->array_tables[1]. " WHERE projetos.ativo=1 AND projetos.url=?  ORDER BY ?" ,array($url,"id"),"is");
 
 
 
