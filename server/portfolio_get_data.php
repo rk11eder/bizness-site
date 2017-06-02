@@ -19,7 +19,7 @@ $lang = $_GET['lang'];
 
 
 
-$res = $database->query_simple_prepare("SELECT projetos.id, projetos.ativo, projetos.url, projetos.logo, projetos.cor, projetos.destaque, projetos.ordem  FROM ".$database->array_tables[1]. " WHERE projetos.ativo=1 ORDER BY ? ASC" ,array("projetos.ordem"),"s");
+$res = $database->query_simple_prepare("SELECT projetos.id, projetos.ativo, projetos.url, projetos.logo, projetos.cor, projetos.destaque, projetos.ordem  FROM ".$database->array_tables[1]. " WHERE projetos.ativo=1 ORDER BY ? DESC" ,array("projetos.ordem"),"s");
 
 
 //$res_select_projectos_fotos = $database->query_simple_prepare("SELECT * FROM projetos_fotos  ORDER BY ?" ,array("id"),"s");
