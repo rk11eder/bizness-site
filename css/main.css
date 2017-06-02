@@ -767,6 +767,7 @@ overflow: hidden;
   width: 40px;
   transform: rotate(90deg) translate3d(30%,20%,0);
   float: right;
+    cursor: pointer;
 }
 .toggle_mostrar_menu{
   animation: menu_mostrar_animation 2s forwards ease-in-out;
