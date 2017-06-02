@@ -218,3 +218,9 @@
 
 2017-06-02 15:04:15: Prepare failed: (1054) Unknown column 'projetos.url' in 'field list'
 
+2017-06-02 15:05:20: Prepare failed: (1054) Unknown column 'projetos.url' in 'field list'
+
+2017-06-02 15:05:22: Prepare failed: (1054) Unknown column 'projetos.url' in 'field list'
+
+2017-06-02 15:05:40: Prepare failed: (1054) Unknown column 'projetos.url' in 'field list'
+
