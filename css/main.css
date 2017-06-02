@@ -1091,6 +1091,7 @@ canvas{
 
     .holder_home_logos_holder_esquerda {
         padding: 50px 0;
+        background-color: white;
     }
 
     .holder_texto_home_esquerda {
@@ -1151,6 +1152,13 @@ canvas{
 
     .holde_sobre_baixo{
         
+    }
+
+    .movel_holder{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .container_website {
@@ -1359,7 +1367,7 @@ canvas{
         margin-top: 31vh;
     }
     .texto_top_sobrenos p{
-        font-size: 30px;
+        font-size: 17px;
         width: 100%;
 
         overflow: visible;
@@ -1376,7 +1384,7 @@ canvas{
 
     .texto_botttom_left_sobrenos {
         top:0;
-        padding-top: 36px;
+        padding-top: 18px;
         font-size: 24px;
         color: white;
         padding-left: 10%;
@@ -1385,7 +1393,7 @@ canvas{
         text-align:center;
     }
     .texto_botttom_right_sobrenos {
-        font-size: 24px;
+        font-size:13px;
         color: #eb504c;
         top: 0;
         padding: 10%;
