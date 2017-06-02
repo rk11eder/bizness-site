@@ -2,12 +2,13 @@
 
 /*exemplo controller*/
 biznessApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http','$interval', function homeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http, $interval){
+
     biznessApp.animation();
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {
     $window.ga('send', 'pageview', { page: $location.url() });  
   });
-
+  $rootScope.flag_loading = 2;
 		
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('Bizness');
@@ -33,7 +34,6 @@ $rootScope.contador_animation = 0;
 			    	var currentScroll2 = $('.fotos_destaques').offset().top; 
                 
                /* console.log(currentScroll);*/
-                console.log(currentScroll2);
 
                 
 				
@@ -80,7 +80,24 @@ $rootScope.contador_animation = 0;
     // console.log($scope.slides);
     $scope.currentIndex = 0;
     $scope.setCurrentSlideIndex = function (index) {
+        console.log(timer);
+
+        if(index!==$scope.currentIndex){
+            $interval.cancel(timer);
+            timer= null;
+            timer = $interval(function(){
+                var max_slides =$rootScope.destaques.length-1;
+                if($scope.currentIndex<max_slides){
+                    $scope.currentIndex++;
+                }else{
+                    $scope.currentIndex=0;
+                }
+
+                console.log($scope.currentIndex);
+            },8000);
+        }
         $scope.currentIndex = index;
+
     };
     $scope.isCurrentSlideIndex = function (index) {
         return $scope.currentIndex === index;
@@ -185,6 +202,13 @@ $rootScope.contador_animation = 0;
 		}
 
 	}
-  
+   
+    var tempo = setTimeout(function(){ 
+        
+        $rootScope.flag_loading = 0;
+        $rootScope.$apply();
+          clearTimeout(tempo);
+     }, 1000);
 
+   /* $rootScope.flag_loading = 0;*/
 }]);

@@ -7,7 +7,7 @@ biznessApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$time
   $scope.$on('$viewContentLoaded', function(event) {
     $window.ga('send', 'pageview', { page: $location.url() });  
   });
-
+  $rootScope.flag_loading = 2;
 		
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('Bizness');
@@ -62,6 +62,12 @@ biznessApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$time
   
 $rootScope.hide_menu = 0;
     $rootScope.hide_botao_menu = 0;
+	 var tempo = setTimeout(function(){ 
+        
+        $rootScope.flag_loading = 0;
+        $rootScope.$apply();
+          clearTimeout(tempo);
+     }, 1000);
 }]);
 
 	
