@@ -957,6 +957,7 @@ overflow: hidden;
 canvas{
   border:none;
   background-color: rgba(255,102,102,0.7);
+    filter:contrast(140%);
 }
 
 .mapa_home_goolge canvas{
