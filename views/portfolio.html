@@ -4,19 +4,19 @@
             <div  ng-repeat="user in users" ng-if="user.lado===0" class="col-xs-12 pd0 holder_linha">
                 <a ng-href="{{lang}}/portfolio/{{user.url}}">
                     <div ng-class="{linha_full: user.destaque == '1',linha_half: user.destaque == '0'}"
-                         style="background-image: url('img/projetos/{{user.fotos[0].id}}/{{user.fotos[0].foto}}');background-size: cover;">
+                         style="background-image: url('img/projetos/{{user.fotos[0].id}}/{{user.fotos[0].foto}}');background-size: cover;" class="la">
                     </div>
 
-                </a>
-                <div  class="holder_backgrounds" style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute">
+                
+                    <div  class="holder_backgrounds" style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute">
 
-                </div>
-
-                <div ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
-                    <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
-                    <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}</div>
-                </div>
-
+                    </div>
+               
+                    <div ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
+                        <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
+                        <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}</div>
+                    </div>
+                 </a>
             </div>
 
         </div>
@@ -24,19 +24,19 @@
             <div ng-repeat="user in users" ng-if="user.lado===1" class="col-xs-12 pd0 holder_linha">
                 <a ng-href="{{lang}}/portfolio/{{user.url}}">
                     <div  ng-class="{linha_full: user.destaque == '1',linha_half: user.destaque == '0'}"
-                          style="background-image: url('img/projetos/{{user.fotos[0].id}}/{{user.fotos[0].foto}}');background-size: cover;">
+                          style="background-image: url('img/projetos/{{user.fotos[0].id}}/{{user.fotos[0].foto}}');background-size: cover;" class="la">
 
                     </div>
 
 
-                </a>
-                <div class="holder_backgrounds"
-                     style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute"></div>
-                <div  ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
-                    <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
-                    <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}{{user.titulo}}</div>
-                </div>
-
+               
+                    <div class="holder_backgrounds"
+                        style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute"></div>
+                    <div  ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
+                        <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
+                        <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}{{user.titulo}}</div>
+                    </div>
+                 </a>
             </div>
 
         </div>
@@ -46,20 +46,20 @@
             <div  ng-repeat="user in users"class="col-xs-12 pd0 holder_linha">
                 <a ng-href="{{lang}}/portfolio/{{user.url}}">
                     <div ng-class="{linha_full: user.destaque == '1',linha_half: user.destaque == '0'}"
-                         style="background-image: url('img/projetos/{{user.fotos[0].id}}/{{user.fotos[0].foto}}');background-size: cover;">
+                         style="background-image: url('img/projetos/{{user.fotos[0].id}}/{{user.fotos[0].foto}}');background-size: cover;" class="la">
 
                     </div>
 
+                
+                    <div  class="holder_backgrounds" style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute">
+
+                    </div>
+
+                    <div  ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
+                        <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
+                        <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}</div>
+                    </div>
                 </a>
-                <div  class="holder_backgrounds" style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute">
-
-                </div>
-
-                <div  ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
-                    <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
-                    <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}</div>
-                </div>
-
             </div>
 
         </div>
@@ -70,21 +70,21 @@
             <div  ng-repeat="user in users" ng-if="user.ladoBig===0" class="col-xs-12 pd0 holder_linha">
                 <a ng-href="{{lang}}/portfolio/{{user.url}}">
                     <div ng-class="{linha_full: user.destaque == '1',linha_half: user.destaque == '0'}"
-                         style="background-image: url('img/projetos/{{user.fotos[0].id}}/{{user.fotos[0].foto}}');background-size: cover;">
+                         style="background-image: url('img/projetos/{{user.fotos[0].id}}/{{user.fotos[0].foto}}');background-size: cover;" class="la">
 
 
                     </div>
 
+                
+                    <div  class="holder_backgrounds" style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute">
+
+                    </div>
+
+                    <div ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
+                        <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
+                        <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}</div>
+                    </div>
                 </a>
-                <div  class="holder_backgrounds" style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute">
-
-                </div>
-
-                <div ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
-                    <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
-                    <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}</div>
-                </div>
-
             </div>
 
         </div>
@@ -92,18 +92,18 @@
             <div ng-repeat="user in users" ng-if="user.ladoBig===1" class="col-xs-12 pd0 holder_linha">
                 <a ng-href="{{lang}}/portfolio/{{user.url}}">
                     <div  ng-class="{linha_full: user.destaque == '1',linha_half: user.destaque == '0'}"
-                          style="background-image: url('img/projetos/{{user.fotos[0].id}}/{{user.fotos[0].foto}}');background-size: cover;">
+                          style="background-image: url('img/projetos/{{user.fotos[0].id}}/{{user.fotos[0].foto}}');background-size: cover;" class="la">
 
                     </div>
 
+                
+                    <div class="holder_backgrounds"
+                        style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute"></div>
+                    <div  ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
+                        <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
+                        <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}{{user.titulo}}</div>
+                    </div>
                 </a>
-                <div class="holder_backgrounds"
-                     style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute"></div>
-                <div  ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
-                    <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
-                    <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}{{user.titulo}}</div>
-                </div>
-
             </div>
 
         </div>
@@ -112,19 +112,19 @@
             <div ng-repeat="user in users" ng-if="user.ladoBig===2" class="col-xs-12 pd0 holder_linha">
                 <a ng-href="{{lang}}/portfolio/{{user.url}}">
                     <div  ng-class="{linha_full: user.destaque == '1',linha_half: user.destaque == '0'}"
-                          style="background-image: url('img/projetos/{{user.fotos[0].id}}/{{user.fotos[0].foto}}');background-size: cover;">
+                          style="background-image: url('img/projetos/{{user.fotos[0].id}}/{{user.fotos[0].foto}}');background-size: cover;" class="la">
 
 
                     </div>
 
+                
+                    <div class="holder_backgrounds"
+                        style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute"></div>
+                    <div  ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
+                        <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
+                        <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}{{user.titulo}}</div>
+                    </div>
                 </a>
-                <div class="holder_backgrounds"
-                     style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute"></div>
-                <div  ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
-                    <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
-                    <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}{{user.titulo}}</div>
-                </div>
-
             </div>
 
         </div>
