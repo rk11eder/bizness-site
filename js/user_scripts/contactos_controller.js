@@ -198,7 +198,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "geometry",
             "stylers": [
                 {
-                    "color": "#000000"
+                    "color": "#474b5f"
                 }
             ]
         },

@@ -1067,7 +1067,7 @@ canvas{
         width: 1300px;
         float: left;
         margin-bottom: 1px;
-        margin-top: -26px;
+        margin-top: -23px;
     }
     .texto_top_sobrenos{
         right: 4%;
@@ -1076,7 +1076,9 @@ canvas{
 }
 
 @media screen and (max-width:992px) {
-
+    .texto_top_sobrenos{
+        right: 1%;
+    }
 }
 @media screen and (max-height:650px) {
     .nav li {
@@ -1468,18 +1470,17 @@ canvas{
     }
 
     .pClassSobre {
-        width: 66vw;
-        margin-top: 31vh;
+        width: 74vw;
+        margin-top: 50vh;
+        transform: translate(0%, -50%);
     }
     .texto_top_sobrenos p{
-        font-size: 17px;
+        font-size: 20px;
         width: 100%;
-
-        overflow: visible;
         animation: none;
-
         text-align: center;
         opacity: 1;
+        margin-top: 0;
 
     }
     .texto_top_sobrenos{
