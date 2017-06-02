@@ -2,12 +2,13 @@
 
 /*exemplo controller*/
 biznessApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http','$interval', function homeCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http, $interval){
+
     biznessApp.animation();
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {
     $window.ga('send', 'pageview', { page: $location.url() });  
   });
-
+  $rootScope.flag_loading = 2;
 		
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('Bizness');
@@ -201,6 +202,13 @@ $rootScope.contador_animation = 0;
 		}
 
 	}
-  
+   
+    var tempo = setTimeout(function(){ 
+        
+        $rootScope.flag_loading = 0;
+        $rootScope.$apply();
+          clearTimeout(tempo);
+     }, 1000);
 
+   /* $rootScope.flag_loading = 0;*/
 }]);

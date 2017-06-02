@@ -7,7 +7,7 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
   $scope.$on('$viewContentLoaded', function(event) {
     $window.ga('send', 'pageview', { page: $location.url() });  
   });
-
+  $rootScope.flag_loading = 2;
 		
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('Bizness');
@@ -291,5 +291,10 @@ function Trirot(x,y,a,d,dx,dy){
     };
 
 
-
+	 var tempo = setTimeout(function(){ 
+        
+        $rootScope.flag_loading = 0;
+        $rootScope.$apply();
+          clearTimeout(tempo);
+     }, 1000);
 }]);

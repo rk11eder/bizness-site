@@ -10,7 +10,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
     $scope.$on('$viewContentLoaded', function(event) {
         $window.ga('send', 'pageview', { page: $location.url() });
     });
-
+     $rootScope.flag_loading = 2;
 
     /*SET TITLE PAGE SEO*/
     PageTitle.setTitle('Bizness');
@@ -232,5 +232,10 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
 
 
 
-
+     var tempo = setTimeout(function(){ 
+        
+        $rootScope.flag_loading = 0;
+        $rootScope.$apply();
+          clearTimeout(tempo);
+     }, 1000);
 }]);
