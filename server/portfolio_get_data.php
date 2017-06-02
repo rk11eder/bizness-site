@@ -18,6 +18,7 @@ $lang = $_GET['lang'];
 
 
 
+
 $res = $database->query_simple_prepare("SELECT projetos.id, projetos.ativo, projetos.logo, projetos.cor, projetos.destaque FROM ".$database->array_tables[1]. " WHERE projetos.ativo=1   ORDER BY ?" ,array("id"),"s");
 
 
@@ -40,12 +41,26 @@ if ($res != $database->flag_error) {
        $imgUrl=$res[$key]["logo"];
        $imgid=$res[$key]["id"];
 
-        $xml = simplexml_load_file('../img/projetos/'.$imgid.'/'.$imgUrl);
-        $attr = $xml->attributes();
-        $width=$attr->width;
-        $height=$attr->height;
-        $width= substr($width, 0, -2);
-        $height= substr($height, 0, -2);
+       $ext = pathinfo($imgUrl, PATHINFO_EXTENSION);
+
+       if($ext=="svg"){
+           $xml = simplexml_load_file('../img/projetos/'.$imgid.'/'.$imgUrl);
+           $attr = $xml->attributes();
+           $width=$attr->width;
+           $height=$attr->height;
+           $width= substr($width, 0, -2);
+           $height= substr($height, 0, -2);
+
+       }else{
+           $data = getimagesize('../img/projetos/'.$imgid.'/'.$imgUrl);
+           $width = $data[0];
+           $height = $data[1];
+
+
+
+       }
+
+
         $return_array["projetos"][$key]["width"]=$width;
         $return_array["projetos"][$key]["height"]=$height;
         $return_array["projetos"][$key]["fotos"]=$res_select_projectos_fotos;
