@@ -15,7 +15,7 @@ biznessApp.controller('portfolioCtrl', ['$scope', '$rootScope','$window','$timeo
 
 
     $rootScope.users = items.projetos;
-
+    console.log($rootScope.users);
 
     $scope.lado = 0;
     $scope.ladoBig = 0;
