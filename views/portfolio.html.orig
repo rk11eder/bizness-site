@@ -7,8 +7,9 @@
                          style="background-image: url('img/projetos/{{user.fotos[0].id}}/{{user.fotos[0].foto}}');background-size: cover;" class="la">
                     </div>
 
-                
-                    <div  class="holder_backgrounds" style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute">
+<<<<<<< HEAD
+                </a>
+                <div  class="holder_backgrounds" style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute">
 
                 </div>
 
@@ -16,7 +17,18 @@
                     <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
                     <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}</div>
                 </div>
+=======
+                
+                    <div  class="holder_backgrounds" style="height: 100%;width: 100%;background-color:#{{user.cor}};  position: absolute">
+>>>>>>> f2cd14db43348999ce1174ad43ef4a7ffdee86e6
 
+                    </div>
+               
+                    <div ng-class="{logo_horizontal: user.width >= user.height,logo_vertical: user.width < user.height}">
+                        <img ng-src="img/projetos/{{user.id}}/{{user.logo}}">
+                        <div class="text_portfolio">{{user.projectos_idiomas[0].nome}}</div>
+                    </div>
+                 </a>
             </div>
 
         </div>

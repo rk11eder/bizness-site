@@ -398,17 +398,18 @@ font-family: 'Roboto';
 .linha_full{
   height:50vw;
     background-position: center;
-    transition: transform 4s;
+    
     filter: saturate(0.2) contrast(340%) brightness(50%);
-
+    transition: transform 4s, filter 4s ;
 
 }
 
 .linha_half{
   height: 25vw;
     background-position: center;
-    transition: transform 4s ;
+    
     filter: saturate(0.2) contrast(340%) brightness(50%);
+    transition: transform 4s, filter 4s ;
 
 }
 .linha_half:hover{
@@ -420,6 +421,16 @@ font-family: 'Roboto';
 }
 .holder_backgrounds:hover{
     opacity: 0;
+}
+
+.holder_backgrounds:hover ~ .la{
+  transform: scale(1.4);
+}
+
+a:hover .la{
+    transform: scale(1.4);
+    filter:none;
+    transition: filter 4s, transform 4s ;
 }
 
 
@@ -436,7 +447,7 @@ font-family: 'Roboto';
     transition:  5s;
     opacity:0.9;
     filter: contrast(100%) brightness(100%);
-    pointer-events: visible;
+    /*pointer-events: none;*/
 
 }
 
@@ -465,7 +476,7 @@ font-family: 'Roboto';
     transform: translate(-50%, -50%);
     /*min-height: 14%;*/
     /*min-width: 9%;*/
-    height: 25%;
+  height: 25%;
 }
 .text_portfolio{
   position: absolute;

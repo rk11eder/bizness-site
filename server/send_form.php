@@ -35,7 +35,7 @@ $body2 = '
 <span style="font:bold 15px arial">Dados Inseridos / Inserted Data</span><br /><br />
 <span style="font-weight:bold">Nome:</span> '.$new_item['nome']."\n\r<br />";
 $body2 .= '
-<span style="font:12px arial;color:#333333"><span style="font-weight:bold;">Contacto:</span>'.$new_item['email'].'\n\r<br />';
+<span style="font:12px arial;color:#333333"><span style="font-weight:bold;">Contacto:</span>'.$new_item['email'].'<br />';
 $body2 .= '<span style="font-weight:bold">Mensagem</span> '.$new_item['mensagem']."\n\r<br /></span>
 <br /><br />
 Iremos entrar em contacto consigo brevemente.
