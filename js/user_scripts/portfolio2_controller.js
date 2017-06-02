@@ -52,6 +52,10 @@ biznessApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$time
 
             $scope.$apply();
         });
+    $scope.$on('$destroy',function(){
+        angular.element('body').unbind("scroll");
+
+    });
 
 			
 			
