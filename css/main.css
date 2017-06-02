@@ -1021,60 +1021,6 @@ canvas{
 }
 
 @media screen and (max-width:992px) {
-
-}
-
-@media screen and (max-width:768px) {
-
-    .holde_sobre_baixo{
-        
-    }
-
-    .container_website {
-        margin-top: 55px;
-    }
-
-    .menu-list-holder {
-         display: none;
-     }
-    .menu-list-holder2 {
-        display: none;
-    }
-    .menu_holder_active{
-        display: none;
-    }
-
-    .item_icon_menu_mobile {
-        display: block;
-    }
-
-    .icon_menu {
-        height: 38px;
-    }
-
-    .menu_mobile {
-        width: 100vw;
-        height: 55px;
-        position: fixed;
-        background-color: white;
-        margin-left: 0px;
-        z-index: 200;
-    }
-
-    .menu_holder {
-
-        margin-left: 0px;
-    }
-
-    .icon_menu {
-        margin: 10px;
-        width: 55px;
-    }
-
-    .menu_mobile_list {
-        display: block;
-    }
-
     /*HOME*/
     .holder_destaques_home {
         height: 70vh;
@@ -1186,6 +1132,61 @@ canvas{
     .holder_logos_home img {
         max-width: 85%;
     }
+
+}
+
+@media screen and (max-width:768px) {
+
+    .holde_sobre_baixo{
+        
+    }
+
+    .container_website {
+        margin-top: 55px;
+    }
+
+    .menu-list-holder {
+         display: none;
+     }
+    .menu-list-holder2 {
+        display: none;
+    }
+    .menu_holder_active{
+        display: none;
+    }
+
+    .item_icon_menu_mobile {
+        display: block;
+    }
+
+    .icon_menu {
+        height: 38px;
+    }
+
+    .menu_mobile {
+        width: 100vw;
+        height: 55px;
+        position: fixed;
+        background-color: white;
+        margin-left: 0px;
+        z-index: 200;
+    }
+
+    .menu_holder {
+
+        margin-left: 0px;
+    }
+
+    .icon_menu {
+        margin: 10px;
+        width: 55px;
+    }
+
+    .menu_mobile_list {
+        display: block;
+    }
+
+
 
     /*FORM CONTACTOS*/
     .contactos_home_holder {
