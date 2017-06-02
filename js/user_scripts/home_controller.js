@@ -150,6 +150,8 @@ $rootScope.contador_animation = 0;
             $interval.cancel(timer);
         }
 
+         angular.element('body').unbind("scroll");
+
     });
     $scope.stopSlides= function () {
         console.log("stop slides");

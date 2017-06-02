@@ -577,6 +577,7 @@ overflow: hidden;
   padding: 0;
   position: relative;
   float: left;
+  filter: saturate(0.2) contrast(340%) brightness(50%);
 }
 .holder_backgrounds_sobrenos{
     height: 100%;
@@ -956,14 +957,16 @@ overflow: hidden;
 }
 
 canvas{
-  border:none;
-  background-color: rgba(255,102,102,0.7);
-    filter:contrast(140%);
+    border:none;
+    background-color:#eb504c;
+    filter:contrast(100%) brightness(100%);
+    opacity:0.9;
 }
 
 .mapa_home_goolge canvas{
   background: transparent !important;
 }
+
 @media screen and (min-width:1900px) {
     /*HOME*/
     .imagens_insta_responsive{
