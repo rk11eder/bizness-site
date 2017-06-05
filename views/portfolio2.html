@@ -23,7 +23,7 @@
 
             <div ng-repeat="user in projetosPortfolio[0].fotos" ng-if="$index>0" class="col-xs-12 pd0 linha_folio2">
                 <div class="col-sm-4 col-xs-12 pd0 texto_folio2"> {{user.titulo}}</div>
-                <div class="col-sm-8 col-xs-12 pd0 imagem_folio2" style="background-image: url('img/projetos/{{user.id}}/{{user.foto}}')"> </div>
+                <div class="col-sm-8 col-xs-12 pd0 imagem_folio2" ng-style="{'background-image': 'url(img/projetos/{{user.id}}/{{user.foto}})'}"> </div>
             </div>
 
         </div>
