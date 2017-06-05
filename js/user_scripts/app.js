@@ -9,7 +9,7 @@ var biznessApp = angular.module('biznessApp', [
   'services',
   'uiGmapgoogle-maps',
   'ngAnimate',
-  'duScroll',
+
 ]);
 
 /*EXEMPLO ROUTING*/

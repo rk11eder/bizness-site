@@ -114,9 +114,6 @@ $desc_page = "";
 
 
     <script src="js/plugins.js"></script>
-     <script type="text/javascript" src="js/angular-scroll.min.js"></script>
-     
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.2/angular-scroll.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
     
     <script src="js/user_scripts/lang/<?php echo $lang; ?>.js"></script>

@@ -22,6 +22,12 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 		   'w': w.width()
 		};
 	};
+    $scope.scroll_bottom = function(){
+    	console.log("asd");
+        angular.element('body,html').animate({scrollTop: w.height()-100},500,function(){
+            // controlo_scroll = 0;
+        });
+    }
 
 
 
