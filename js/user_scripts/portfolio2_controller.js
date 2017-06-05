@@ -68,7 +68,7 @@ biznessApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$time
         angular.element('body,html').animate({scrollTop: w.height()-100},500,function(){
             // controlo_scroll = 0;
         });
-    }
+    };
 
 			
 			
