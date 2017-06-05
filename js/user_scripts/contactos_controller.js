@@ -236,7 +236,13 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
 
     };
 
+    $scope.gotoBottom = function() {
+      console.log("eder")
+        $location.hash('bottom');
 
+        // call $anchorScroll()
+        $anchorScroll();
+    };
 
 
      var tempo = setTimeout(function(){ 

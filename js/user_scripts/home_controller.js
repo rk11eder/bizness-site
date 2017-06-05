@@ -18,7 +18,7 @@ biznessApp.controller('homeCtrl', ['$scope', '$rootScope','$window','$timeout','
               promise.then(
                   function(response){
                      $scope.logos = response;
-                      console.log($scope.logos);
+
                   });
    
 $scope.ins = items.data;
@@ -33,7 +33,7 @@ $rootScope.contador_animation = 0;
 
 			    	var currentScroll2 = $('.fotos_destaques').offset().top; 
                 
-               /* console.log(currentScroll);*/
+
 
                 
 				
@@ -61,7 +61,7 @@ $rootScope.contador_animation = 0;
 
 
 
-  console.log($scope.ins);
+
   /*RESIZE WINDOW*/
 	var w = angular.element($window);
 	$scope.getWindowDimensions = function () {
@@ -77,10 +77,10 @@ $rootScope.contador_animation = 0;
         {image: 'img/folio2.jpg', titulo: 'SAMSUNG'},
         {image: 'img/loewe.jpg', titulo: 'FACEBOOK'}
     ];*/
-    // console.log($scope.slides);
+
     $scope.currentIndex = 0;
     $scope.setCurrentSlideIndex = function (index) {
-        console.log(timer);
+
 
         if(index!==$scope.currentIndex){
             $interval.cancel(timer);
@@ -93,7 +93,7 @@ $rootScope.contador_animation = 0;
                     $scope.currentIndex=0;
                 }
 
-                console.log($scope.currentIndex);
+
             },8000);
         }
         $scope.currentIndex = index;
@@ -110,7 +110,7 @@ $rootScope.contador_animation = 0;
         }else{
             $scope.currentIndex=0;
         }
-        console.log($scope.currentIndex);
+
 
 
     },8000);
@@ -127,7 +127,7 @@ $rootScope.contador_animation = 0;
         for (stateKey in keys) {
             if (stateKey in document) {
                 eventKey = keys[stateKey];
-                console.log(eventKey);
+
                 break;
             }
         }
@@ -138,10 +138,9 @@ $rootScope.contador_animation = 0;
     })();
     // check if current tab is active or not
     vis(function(){
-        console.log("asd");
-        console.log(vis());
+
         if(vis()){
-            console.log("tab is visible - has focus");
+
 
                 timer = $interval(function(){
 
@@ -152,14 +151,14 @@ $rootScope.contador_animation = 0;
                         $scope.currentIndex=0;
                     }
 
-                    console.log($scope.currentIndex);
+
                 },8000);
 
         } else {
             $interval.cancel(timer);
             timer = null;
             // tween pause() code goes here
-            console.log("tab is invisible - has blur");
+
         }
     });
     $scope.$on('$destroy',function(){
@@ -171,7 +170,7 @@ $rootScope.contador_animation = 0;
 
     });
     $scope.stopSlides= function () {
-        console.log("stop slides");
+
         if(timer){
             $interval.cancel(timer);
             timer= null;
@@ -185,7 +184,6 @@ $rootScope.contador_animation = 0;
                     $scope.currentIndex=0;
                 }
 
-                console.log($scope.currentIndex);
             },8000);
         }
     }
@@ -195,8 +193,7 @@ $rootScope.contador_animation = 0;
         $window.open($scope.ins[index].link, '_blank');
     };
 	$scope.send_form=function(formulario){
-		console.log($scope.formulario);
-		console.log(toString(formulario.$invalid));
+
 		if(!$scope.formulario.$invalid){
             services.send_form($scope.form);
             alert("Mensagem enviada com sucesso");
