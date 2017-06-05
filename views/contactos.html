@@ -25,9 +25,15 @@
 
 
 </div>
-<div class="circle">
-    <img src="img/seta_baixo.svg" alt="" width="100%">
+
+<div ng-controller="ExampleController">
+        <a ng-click="gotoBottom()">Go to bottom</a>
+
+
 </div>
+
+
+
 <div class="col-xs-12 pd0 contactos_home_holder">
     <div class="col-sm-7 col-xs-12 pd0 contactos_imagem_holder">
         <div class="col-xs-12 pd0 contactos_home_holder_texto">
@@ -52,7 +58,7 @@
                     <textarea id="mensagem" ng-model="form.mensagem" class="textarea_home" placeholder="MENSAGEM" required></textarea>
                 </div>
                 <div class="col-xs-12 pd0 holder_botao_submit">
-                    <input type="submit" ng-click="send_form(form)" value="ENVIAR" class="input_submit_contactos_home">
+                    <input type="submit" ng-click="send_form(form)" ng-model="form.enviado" value="ENVIAR" class="input_submit_contactos_home">
                 </div>
             </form>
         </div>

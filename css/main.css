@@ -1252,6 +1252,21 @@ canvas{
 
 
 @media screen and (max-width:768px) {
+    .logo_vertical_portfolio2 img{
+        position: relative;
+        height: 24px;
+        bottom: 120%;
+
+        bottom: 120%;
+
+    }
+    .logo_horizontal_portfolio2 img{
+        position: relative;
+        max-width: 25%;
+        min-width: 10%;
+        bottom: 120%;
+
+    }
 
     .holde_sobre_baixo{
         
@@ -1428,6 +1443,13 @@ canvas{
 }
 
 @media screen and (max-width:768px) {
+
+    .titulo_folio2{
+        font-size:34px;
+    }
+    .descricao_folio2{
+        font-size:14px;
+    }
 
     .holde_sobre_baixo{
         
@@ -1723,6 +1745,8 @@ canvas{
         left: 0;
         right: 0;
     }
+
+
     @media screen and (max-height:550px) {
         .home_titulo{
             font-size: 30px;
