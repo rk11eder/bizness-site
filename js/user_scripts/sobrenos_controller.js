@@ -284,18 +284,6 @@ function Trirot(x,y,a,d,dx,dy){
 	$scope.resize_func();
 
     
-	$scope.toTheTop = function() {
-      $document.scrollTopAnimated(0, 5000).then(function() {
-        console && console.log('You just scrolled to the top!');
-      });
-    }
-
-    var parent_canvas = angular.element(document.getElementById('parent_canvas'));
-    $scope.parent_canvas = function() {
-		console.log("ou");
-      $document.scrollToElementAnimated(parent_canvas);
-    }
-
 
 	 var tempo = setTimeout(function(){ 
         

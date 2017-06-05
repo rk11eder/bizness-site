@@ -156,6 +156,8 @@ $desc_page = "";
     <script>
       var lang = '<?php echo $lang?>';
       var pathgeral = '<?php echo "http://".$_SERVER['HTTP_HOST'].$url_base ?>';
+
+     
     </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
