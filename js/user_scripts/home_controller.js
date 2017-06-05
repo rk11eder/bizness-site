@@ -42,7 +42,7 @@ $rootScope.contador_animation = 0;
 						var parallaximage = $('.holder_destaques_home');
 						/*var parallaxtexto = $('.contactos_home_holder');*/
 
-				parallaximage.css('transform','translateY('+ -(currentScroll * .4) + 'px)' );
+				// parallaximage.css('transform','translateY('+ -(currentScroll * .4) + 'px)' );
 
 				/*parallaxtexto.css('transform','translateY('+ -(currentScroll2 * .4) + 'px)' );*/
 					
