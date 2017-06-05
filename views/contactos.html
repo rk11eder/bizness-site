@@ -52,7 +52,7 @@
                     <textarea id="mensagem" ng-model="form.mensagem" class="textarea_home" placeholder="MENSAGEM" required></textarea>
                 </div>
                 <div class="col-xs-12 pd0 holder_botao_submit">
-                    <input type="submit" ng-click="send_form(form)" value="ENVIAR" class="input_submit_contactos_home">
+                    <input type="submit" ng-click="send_form(form)" ng-model="form.enviado" value="ENVIAR" class="input_submit_contactos_home">
                 </div>
             </form>
         </div>

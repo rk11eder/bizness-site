@@ -12,6 +12,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
     });
      $rootScope.flag_loading = 2;
 
+
     /*SET TITLE PAGE SEO*/
     PageTitle.setTitle('Bizness');
     PageTitle.setDesc($rootScope.lang_array.descricao_page);
@@ -21,7 +22,13 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
         console.log(toString(formulario.$invalid));
         if(!$scope.formulario.$invalid){
             services.send_form($scope.form);
+            alert("Mensagem enviada com sucesso");
+            $scope.form={};
+
+
+
         }
+
 
     };
 
