@@ -185,7 +185,11 @@ p{
     margin-left: 10px;
     overflow: hidden;
 }
-
+.destaques_holder{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
 
 .barra_destaque_red{
     height: 100%;
@@ -350,6 +354,14 @@ p{
   font-family: 'Roboto';
   font-weight: 700;
   line-height: 100px;
+}
+.home_titulo:hover{
+    color: white;
+}
+.home_titulo:hover > .scndline{
+
+    background: url("../img/seta_destaques_branco.svg") right center no-repeat;
+
 }
 
 .home_tipo{
@@ -1102,10 +1114,10 @@ canvas{
         height: calc(41vw / 3);
     }
     .imagens_insta_responsive img{
-        max-width: calc(41vw / 3);
+        width: 100%;
     }
     .imagens_insta_ultra img{
-        max-width: calc(41vw / 3);
+        width: 100%;
     }
     .bd_sobrenos_ultra{
         display: block;

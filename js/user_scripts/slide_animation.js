@@ -3,6 +3,7 @@
 /*exemplo controller*/
 biznessApp.animation('.slide-animation-titulo', ['$rootScope', function ($rootScope) {
     var i = 0;
+    var parent = angular.element( document.querySelector('#parent_titulo') );
     return {
         addClass: function (element, className, done) {
 
@@ -10,7 +11,7 @@ biznessApp.animation('.slide-animation-titulo', ['$rootScope', function ($rootSc
             if($rootScope.contador_animation>=numeroRepeticoes){
                 if (className == 'ng-hide' ) {
                     TweenMax.set(element,{css:{zIndex:0}});
-                    TweenMax.to(element, 2, {right: element.parent().width(), onComplete: done });
+                    TweenMax.to(element, 1, {right: parent.width(), onComplete: done });
                     console.log("log1");
                 }
                 else {
@@ -20,7 +21,7 @@ biznessApp.animation('.slide-animation-titulo', ['$rootScope', function ($rootSc
 
             }else{
                 console.log("log3");
-                TweenMax.set(element,{right:-(element.parent().width()*2)});
+                TweenMax.set(element,{right:-parent.width()*2});
             }
 
             $rootScope.contador_animation++;
@@ -36,7 +37,7 @@ biznessApp.animation('.slide-animation-titulo', ['$rootScope', function ($rootSc
                 TweenMax.set(element,{css:{zIndex:1}});
                 // console.log(element.prev().width());
 
-                TweenMax.fromTo(element, 2, { right: -element.parent().width()}, {right: 0, onComplete: done });
+                TweenMax.fromTo(element, 1, { right: -parent.width()}, {right: 0, onComplete: done });
             }
             else {
                 done();
@@ -53,7 +54,7 @@ biznessApp.animation('.slide-animation', ['$rootScope', function ($rootScope) {
             if($rootScope.contador_animation>=numeroRepeticoes){
                 if (className == 'ng-hide' ) {
                     TweenMax.set(element,{css:{zIndex:0}});
-                    TweenMax.to(element, 2, {left: -(element.parent().width()), onComplete: done });
+                    TweenMax.to(element, 1, {left: -(element.parent().width()), onComplete: done });
                 }
                 else {
                     done();
@@ -73,7 +74,7 @@ biznessApp.animation('.slide-animation', ['$rootScope', function ($rootScope) {
                  TweenMax.to(element, 0.5, {left: 0, onComplete: done });*/
                 TweenMax.set(element,{css:{zIndex:$rootScope.contador_animation}});
                 // TweenMax.fromTo(element, 2, { left: element.parent().width() }, {left: 0, onComplete: done });
-                TweenMax.fromTo(element, 2, { left: element.parent().width() }, {left: 0, onComplete: done });
+                TweenMax.fromTo(element, 1, { left: element.parent().width() }, {left: 0, onComplete: done });
             }
             else {
                 done();

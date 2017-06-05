@@ -1,6 +1,6 @@
 <div class="col-sm-12 pd0">
     <div class="col-sm-12 pd0 holder_destaques_home " >
-        <div class="col-sm-12 pd0 titulo_destaques">
+        <div class="col-sm-12 pd0 titulo_destaques" id="parent_titulo">
             <div class="holder_barras" style="top: 0">
                 <div class="holder_barra" ng-repeat="slide in destaques" ng-click="setCurrentSlideIndex($index)" >
                     <div class="barra_destaque">
@@ -14,22 +14,24 @@
                 <div class="barra_destaque_red" ng-click="setCurrentSlideIndex($index)"
                      ng-class="{slide_activo:isCurrentSlideIndex($index)}" ng-repeat="slide in destaques"></div>
             </div>-->
-
-            <div ng-repeat="slide in destaques"
-                 class="col-md-6 col-md-offset-6 col-sm-12 pd0 holder_titulo_home  slide slide-animation-titulo"
-                 style="position: absolute" ng-hide="!isCurrentSlideIndex($index)" ng-class="{primeiro_destaque: $index == 0}">
-                <div class="home_tipo">
-                    {{slide.tipo}}
-                </div>
-                <div class="home_titulo">
-                    <span class="first_titulo">{{slide.titulo[0]}}</span><br>
-                    <div class="scndline">
-                        <span class="scnd_titulo" ng-bind-html="slide.titulo[1]"></span> <!--<img class="seta_destaques" src="img/seta_destaques.svg">-->
+            <div class="destaques_holder">
+                <div ng-repeat="slide in destaques"
+                     class="col-md-6 col-md-offset-6 col-sm-12 pd0 holder_titulo_home  slide slide-animation-titulo"
+                     style="position: absolute" ng-hide="!isCurrentSlideIndex($index)" ng-class="{primeiro_destaque: $index == 0}">
+                    <div class="home_tipo">
+                        {{slide.tipo}}
                     </div>
+                    <div class="home_titulo">
+                        <span class="first_titulo">{{slide.titulo[0]}}</span><br>
+                        <div class="scndline">
+                            <span class="scnd_titulo" ng-bind-html="slide.titulo[1]"></span> <!--<img class="seta_destaques" src="img/seta_destaques.svg">-->
+                        </div>
 
 
+                    </div>
                 </div>
             </div>
+
         </div>
         <div class="col-sm-12 col-xs-12 pd0 fotos_destaques container slider">
 
