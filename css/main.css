@@ -1199,6 +1199,12 @@ canvas{
     }
 }
 @media screen and (max-height:650px) {
+    .home_titulo{
+        line-height: 60px;
+        font-size: 65px;
+    }
+}
+@media screen and (max-height:650px) {
     .nav li {
            margin-right: 5vh;
 
