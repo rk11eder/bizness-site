@@ -32,7 +32,12 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
                       $rootScope.destaques = response;
                       console.log($rootScope.destaques);
                   });
-
+              var promise3 = services.get_logos();
+              promise3.then(
+                  function(response){
+                      $rootScope.logos = response;
+                      console.log($rootScope.logos);
+                  });
              var promise = services.insta();
             return promise;
 
