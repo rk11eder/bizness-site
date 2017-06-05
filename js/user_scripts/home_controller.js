@@ -199,6 +199,7 @@ $rootScope.contador_animation = 0;
 		console.log(toString(formulario.$invalid));
 		if(!$scope.formulario.$invalid){
             services.send_form($scope.form);
+
 		}
 
 	}

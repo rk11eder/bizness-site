@@ -16,6 +16,13 @@ biznessApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$time
 
     $rootScope.projetosPortfolio=items.projetos;
 	console.log($rootScope.projetosPortfolio);
+    var w = angular.element($window);
+    $scope.getWindowDimensions = function () {
+        return {
+            'h': w.height(),
+            'w': w.width()
+        };
+    };
 
 
 		angular.element('body').bind("scroll", function(){
@@ -56,6 +63,12 @@ biznessApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$time
         angular.element('body').unbind("scroll");
 
     });
+    $scope.scroll_bottom = function(){
+        console.log("asd");
+        angular.element('body,html').animate({scrollTop: w.height()-100},500,function(){
+            // controlo_scroll = 0;
+        });
+    }
 
 			
 			
@@ -69,13 +82,6 @@ $rootScope.hide_menu = 0;
           clearTimeout(tempo);
      }, 1000);
 
-    $scope.goDown = function() {
-
-        $location.hash('bottom');
-
-
-        $anchorScroll();
-    };
 
 
 }]);
