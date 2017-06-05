@@ -889,6 +889,11 @@ overflow: hidden;
   background-size: contain;
   background: white url('../img/botao_open_menu.svg') no-repeat center;
   transform: rotate(90deg);
+    -moz-transform:rotate(90deg) ;
+    -o-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+
   pointer-events: all;
     cursor: pointer;
 }
