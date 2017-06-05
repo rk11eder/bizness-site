@@ -1198,6 +1198,15 @@ canvas{
         right: 1%;
     }
 }
+@media screen and (max-height:820px) {
+    .pClassSobre p {
+        font-size: 81px;
+        margin-top: -26px;
+    }
+    testo_mapa_home{
+        margin-top: 8vh;
+    }
+}
 @media screen and (max-height:650px) {
     .home_titulo{
         line-height: 60px;
