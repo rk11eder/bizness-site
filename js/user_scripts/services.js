@@ -113,6 +113,8 @@ console.log(users);
         return users;
     }
 
+
+
 }]);
 
 /*servico para mudar page title (SEO)*/

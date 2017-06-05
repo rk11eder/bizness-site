@@ -1,7 +1,7 @@
 'use strict';
 
 /*exemplo controller*/
-biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http','$anchorScroll', function sobrenosCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http,$anchorScroll){
+biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeout','$sce','items','services','$routeParams','PageTitle','$location','$http', function sobrenosCtrl($scope, $rootScope, $window,$timeout,$sce,items, services,$routeParams,PageTitle,$location,$http,$document){
 
 	/*CLICKS GOOGLE MAPS*/
   $scope.$on('$viewContentLoaded', function(event) {
@@ -282,14 +282,8 @@ function Trirot(x,y,a,d,dx,dy){
 	});
 
 	$scope.resize_func();
-    $scope.gotoBottom = function() {
 
-        var result = document.getElementsByClassName("fotos_sobrenos").style.animation = "float: right;";
-
-
-
-    };
-
+    
 
 	 var tempo = setTimeout(function(){ 
         
@@ -297,4 +291,4 @@ function Trirot(x,y,a,d,dx,dy){
         $rootScope.$apply();
           clearTimeout(tempo);
      }, 1000);
-}]);
+}]).value('duScrollOffset', 30);

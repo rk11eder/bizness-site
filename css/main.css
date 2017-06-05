@@ -364,7 +364,7 @@ p{
   font-weight: 400;
   color:#ffffff;
   padding-top: 6px;
-    background-color: #34394f;
+    /*background-color: #34394f;*/
 }
 
 
@@ -1082,7 +1082,7 @@ transform: translate3d(0px,0px,0px) rotate(90deg);
     color: black;
     text-align: center;
     font-size: 22px;
-    font-family: textfont;
+    font-family: 'Roboto';
     font-weight: bold;
     margin-top: 64px;
 }
@@ -1208,6 +1208,12 @@ canvas{
     }
 }
 @media screen and (max-height:650px) {
+    .home_titulo{
+        line-height: 60px;
+        font-size: 65px;
+    }
+}
+@media screen and (max-height:650px) {
     .nav li {
            margin-right: 5vh;
 
@@ -1308,7 +1314,7 @@ canvas{
         right: 30px;
     }
     .barra_destaque{
-        width: 60px;
+        width: 54px;
     }
 
     .titulo_destaques {
@@ -1717,4 +1723,10 @@ canvas{
         left: 0;
         right: 0;
     }
+    @media screen and (max-height:500px) {
+        .home_titulo{
+            font-size: 30px;
+        }
+    }
+
 }
