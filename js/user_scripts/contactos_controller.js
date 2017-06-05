@@ -40,7 +40,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
     };
     $scope.scroll_bottom = function(){
 
-        angular.element('body,html').animate({scrollTop: w.height()-100},500,function(){
+        angular.element('body,html').animate({scrollTop: w.height()-63},500,function(){
             // controlo_scroll = 0;
         });
     }
@@ -146,7 +146,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "labels.text.stroke",
             "stylers": [
                 {
-                    "color": "#1b1b1b"
+                    "color": "#383d53"
                 }
             ]
         },

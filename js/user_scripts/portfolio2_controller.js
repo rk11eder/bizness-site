@@ -65,7 +65,7 @@ biznessApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$time
     });
     $scope.scroll_bottom = function(){
         console.log("asd");
-        angular.element('body,html').animate({scrollTop: w.height()-100},500,function(){
+        angular.element('body,html').animate({scrollTop: w.height()-63},500,function(){
             // controlo_scroll = 0;
         });
     };

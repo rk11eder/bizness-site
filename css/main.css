@@ -80,11 +80,13 @@
   background-color: transparent;
 }
 
+
 body, html{
 	margin: 0px;
 	padding: 0px;
   overflow: auto;
 }
+
 .container_portfolio{
     background-color: #33384e;
 }
@@ -789,6 +791,12 @@ overflow: hidden;
     font-family: 'Roboto';
     font-size: 31px;
     font-weight: bold;
+    margin-left: 70px;
+    padding: 0px;
+}
+.texto_middle_sobrenos p{
+    width: 467px;
+    margin: 0 auto;
 }
 .texto_botttom_left_sobrenos{
   top: 50%;
@@ -1252,6 +1260,10 @@ canvas{
 
 
 @media screen and (max-width:768px) {
+
+    .scndline{
+        background:none;
+    }
     .logo_vertical_portfolio2 img{
         position: relative;
         height: 24px;
@@ -1319,14 +1331,15 @@ canvas{
 
     /*HOME*/
     .holder_destaques_home {
-        height: 70vh;
+        height: calc(100vh - 55px);
     }
     .primeiro_destaque{
         right: 0;
     }
     .holder_barras{
         top: 40px;
-        right: 30px;
+       /* right: 30px;*/
+        right: inherit;
     }
     .barra_destaque{
         width: 54px;
@@ -1338,6 +1351,7 @@ canvas{
         display: flex;
         align-items: center;
         overflow: hidden;
+        justify-content: center;
     }
 
     .home_tipo {
@@ -1386,6 +1400,7 @@ canvas{
     .holder_home_logos_holder_esquerda {
         padding: 50px 0;
         background-color: white;
+        height: calc(100vh - 55px);
     }
 
     .holder_texto_home_esquerda {
@@ -1668,6 +1683,12 @@ canvas{
     .texto_middle_sobrenos {
         font-size: 20px;
         text-align: center;
+        margin: 0px;
+        
+    }
+    .texto_middle_sobrenos p{
+        width: auto;
+        
     }
 
     .pClassSobre {
@@ -1751,6 +1772,7 @@ canvas{
         bottom: 0;
         left: 0;
         right: 0;
+            bottom: inherit; /* ter cuidado */
     }
 
 
