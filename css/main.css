@@ -1198,6 +1198,12 @@ canvas{
         right: 1%;
     }
 }
+@media screen and (max-height:900px) {
+    .home_titulo{
+        line-height: 60px;
+        font-size: 65px;
+    }
+}
 @media screen and (max-height:820px) {
     .pClassSobre p {
         font-size: 81px;
@@ -1723,7 +1729,7 @@ canvas{
         left: 0;
         right: 0;
     }
-    @media screen and (max-height:500px) {
+    @media screen and (max-height:550px) {
         .home_titulo{
             font-size: 30px;
         }
