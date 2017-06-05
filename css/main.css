@@ -1195,9 +1195,34 @@ canvas{
 }
 @media screen and (max-height:650px) {
     .nav li {
-        margin-right: 5vh;
+           margin-right: 5vh;
+
+       }
+    .menu-list-holder {
+        width: 100vh;
+    }
+    .icon_menu {
+        z-index: 50;
+        /* position: relative; */
+        position: fixed;
 
     }
+    .menu_holder ul {
+        display: inline-block;
+        float: right;
+        margin-top: -43px;
+
+        margin-right: 85px;
+    }
+    .icon_menu_list img {
+        width: 18px;
+        margin-top: -53px;
+
+    }
+    .icon_menu_list{
+        margin-left: 0px;
+    }
+
 
 }
 
