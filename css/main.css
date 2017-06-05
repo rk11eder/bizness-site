@@ -1448,6 +1448,13 @@ canvas{
 
 }
 
+@media screen and (max-width:880px) {
+    .pClassSobre p {
+        font-size: 67px;
+        margin-top: -23px;
+
+    }
+}
 @media screen and (max-width:768px) {
 
     .titulo_folio2{
