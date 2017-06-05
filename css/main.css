@@ -1729,7 +1729,7 @@ canvas{
         left: 0;
         right: 0;
     }
-    @media screen and (max-height:500px) {
+    @media screen and (max-height:550px) {
         .home_titulo{
             font-size: 30px;
         }
