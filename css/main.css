@@ -890,6 +890,7 @@ overflow: hidden;
   background: white url('../img/botao_open_menu.svg') no-repeat center;
   transform: rotate(90deg);
   pointer-events: all;
+    cursor: pointer;
 }
 .menu_back{
   background: url("../img/menu_back.svg") no-repeat center;
@@ -915,7 +916,7 @@ overflow: hidden;
   100% {width: 90%;}
 }
 .fadeOut{
-  visibility: hidden;
+  /*visibility: hidden;*/
   opacity: 0;
   transition: visibility 0s 1s, opacity 1s linear;
   
