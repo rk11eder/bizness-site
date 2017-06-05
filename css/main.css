@@ -364,7 +364,7 @@ p{
   font-weight: 400;
   color:#ffffff;
   padding-top: 6px;
-    background-color: #34394f;
+    /*background-color: #34394f;*/
 }
 
 
@@ -1305,7 +1305,7 @@ canvas{
         right: 30px;
     }
     .barra_destaque{
-        width: 60px;
+        width: 54px;
     }
 
     .titulo_destaques {
@@ -1714,4 +1714,10 @@ canvas{
         left: 0;
         right: 0;
     }
+    @media screen and (max-height:500px) {
+        .home_titulo{
+            font-size: 30px;
+        }
+    }
+
 }
