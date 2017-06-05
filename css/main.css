@@ -177,7 +177,7 @@ p{
     top: 25px;
 }
 .holder_barra{
-    padding-top: 25px;
+    padding-top: 4%;
     float: left;
     cursor: pointer;
     padding-bottom: 20px;
@@ -346,7 +346,8 @@ p{
   display:flex;
     padding: 10px 83px 10px 0;
     justify-content: flex-end;
-    pointer-events: none;
+    /*pointer-events: none;*/
+    cursor: pointer;
 }
 
 .home_titulo{
@@ -1116,6 +1117,7 @@ canvas{
     .imagens_insta{
         display: none;
     }
+
     /*Porfolio*/
 
         .portfolio_desktop{
@@ -1254,6 +1256,16 @@ canvas{
     /*HOME*/
     .holder_destaques_home {
         height: 70vh;
+    }
+    .primeiro_destaque{
+        right: 0;
+    }
+    .holder_barras{
+        top: 40px;
+        right: 30px;
+    }
+    .barra_destaque{
+        width: 60px;
     }
 
     .titulo_destaques {

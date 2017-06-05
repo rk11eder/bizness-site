@@ -55,7 +55,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "labels.text.stroke",
             "stylers": [
                 {
-                    "color": "#212121"
+                    "color": "#383d53"
                 }
             ]
         },
@@ -64,7 +64,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "geometry",
             "stylers": [
                 {
-                    "color": "#757575"
+                    "color": "#ffffff"
                 }
             ]
         },
@@ -108,7 +108,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "geometry",
             "stylers": [
                 {
-                    "color": "#181818"
+                    "color": "#4b5063"
                 }
             ]
         },
@@ -135,7 +135,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "geometry.fill",
             "stylers": [
                 {
-                    "color": "#2c2c2c"
+                    "color": "#34394f"
                 }
             ]
         },
@@ -144,7 +144,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "labels.text.fill",
             "stylers": [
                 {
-                    "color": "#8a8a8a"
+                    "color": "#6d7081"
                 }
             ]
         },
@@ -162,7 +162,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "geometry",
             "stylers": [
                 {
-                    "color": "#464b5f"
+                    "color": "#44495d"
                 }
             ]
         },
@@ -171,7 +171,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "geometry",
             "stylers": [
                 {
-                    "color": "#464b5f"
+                    "color": "#484d60"
                 }
             ]
         },
@@ -180,7 +180,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "labels.text.fill",
             "stylers": [
                 {
-                    "color": "#34394f"
+                    "color": "#686c7c"
                 }
             ]
         },
@@ -198,7 +198,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "geometry",
             "stylers": [
                 {
-                    "color": "#474b5f"
+                    "color": "#464b5f"
                 }
             ]
         },
@@ -207,7 +207,7 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
             "elementType": "labels.text.fill",
             "stylers": [
                 {
-                    "color": "#3d3d3d"
+                    "color": "#757575"
                 }
             ]
         }
