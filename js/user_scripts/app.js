@@ -37,7 +37,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
               promise3.then(
                   function(response){
                       $rootScope.logos = response;
-                  
+
                   });
              var promise = services.insta();
             return promise;
