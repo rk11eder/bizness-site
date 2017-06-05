@@ -73,7 +73,7 @@ $rootScope.hide_menu = 0;
 
         $location.hash('bottom');
 
-      
+
         $anchorScroll();
     };
 
