@@ -138,12 +138,12 @@
     </div>
 
     <div class="col-md-5 col-sm-12 col-xs-12 pd0 insta2" >
-        <div ng-repeat="i in ins |  limitTo:8" ng-if="$index>3" class="col-md-6 col-sm-6 col-xs-12 pd0 imagens_insta ">
+        <div ng-repeat="i in ins |  limitTo:8" ng-if="$index>3" class="col-md-6 col-sm-6 col-xs-12 pd0 imagens_insta cursor ">
             <div class="holder_backgrounds " ng-click="open_imagem_insta($index)" style="background-color: rgba(52,57,79,0.7);"></div>
             <div class="logo_insta"><img src="img/logo_instagram_red.svg"></div>
             <img ng-src="{{i.images.standard_resolution.url}}" alt="">
         </div>
-        <div ng-repeat="i in ins | limitTo:18" ng-if="$index>8" class="col-sm-4 pd0 imagens_insta_ultra">
+        <div ng-repeat="i in ins | limitTo:18" ng-if="$index>8" class="col-sm-4 pd0 imagens_insta_ultra cursor">
             <div class="holder_backgrounds " ng-click="open_imagem_insta($index)" style="background-color: rgba(52,57,79,0.7);"></div>
             <div class="logo_insta"><img src="img/logo_instagram_red.svg"></div>
             <img ng-src="{{i.images.standard_resolution.url}}" alt="">
