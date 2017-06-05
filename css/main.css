@@ -897,7 +897,12 @@ overflow: hidden;
   background-size: contain;;
   height: 40px;
   width: 40px;
+
   transform: rotate(90deg) translate3d(30%,20%,0);
+    -moz-transform:rotate(90deg) translate3d(30%,20%,0);
+    -o-transform:rotate(90deg) translate3d(30%,20%,0);
+    -ms-transform:rotate(90deg) translate3d(30%,20%,0);
+    -webkit-transform:rotate(90deg) translate3d(30%,20%,0);
   float: right;
     cursor: pointer;
 }
@@ -916,9 +921,10 @@ overflow: hidden;
   100% {width: 90%;}
 }
 .fadeOut{
-  /*visibility: hidden;*/
+  visibility: hidden;
   opacity: 0;
   transition: visibility 0s 1s, opacity 1s linear;
+
   
 }
 
