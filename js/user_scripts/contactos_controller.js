@@ -31,6 +31,19 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
 
 
     };
+    var w = angular.element($window);
+    $scope.getWindowDimensions = function () {
+        return {
+            'h': w.height(),
+            'w': w.width()
+        };
+    };
+    $scope.scroll_bottom = function(){
+
+        angular.element('body,html').animate({scrollTop: w.height()-100},500,function(){
+            // controlo_scroll = 0;
+        });
+    }
 
 
     var styleArray= [
