@@ -1082,7 +1082,7 @@ transform: translate3d(0px,0px,0px) rotate(90deg);
     color: black;
     text-align: center;
     font-size: 22px;
-    font-family: textfont;
+    font-family: 'Roboto';
     font-weight: bold;
     margin-top: 64px;
 }
