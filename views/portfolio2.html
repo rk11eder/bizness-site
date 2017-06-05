@@ -7,7 +7,7 @@
             <div class="col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2" style="height: 100%">
                 <div class="holder_folio2_header" >
                   <div  ng-class="{logo_horizontal_portfolio2: projetosPortfolio[0].width / projetosPortfolio[0].height <2,logo_vertical_portfolio2:projetosPortfolio[0].width / projetosPortfolio[0].height >2}">
-                    <img src="img/projetos/{{projetosPortfolio[0].id}}/{{projetosPortfolio[0].logo}}">
+                    <img ng-src="img/projetos/{{projetosPortfolio[0].id}}/{{projetosPortfolio[0].logo}}">
                   </div>
                       <div class="titulo_folio2">
                         {{projetosPortfolio[0].projectos_idiomas[0].nome}}
