@@ -8,7 +8,8 @@ var biznessApp = angular.module('biznessApp', [
   'ngSanitize',
   'services',
   'uiGmapgoogle-maps',
-  'ngAnimate'
+  'ngAnimate',
+  'duScroll',
 ]);
 
 /*EXEMPLO ROUTING*/
@@ -99,6 +100,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
     when('/'+lang+'/sobrenos', {
         templateUrl: 'views/sobrenos.html',
         controller: 'sobrenosCtrl',
+        reloadOnSearch: false,
         resolve:{
             items: ['$rootScope','services', function($rootScope,services){
                 $rootScope.flag_loading = 1;
