@@ -21,14 +21,17 @@
                     <div class="home_tipo">
                         {{slide.tipo}}
                     </div>
-                    <div class="home_titulo">
-                        <span class="first_titulo">{{slide.titulo[0]}}</span><br>
-                        <div class="scndline">
-                            <span class="scnd_titulo" ng-bind-html="slide.titulo[1]"></span> <!--<img class="seta_destaques" src="img/seta_destaques.svg">-->
+                    <a ng-href="portfolio/{{slide.url}}">
+                        <div class="home_titulo">
+                            <span class="first_titulo">{{slide.titulo[0]}}</span><br>
+                            <div class="scndline">
+                                <span class="scnd_titulo" ng-bind-html="slide.titulo[1]"></span> <!--<img class="seta_destaques" src="img/seta_destaques.svg">-->
+                            </div>
+
+
                         </div>
+                    </a>
 
-
-                    </div>
                 </div>
             </div>
 
