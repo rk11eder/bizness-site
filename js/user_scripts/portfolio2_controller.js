@@ -26,7 +26,7 @@ biznessApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$time
 
 
 		angular.element('body').bind("scroll", function(){
-
+            console.log("ola");
 				var portfolio = $('.holder_backgrounds_portfolio2').offset().top;
 				var currentScroll = $('.holder_backgrounds_portfolio2').offset().top; // get current position
 				var currentScroll2 = $('.holder_folio2_header').offset().top; // get current position
@@ -65,7 +65,7 @@ biznessApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$time
     });
     $scope.scroll_bottom = function(){
         console.log("asd");
-        angular.element('body,html').animate({scrollTop: w.height()-100},500,function(){
+        angular.element('body,html').animate({scrollTop: w.height()-63},500,function(){
             // controlo_scroll = 0;
         });
     };

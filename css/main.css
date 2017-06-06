@@ -80,11 +80,13 @@
   background-color: transparent;
 }
 
+
 body, html{
 	margin: 0px;
 	padding: 0px;
   overflow: auto;
 }
+
 .container_portfolio{
     background-color: #33384e;
 }
@@ -801,6 +803,12 @@ overflow: hidden;
     font-family: 'Roboto';
     font-size: 31px;
     font-weight: bold;
+    margin-left: 70px;
+    padding: 0px;
+}
+.texto_middle_sobrenos p{
+    width: 467px;
+    margin: 0 auto;
 }
 .texto_botttom_left_sobrenos{
   top: 50%;
@@ -1007,7 +1015,7 @@ transform: translate3d(0px,0px,0px) rotate(90deg);
 
     display: none;
     background-color: white;
-    height: 100vh;
+    height: calc(100vh - 50px);
     top: -100vh;
     position: fixed;
     font-family: 'Roboto';
@@ -1016,6 +1024,7 @@ transform: translate3d(0px,0px,0px) rotate(90deg);
     /* animation-iteration-count: 3; */
     width: 100%;
     z-index: 50;
+    color: #7f7f7f;
 
 }
 .menu_mobile_list ul{
@@ -1023,8 +1032,7 @@ transform: translate3d(0px,0px,0px) rotate(90deg);
     /* float: right; */
     position: absolute;
     text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
+    width:100%;
     background-color: white;
 }
 
@@ -1085,7 +1093,7 @@ transform: translate3d(0px,0px,0px) rotate(90deg);
 }
 
 .menu_mobile_list a {
-    color: black;
+    color: #7f7f7f;
     text-align: center;
     font-size: 22px;
     font-family: 'Roboto';
@@ -1267,6 +1275,10 @@ canvas{
 
 
 @media screen and (max-width:768px) {
+
+    .scndline{
+        background:none;
+    }
     .logo_vertical_portfolio2 img{
         position: relative;
         height: 24px;
@@ -1334,14 +1346,15 @@ canvas{
 
     /*HOME*/
     .holder_destaques_home {
-        height: 70vh;
+        height: calc(100vh - 55px);
     }
     .primeiro_destaque{
         right: 0;
     }
     .holder_barras{
         top: 40px;
-        right: 30px;
+       /* right: 30px;*/
+        right: inherit;
     }
     .barra_destaque{
         width: 54px;
@@ -1353,6 +1366,7 @@ canvas{
         display: flex;
         align-items: center;
         overflow: hidden;
+        justify-content: center;
     }
 
     .home_tipo {
@@ -1401,6 +1415,7 @@ canvas{
     .holder_home_logos_holder_esquerda {
         padding: 50px 0;
         background-color: white;
+        height: calc(100vh - 55px);
     }
 
     .holder_texto_home_esquerda {
@@ -1526,7 +1541,9 @@ canvas{
     }
 
     .menu_mobile_list {
-        display: block;
+           display: flex;
+    flex-direction: column;
+    justify-content: center;
     }
 
 
@@ -1683,6 +1700,12 @@ canvas{
     .texto_middle_sobrenos {
         font-size: 20px;
         text-align: center;
+        margin: 0px;
+        
+    }
+    .texto_middle_sobrenos p{
+        width: auto;
+        
     }
 
     .pClassSobre {
@@ -1742,12 +1765,16 @@ canvas{
     }
     .texto_folio2{
         height: 50px;
-        text-align: center;
+        text-align: left;
         padding: 0;
         font-family: Roboto;
         vertical-align: middle;
         /* display: table-cell; */
         line-height: 50px;
+        padding-left: 15px;
+    }
+    .conteudo_port_holder{
+        padding-bottom: 50px;
     }
     .imagem_folio2 {
         height: calc(100% - 50px);
@@ -1766,6 +1793,7 @@ canvas{
         bottom: 0;
         left: 0;
         right: 0;
+            bottom: inherit; /* ter cuidado */
     }
 
 
