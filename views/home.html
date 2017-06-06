@@ -36,7 +36,7 @@
         <div class="col-sm-12 col-xs-12 pd0 fotos_destaques container slider">
 
                 <img ng-repeat="slide in destaques" class="slide slide-animation"
-                     ng-hide="!isCurrentSlideIndex($index)" ng-click="stopSlides()" ng-src="img/destaques/{{slide.id}}/{{slide.imagem}}">
+                     ng-hide="!isCurrentSlideIndex($index)" ng-click="stopSlides()" ng-src="img/projetos/{{slide.id}}/{{slide.imagens[0].imagem}}">
             <!-- CODE OMITTED -->
         </div>
     </div>
