@@ -516,8 +516,8 @@ a:hover .la{
   transform: translate(50% 0%);
   transform: translate(-50%, -50%);
 
-    max-width: 24%;
-    min-width: 18%;
+    max-width: 16%;
+    min-width: 16%;
 }
 
 .logo_vertical img{
@@ -529,7 +529,7 @@ a:hover .la{
     transform: translate(-50%, -50%);
     /*min-height: 14%;*/
     /*min-width: 9%;*/
-    max-height: 25%;
+    max-height: 20%;
     min-height: 10%;
 }
 .logo_vertical_portfolio2 img{
@@ -828,7 +828,7 @@ overflow: hidden;
 }
 
 .contactos_imagem_holder{
-    background-image: url('../img/contactos.jpg');
+    background-image: url('../img/contactos.png');
     background-position: center center;
     background-size:cover;
 }
@@ -1027,6 +1027,9 @@ transform: translate3d(0px,0px,0px) rotate(90deg);
     color: #7f7f7f;
 
 }
+.menu_mobile_list img{
+    padding: 24px;
+}
 .menu_mobile_list ul{
     display: inline-block;
     /* float: right; */
@@ -1039,7 +1042,7 @@ transform: translate3d(0px,0px,0px) rotate(90deg);
 .menu_mobile_list li {
 
     height:100%;
-    line-height:90px;
+    line-height:60px;
     list-style: none;
     padding: 10px;
 }
@@ -1186,6 +1189,18 @@ canvas{
 }
 @media screen and (max-width:1200px) {
 
+    .contactos_home_holder h1 {
+        font-weight: bold;
+        font-size: 57px;
+    }
+    .contactos_home_holder p {
+        font-size: 27px;
+    }
+    .texto_home {
+
+        font-size: 17px;
+
+    }
 
     .footer_esquerda{
         font-size: 13px;
