@@ -3,7 +3,7 @@
 /*exemplo controller*/
 biznessApp.animation('.slide-animation-titulo', ['$rootScope', function ($rootScope) {
     var i = 0;
-    var parent = angular.element( document.querySelector('#parent_titulo') );
+    var parent = angular.element( document.querySelector('body') );
     return {
         beforeAddClass: function (element, className, done) {
             console.log($rootScope.contador_animation);
