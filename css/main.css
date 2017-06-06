@@ -781,18 +781,18 @@ overflow: hidden;
 
 }
 .texto_top_sobrenos3 {
-    animation-delay: 2.8s;
+    animation-delay: 2.9s;
 
 
 }
 .texto_top_sobrenos4 {
 
-    animation-delay: 3.1s;
+    animation-delay: 3.2s;
 
 }
 
 .texto_top_sobrenos5 {
-    animation-delay: 3.4s;
+    animation-delay: 3.5s;
 
 }
 
@@ -1007,6 +1007,10 @@ transform: translate3d(0px,0px,0px) rotate(90deg);
 .menu_item_sel{
   color:#cccccc;
 }
+.menu_mobile_list span:active{
+    color:#cccccc;
+}
+
 .icon_menu_list{
   min-height: 10px;
   display: inline-block;
