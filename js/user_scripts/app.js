@@ -71,7 +71,6 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
             items: ['$rootScope','services','$route', function($rootScope,services,$route){
                  $rootScope.flag_loading = 1;
                 $rootScope.area_sel = 'portfolio';
-                $rootScope.sub_area_sel = 'portfolio2';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
 

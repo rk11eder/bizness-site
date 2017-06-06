@@ -1128,6 +1128,9 @@ canvas{
     .imagens_insta{
         display: none;
     }
+    .holder_logos_home div{
+        padding: 51px 0;
+    }
 
     /*Porfolio*/
 
