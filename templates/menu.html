@@ -38,6 +38,10 @@
         <div class="icon_menu_list">
             <img src="img/logo_instagram_branco.svg">
         </div>
+         <div class="icon_menu_list">
+            <div ng-click="activeButton(); changelangPT()" class="cursor" ng-show="lang == 'en'">PT</div>
+            <div ng-click="activeButton(); changelangEN()" class="cursor" ng-show="lang == 'pt'">EN</div>
+        </div>
         <ul class="pd0 nav">
             <li class="vertical-text" ng-class="{menu_item_sel: area_sel == 'home'}"><a ng-href="{{lang}}/home"><span>{{array_lang.menu_inicio}}</span></a>
             </li>

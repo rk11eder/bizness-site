@@ -8,7 +8,7 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
     $window.ga('send', 'pageview', { page: $location.url() });  
   });
   $rootScope.flag_loading = 2;
-		
+  angular.element('body').scrollTop();
 	/*SET TITLE PAGE SEO*/
   	PageTitle.setTitle('Bizness');
   	PageTitle.setDesc($rootScope.lang_array.descricao_page);
