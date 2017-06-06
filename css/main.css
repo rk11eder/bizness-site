@@ -502,8 +502,8 @@ a:hover .la{
   transform: translate(50% 0%);
   transform: translate(-50%, -50%);
 
-    max-width: 24%;
-    min-width: 18%;
+    max-width: 16%;
+    min-width: 16%;
 }
 
 .logo_vertical img{
@@ -515,7 +515,7 @@ a:hover .la{
     transform: translate(-50%, -50%);
     /*min-height: 14%;*/
     /*min-width: 9%;*/
-    max-height: 25%;
+    max-height: 20%;
     min-height: 10%;
 }
 .logo_vertical_portfolio2 img{
