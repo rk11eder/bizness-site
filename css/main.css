@@ -828,7 +828,7 @@ overflow: hidden;
 }
 
 .contactos_imagem_holder{
-    background-image: url('../img/contactos.jpg');
+    background-image: url('../img/contactos.png');
     background-position: center center;
     background-size:cover;
 }
@@ -1027,6 +1027,9 @@ transform: translate3d(0px,0px,0px) rotate(90deg);
     color: #7f7f7f;
 
 }
+.menu_mobile_list img{
+    padding: 24px;
+}
 .menu_mobile_list ul{
     display: inline-block;
     /* float: right; */
@@ -1039,7 +1042,7 @@ transform: translate3d(0px,0px,0px) rotate(90deg);
 .menu_mobile_list li {
 
     height:100%;
-    line-height:90px;
+    line-height:60px;
     list-style: none;
     padding: 10px;
 }
@@ -1186,6 +1189,18 @@ canvas{
 }
 @media screen and (max-width:1200px) {
 
+    .contactos_home_holder h1 {
+        font-weight: bold;
+        font-size: 57px;
+    }
+    .contactos_home_holder p {
+        font-size: 27px;
+    }
+    .texto_home {
+
+        font-size: 17px;
+
+    }
 
     .footer_esquerda{
         font-size: 13px;
@@ -1214,6 +1229,30 @@ canvas{
     .texto_top_sobrenos{
         right: 1%;
     }
+    .imagens_insta{
+        display: none;
+    }
+    .imagens_insta_responsive{
+        display: block;
+        height: calc(100vw / 3);
+        overflow: hidden;
+    }
+    .imagens_insta_responsive img{
+        width: 100%;
+    }
+    .logo_insta{
+        margin: 5px;
+    }
+    .holder_home_logos_holder{
+        flex-direction: column;
+    }
+    .insta2{
+        display: none;
+    }
+
+
+
+
 }
 @media screen and (max-height:900px) {
     .home_titulo{
@@ -1352,9 +1391,8 @@ canvas{
         right: 0;
     }
     .holder_barras{
-        top: 40px;
-       /* right: 30px;*/
-        right: inherit;
+        right: 30px;
+
     }
     .barra_destaque{
         width: 54px;
@@ -1415,7 +1453,7 @@ canvas{
     .holder_home_logos_holder_esquerda {
         padding: 50px 0;
         background-color: white;
-        height: calc(100vh - 55px);
+        /*height: calc(100vh - 55px);*/
     }
 
     .holder_texto_home_esquerda {
