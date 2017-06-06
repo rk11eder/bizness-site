@@ -38,7 +38,7 @@ $res = $database->query_simple_prepare("SELECT
 
 //imagem
 foreach ( $res as $key => $value) {
-        $res[$key]['imagens'] = $database->query_simple_prepare("SELECT projetos_fotos.foto as imagem FROM projetos_fotos WHERE projetos_fotos.id_projeto=? ORDER BY ? ", array($value["id"],"id"), "is");
+        $res[$key]['imagens'] = $database->query_simple_prepare("SELECT projetos_fotos.foto as imagem, projetos_fotos.id as id FROM projetos_fotos WHERE projetos_fotos.id_projeto=? ORDER BY ? ", array($value["id"],"id"), "is");
 }
 
 foreach ( $res as $key => $value) {
