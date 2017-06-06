@@ -25,14 +25,11 @@ $scope.ins = items.data;
 $scope.form = {};
 $rootScope.contador_animation = 0;
 
-    angular.element('html').bind("scroll", function(){
+    angular.element('body').bind("scroll", function(){
         console.log("ola");
 				
 				var currentScroll = $('.holder_destaques_home').offset().top; 
                
-
-			    	var currentScroll2 = $('.fotos_destaques').offset().top; 
-                
 
 
                 
