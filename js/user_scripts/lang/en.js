@@ -11,11 +11,11 @@ var array_lang = {
 
 
     //sobre
-    sobrenos_titulo_principal:"A Bizness é uma",
-    sobrenos_titulo_principa2:"empresa jovem,",
-    sobrenos_titulo_principa3:"irreverente e com",
-    sobrenos_titulo_principa4:"forte sentido de",
-    sobrenos_titulo_principa5:"responsabilidade.",
+    sobrenos_titulo_principal:"Bizness is a",
+    sobrenos_titulo_principa2:"young company,",
+    sobrenos_titulo_principa3:"irreverent and with",
+    sobrenos_titulo_principa4:"a strong sense",
+    sobrenos_titulo_principa5:"of responsibility.",
 
 
     sobrenos_titulo_principa_mobile_l:"A Bizness",
@@ -31,16 +31,16 @@ var array_lang = {
 
 
 
-    sobrenos_titulo_secundario:"Oferecemos soluções nas áreas de comunicação integradas, eventos, Brand activation, comunicação e estratégia.",
+    sobrenos_titulo_secundario:"We offer solutions in the areas of integrated communication, events, brand activation, communication and strategy.",
 
-    sobrenos_pergunta:"O que os clientes esperam de nós ?",
-    sobrenos_resposta:"Soluções criativas e conceitos diferenciadores para estarem sempre na linha da frente.<br>O que procuramos?<br> Inovações técnicas para aplicação imediata.<br>O que queremos ser?<br>Uma empresa versátil, adaptada ás necessidades diárias de cada marca e cliente.",
+    sobrenos_pergunta:" What customers expect from us?",
+    sobrenos_resposta:"Creative solutions and differentiating concepts to always be at the forefront.<br>What are we looking for?<br>Technical innovations for immediate application.<br>What do we want to be?<br>A versatile company, adapted to the daily needs of each brand and customer.",
 
 
 
     //contactos
-    contactos_titulo:"Contacte-nos",
-    contactos_subtitlo:"Para esclarecer qualquer dúvida<p> ou prestar mais onformações",
+    contactos_titulo:"Contact us",
+    contactos_subtitlo:"To clarify any doubts<p> or provide more information",
 
     contactos_nome:"NAME",
     contactos_email:"EMAIL",
