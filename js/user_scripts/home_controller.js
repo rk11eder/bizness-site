@@ -165,6 +165,7 @@ $rootScope.contador_animation = 0;
         if(timer){
             $interval.cancel(timer);
         }
+        $rootScope.contador_animation=0;
 
          angular.element('body').unbind("scroll");
 
