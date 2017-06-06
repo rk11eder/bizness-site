@@ -100,7 +100,7 @@ $desc_page = "";
     <menu></menu>
 
     <!-- CONTAINER -->
-    <div class="container_website col-xs-12 pd0"  ng-view></div>
+    <div class="container_website col-xs-12 pd0"  ng-view autoscroll="true"></div>
 
     <!-- FOOTER -->
     <footer></footer>
