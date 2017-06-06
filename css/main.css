@@ -1514,7 +1514,7 @@ canvas{
     .holder_home_logos_holder_esquerda {
         padding: 50px 0;
         background-color: white;
-        /*height: calc(100vh - 55px);*/
+        height: 45vh;
     }
 
     .holder_texto_home_esquerda {
@@ -1647,7 +1647,7 @@ canvas{
     /*FORM CONTACTOS*/
     .contactos_home_holder {
         display: block;
-        height: calc(100vh - 55px);
+        height: 100vh;
     }
 
     .input_home, .textarea_home {
@@ -1669,11 +1669,11 @@ canvas{
     }
 
     .contactos_imagem_holder {
-        height: 35%;
+        height: 45vh;
     }
 
     .contactos_holder {
-        height: 65%;
+        height: 55vh;
     }
 
     .contactos_holder form {
