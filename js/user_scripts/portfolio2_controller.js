@@ -26,14 +26,15 @@ biznessApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$time
     };
 
 
-		angular.element('body').bind("scroll", function(){
+		angular.element(window).bind("scroll", function(){
             console.log("ola");
 				var portfolio = $('.holder_backgrounds_portfolio2').offset().top;
 				var currentScroll = $('.holder_backgrounds_portfolio2').offset().top; // get current position
 				var currentScroll2 = $('.holder_folio2_header').offset().top; // get current position
-                console.log(currentScroll);
-                console.log(currentScroll2);
-
+               /* console.log(currentScroll);
+                console.log(currentScroll2);*/
+                console.log($(this).scrollTop());
+             /*   console.log($('.holder_backgrounds_portfolio2').offset().top);*/
 				$scope.map = function(x, in_min, in_max, out_min, out_max){
 					if(x<in_min) return out_min;
 					if(x>in_max) return out_max;
