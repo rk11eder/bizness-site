@@ -18,13 +18,13 @@ var array_lang = {
     sobrenos_titulo_principa5:"responsabilidade.",
 
 
-
-    sobrenos_titulo_principa_mobile_l:"Bizness is a",
-    sobrenos_titulo_principa_mobile_2:"young company,",
-    sobrenos_titulo_principa_mobile_3:"irreverent and",
-    sobrenos_titulo_principa_mobile_4:"with a strong",
-    sobrenos_titulo_principa_mobile_5:"sense of",
-    sobrenos_titulo_principa_mobile_6:"responsibility.",
+    sobrenos_titulo_principa_mobile_l:"A Bizness",
+	sobrenos_titulo_principa_mobile_2:" é uma",
+    sobrenos_titulo_principa_mobile_3:" empresa jovem,",
+    sobrenos_titulo_principa_mobile_4:"irreverente",
+    sobrenos_titulo_principa_mobile_5:" e com forte",
+    sobrenos_titulo_principa_mobile_6:" sentido de",
+    sobrenos_titulo_principa_mobile_7:" responsabilidade.",
 
 
 
