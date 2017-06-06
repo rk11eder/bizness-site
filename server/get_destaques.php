@@ -7,7 +7,7 @@ ini_set('error_log','my_file.log');
 require_once('../classes/database.class.php');
 
 $dados = json_decode(file_get_contents("php://input"));
-// $lang = $_GET['lang'];
+ $lang = $_GET['lang'];
 
 
 //$lang="pt";
@@ -18,23 +18,28 @@ $database = new database();
 
 
 $res = $database->query_simple_prepare("SELECT 
- 	destaques.id as id, 
- 	destaques.foto as imagem,
- 	destaques_idiomas.nome as titulo,
- 	destaques_idiomas.tipo as tipo
+ 	projetos.id as id, 
+ 	projetos.url as url,
+ 	projetos_idiomas.nome as titulo,
+ 	projetos_idiomas.destaque_home_tipo as tipo
  	FROM 
- 	destaques, 
- 	destaques_idiomas 
+ 	projetos, 
+ 	projetos_idiomas 
  	WHERE 
- 	destaques.ativo=1 
+ 	projetos.ativo=1 
  	AND 
- 	destaques_idiomas.id_destaque = destaques.id 
+ 	projetos.destaque=1
+ 	AND
+ 	projetos_idiomas.id_projeto= projetos.id 
  	AND 
- 	destaques_idiomas.sigla='pt' ORDER BY id DESC
+ 	projetos_idiomas.sigla=? ORDER BY ordem ASC
 
-	",array(),"");
+	",array($lang),"s");
 
-
+//imagem
+foreach ( $res as $key => $value) {
+        $res['imagens'] = $database->query_simple_prepare("SELECT projetos_fotos.foto as imagem FROM projetos_fotos WHERE projetos_fotos.id_projeto=? ORDER BY ?  ", array($value["id"],"id"), "is");
+}
 
 foreach ( $res as $key => $value) {
     $res[$key]['titulo'] = explode(' ',$res[$key]['titulo']);
