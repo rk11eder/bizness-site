@@ -38,7 +38,7 @@ services.service('services',['$http','$q','$location','$window', function ($http
     }
     this.get_destaques = function (lang) {
         var deferred = $q.defer();
-        $http.get('server/get_destaques.php?lang='+lang+'data=' + (Math.random()), {cache: false}).success(function (data, status) {
+        $http.get('server/get_destaques.php?lang='+lang+'&data=' + (Math.random()), {cache: false}).success(function (data, status) {
             deferred.resolve(data);
         }).error(function (data, status) {
             deferred.reject(data);
