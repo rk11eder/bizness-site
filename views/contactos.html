@@ -34,8 +34,8 @@
 <div class="col-xs-12 pd0 contactos_home_holder">
     <div class="col-sm-7 col-xs-12 pd0 contactos_imagem_holder">
         <div class="col-xs-12 pd0 contactos_home_holder_texto">
-            <h1>{{array_lang.contactos_titulo}}</h1>
-            <p>{{array_lang.contactos_subtitlo}}</p>
+            <h1>{{lang_array.contactos_titulo}}</h1>
+            <p ng-bind-html="lang_array.contactos_subtitlo"></p>
         </div>
 
      <!--   <div class="col-xs-12 pd0">
@@ -45,16 +45,16 @@
     <div class="col-sm-5 col-xs-12 pd0 contactos_holder">
             <form id="formulario" name="formulario">
                 <div class="col-xs-12 pd0 contatos_input">
-                    <input id="nome" type="text" ng-model="form.nome" class="input_home" placeholder="{{array_lang.contactos_nome}}" required>
+                    <input id="nome" type="text" ng-model="form.nome" class="input_home" placeholder="{{lang_array.contactos_nome}}" required>
                 </div>
                 <div class="col-xs-12 pd0 contatos_input">
-                    <input id="email" type="email" ng-model="form.email" class="input_home" placeholder="{{array_lang.contactos_email}}" required>
+                    <input id="email" type="email" ng-model="form.email" class="input_home" placeholder="{{lang_array.contactos_email}}" required>
                 </div>
                 <div class="col-xs-12 pd0 contatos_textarea">
-                    <textarea id="mensagem" ng-model="form.mensagem" class="textarea_home" placeholder="{{array_lang.contactos_mensagem}}" required></textarea>
+                    <textarea id="mensagem" ng-model="form.mensagem" class="textarea_home" placeholder="{{lang_array.contactos_mensagem}}" required></textarea>
                 </div>
                 <div class="col-xs-12 pd0 holder_botao_submit">
-                    <input type="submit" ng-click="send_form(form)" ng-model="form.enviado" value="{{array_lang.contactos_enviar}}" class="input_submit_contactos_home">
+                    <input type="submit" ng-click="send_form(form)" ng-model="form.enviado" value="{{lang_array.contactos_enviar}}" class="input_submit_contactos_home">
                 </div>
             </form>
         </div>

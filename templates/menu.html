@@ -16,14 +16,14 @@
          ng-class="{menu_mobile_open: menuMobileControler == '1',menu_mobile_cima: menuMobileControler == '2'}"
          id="myMenu">
         <ul class="pd0">
-            <li ><a ng-href="{{lang}}/home" ng-click="changeClass()"><span>{{array_lang.menu_inicio}}</span></a>
+            <li ><a ng-href="{{lang}}/home" ng-click="changeClass()"><span>{{lang_array.menu_inicio}}</span></a>
             </li>
-            <li ><a ng-href="{{lang}}/sobrenos" ng-click="changeClass()"><span>{{array_lang.menu_sobre}}</span></a>
+            <li ><a ng-href="{{lang}}/sobrenos" ng-click="changeClass()"><span>{{lang_array.menu_sobre}}</span></a>
             </li>
             <li ><a
-                    ng-href="{{lang}}/portfolio" ng-click="changeClass()"><span>{{array_lang.menu_portfolio}}</span></a></li>
+                    ng-href="{{lang}}/portfolio" ng-click="changeClass()"><span>{{lang_array.menu_portfolio}}</span></a></li>
             <li><a
-                    ng-href="{{lang}}/contactos" ng-click="changeClass()"><span>{{array_lang.menu_contactos}}</span></a></li>
+                    ng-href="{{lang}}/contactos" ng-click="changeClass()"><span>{{lang_array.menu_contactos}}</span></a></li>
 
             <li> <img src="img/logo_facebook_branco.svg">   <img src="img/logo_instagram_branco.svg"></li>
 
@@ -43,14 +43,14 @@
             <div ng-click="activeButton(); changelangEN()" class="cursor" ng-show="lang == 'pt'">EN</div>
         </div>
         <ul class="pd0 nav">
-            <li class="vertical-text" ng-class="{menu_item_sel: area_sel == 'home'}"><a ng-href="{{lang}}/home"><span>{{array_lang.menu_inicio}}</span></a>
+            <li class="vertical-text" ng-class="{menu_item_sel: area_sel == 'home'}"><a ng-href="{{lang}}/home"><span>{{lang_array.menu_inicio}}</span></a>
             </li>
-            <li class="vertical-text" ng-class="{menu_item_sel: area_sel == 'sobrenos'}"><a ng-href="{{lang}}/sobrenos"><span>{{array_lang.menu_sobre}}</span></a>
+            <li class="vertical-text" ng-class="{menu_item_sel: area_sel == 'sobrenos'}"><a ng-href="{{lang}}/sobrenos"><span>{{lang_array.menu_sobre}}</span></a>
             </li>
             <li class="vertical-text" ng-class="{menu_item_sel: area_sel == 'portfolio'}"><a
-                    ng-href="{{lang}}/portfolio"><span>{{array_lang.menu_portfolio}}</span></a></li>
+                    ng-href="{{lang}}/portfolio"><span>{{lang_array.menu_portfolio}}</span></a></li>
             <li class="vertical-text" ng-class="{menu_item_sel: area_sel == 'contactos'}"><a
-                    ng-href="{{lang}}/contactos"><span>{{array_lang.menu_contactos}}</span></a></li>
+                    ng-href="{{lang}}/contactos"><span>{{lang_array.menu_contactos}}</span></a></li>
         </ul>
 
     </div>

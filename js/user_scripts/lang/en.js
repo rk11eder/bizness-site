@@ -1,32 +1,50 @@
 var array_lang = {
-	tudo_palavra: "All",
-	interior_titulo: "Interior Design",
-	interior_texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet turpis egestas, sodales ipsum sed, bibendum sapien. Vestibulum rutrum odio nec diam feugiat cursus. Mauris cursus risus vel consectetur lacinia. Mauris mauris tortor, placerat in lobortis et, efficitur sit amet nulla. Etiam o nulla, facilisis sed posuere id, ultricies quis mauris. Cras nisl ante, aliquam at ",
-	arquitetura_titulo: "Architecture",
-	arquitetura_texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet turpis egestas, sodales ipsum sed, bibendum sapien. Vestibulum rutrum odio nec diam feugiat cursus. Mauris cursus risus vel consectetur lacinia. Mauris mauris tortor, placerat in lobortis et, efficitur sit amet nulla. Etiam o nulla, facilisis sed posuere id, ultricies quis mauris. Cras nisl ante, aliquam at",
-	arquitetura_nome_arquiteta:"Jutta Susanne Hoehn",
-	arquitetura_descricao_arquiteta: "Architect/Managing Director/Owner",
-	arquitetura_ordem_arquitetura: "Chartered Member of Riba UK/11269169 Member of Architektenkammer Deutschland / 15069 Member of Ordem dos Arquitectos de Lisboa / 9817",
-	arquitetura_email: "jutta@algarve-architecture.com",
-	contactos_titulo: "Contacts",
-	contactos_titulo_local: "Office Address:",
-	contactos_morada_office: "JSH Algarve – Arquitectura Unipessoal, Lda. Jutta Susanne Hoehn Centro Comercial O Tradicional – Loja M/N Rua do Comércio 8135 – 126 Almancil",
-	contactos_enderece: "Address PO:",
-	contactos_texto_adress: "JSH Algarve – Arquitectura Unipessoal, Lda. Apartado n.º 3445 8135 – 905 Almancil",
-	contactos_telefone_fax: "Telefone: 00 351 289 394 792 Fax: 00 351 289 395 816",
-	contactos_email: "info@algarve-architecture.com",
-	project_vermais: "VER MAIS",
-	project_voltar: "VOLTAR",
-	menu_fechar: "FECHAR",
-	menu_home: "Home",
-	menu_architecture: "Architecture",
-	menu_interiordesign: "Interior design",
-	menu_cuttings: "Cuttings",
-	menu_contact: "Contact",
-	footer_telefone: "Telefone",
-	contactos_mobile_morada: "JSH Algarve - Arquitectura Unipessoal, Lda. <br>Jutta Susanne Hoehn <br>Centro Comercial O tradicional - Loja M/N <br>Rua do Comércio <br>8135 - 126 Almancil",
-	contactos_mobile_morada2: "JSH Algarve - Arquitectura Unipessoal, Lda. <br>Apartado nº 3445 <br>8135 - 905 Almancil",
-	contactos_mobile_telefone: "Telefone: 00 351 289 394 792 <br>Fax: 00 351 289 395 816",
-	mobile_project: "PROJECTS",
-	mobile_contact: "CONTACTS",
-}
+
+    //home
+    menu_inicio:"START",
+    menu_sobre:"ABOUT",
+    menu_portfolio:"PORTFOLIO",
+    menu_contactos:"CONTACTS",
+
+    titulo_home:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra sem nisl, id fringilla ipsum imperdiet in.",
+    conteudo_home:"Nunc libero lacus, suscipit sed placerat velLorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra sem nisl, id fringilla ipsum imperdiet in. Nunc libero lacus, suscipit sed placerat vel Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra sem nisl, id fringilla ipsum imperdiet in. Nunc libero lacus, suscipit sed placerat vel Cras viverra sem nisl, id fringilla ipsum imperdiet in. Nunc libero lacus, suscipit sed placerat vel",
+
+
+    //sobre
+    sobrenos_titulo_principal:"A Bizness é uma",
+    sobrenos_titulo_principa2:"empresa jovem,",
+    sobrenos_titulo_principa3:"irreverente e com",
+    sobrenos_titulo_principa4:"forte sentido de",
+    sobrenos_titulo_principa5:"responsabilidade.",
+
+
+    sobrenos_titulo_principa_mobile_l:"A Bizness",
+    sobrenos_titulo_principa_mobile_2:" é uma",
+    sobrenos_titulo_principa_mobile_3:" empresa jovem,",
+    sobrenos_titulo_principa_mobile_4:"irreverente",
+    sobrenos_titulo_principa_mobile_5:" e com forte",
+    sobrenos_titulo_principa_mobile_6:" sentido de",
+    sobrenos_titulo_principa_mobile_7:" responsabilidade.",
+
+
+
+
+
+
+    sobrenos_titulo_secundario:"Oferecemos soluções nas áreas de comunicação integradas, eventos, Brand activation, comunicação e estratégia.",
+
+    sobrenos_pergunta:"O que os clientes esperam de nós ?",
+    sobrenos_resposta:"Soluções criativas e conceitos diferenciadores para estarem sempre na linha da frente.<br>O que procuramos?<br> Inovações técnicas para aplicação imediata.<br>O que queremos ser?<br>Uma empresa versátil, adaptada ás necessidades diárias de cada marca e cliente.",
+
+
+
+    //contactos
+    contactos_titulo:"Contacte-nos",
+    contactos_subtitlo:"Para esclarecer qualquer dúvida<p> ou prestar mais onformações",
+
+    contactos_nome:"NAME",
+    contactos_email:"EMAIL",
+    contactos_mensagem:"MESSAGE",
+
+    contactos_enviar:"SEND"
+};

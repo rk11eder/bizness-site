@@ -17,10 +17,24 @@ var array_lang = {
     sobrenos_titulo_principa4:"forte sentido de",
     sobrenos_titulo_principa5:"responsabilidade.",
 
+
+    sobrenos_titulo_principa_mobile_l:"A Bizness",
+	sobrenos_titulo_principa_mobile_2:" é uma",
+    sobrenos_titulo_principa_mobile_3:" empresa jovem,",
+    sobrenos_titulo_principa_mobile_4:"irreverente",
+    sobrenos_titulo_principa_mobile_5:" e com forte",
+    sobrenos_titulo_principa_mobile_6:" sentido de",
+    sobrenos_titulo_principa_mobile_7:" responsabilidade.",
+
+
+
+
+
+
 	sobrenos_titulo_secundario:"Oferecemos soluções nas áreas de comunicação integradas, eventos, Brand activation, comunicação e estratégia.",
 
     sobrenos_pergunta:"O que os clientes esperam de nós ?",
-	sobrenos_resposta:"Soluções criativas e conceitos diferenciadores para estarem sempre na linha da frente.<br/>O que procuramos?<br/> Inovações técnicas para aplicação imediata.<br/>O que queremos ser?<br/>Uma empresa versátil, adaptada ás necessidades diárias de cada marca e cliente.",
+	sobrenos_resposta:"Soluções criativas e conceitos diferenciadores para estarem sempre na linha da frente.<br>O que procuramos?<br> Inovações técnicas para aplicação imediata.<br>O que queremos ser?<br>Uma empresa versátil, adaptada ás necessidades diárias de cada marca e cliente.",
 
 
 
@@ -33,4 +47,4 @@ var array_lang = {
 	contactos_mensagem:"MENSAGEM",
 
 	contactos_enviar:"ENVIAR"
-}
+};

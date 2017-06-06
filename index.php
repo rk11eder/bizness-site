@@ -1,6 +1,6 @@
 <?php
   $lang = $_GET['lang'];
-  if ($lang && ($lang == 'pt' || $lang == 'en' || $lang == 'ge')) {
+  if ($lang && ($lang == 'pt' || $lang == 'en' )) {
     unset($_COOKIE['cookiesBizness']);
     $cookie_name = "cookiesBizness";
     $cookie_value = $lang;
@@ -21,10 +21,7 @@
             $lang="en";
             break;
         }
-        case "ge":{
-            $lang="ge";
-            break;
-        }
+
         default:{
             $lang="pt";
             break;
