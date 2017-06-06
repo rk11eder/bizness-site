@@ -910,6 +910,11 @@ overflow: hidden;
     position: absolute;
     right: 0;
 }
+.menu_mobile_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .menu_back{
   background: url("../img/menu_back.svg") no-repeat center;
   background-size: contain;;
@@ -1228,31 +1233,6 @@ canvas{
 }
 
 @media screen and (max-width:992px) {
-    .container_website {
-        margin-top: 55px;
-    }
-    .menu-list-holder {
-        display: none;
-    }
-    .menu_holder {
-        margin-left: 0px;
-    }
-    .item_icon_menu_mobile {
-        display: block;
-    }
-    .menu_mobile {
-        width: 100vw;
-        height: 55px;
-        position: fixed;
-        background-color: white;
-        margin-left: 0px;
-        z-index: 200;
-    }
-    .icon_menu {
-        margin: 10px;
-        width: 55px;
-        height: 39px;
-    }
     .texto_top_sobrenos{
         right: 1%;
     }
@@ -1278,17 +1258,20 @@ canvas{
     }
     .holder_texto_home_esquerda{
         padding:50px 0;
+        min-height: 45vh;
     }
     .texto_home {
         margin-left: 14px;
         font-size: 15px;
+        padding-left: 70px;
     }
     .contactos_home_holder {
         display: block;
-        height: calc(100vh - 55px);
+        height: 100vh;
     }
     .contactos_imagem_holder {
         height: 45%;
+        min-height: inherit;
     }
     .contactos_holder {
         height: 55%;
@@ -1317,7 +1300,10 @@ canvas{
     }
     .holder_home_logos_holder_esquerda{
         padding: 50px 0;
-        min-height: 41vw;
+        min-height: 45vh;
+    }
+    .input_home, .textarea_home{
+        padding-left: 100px;
     }
 
 
@@ -1553,8 +1539,10 @@ canvas{
     }
 
     .texto_home {
-        margin-left: 14px;
         font-size: 15px;
+        padding-left: 0px;
+        margin-left: 0;
+
 
     }
 
@@ -1647,12 +1635,6 @@ canvas{
         margin: 10px;
         width: 55px;
         margin-left: 6px;
-    }
-
-    .menu_mobile_list {
-           display: flex;
-    flex-direction: column;
-    justify-content: center;
     }
 
 
