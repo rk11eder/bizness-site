@@ -21,7 +21,7 @@ biznessApp.animation('.slide-animation-titulo', ['$rootScope', function ($rootSc
 
             }else{
                 console.log("log3");
-                TweenMax.set(element,{right:-parent.width()*2});
+                TweenMax.set(element,{right:-(parent.width()*2)});
             }
 
             $rootScope.contador_animation++;
