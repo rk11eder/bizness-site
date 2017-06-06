@@ -27,6 +27,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
               $rootScope.sub_area_sel = '';
             $rootScope.menu_mobile_open = false;
             $rootScope.array_tags = [];
+              $rootScope.contador_animation=0;
               var promise2 = services.get_destaques();
               promise2.then(
                   function(response){
@@ -55,6 +56,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
                 $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
+                $rootScope.contador_animation=0;
 
                 var promise = services.getPortefolio(lang);
 
@@ -73,6 +75,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
                 $rootScope.area_sel = 'portfolio';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
+                $rootScope.contador_animation=0;
                 return services.getPortefolio2($route.current.params.url,lang);
 
 
@@ -91,6 +94,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
                 $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
+                $rootScope.contador_animation=0;
                 var promise = services.insta();
                 return promise;
             }]
@@ -107,6 +111,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
                 $rootScope.sub_area_sel = '';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
+                $rootScope.contador_animation=0;
                 var promise = services.insta();
 
                 return promise;
