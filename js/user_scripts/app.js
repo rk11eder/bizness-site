@@ -28,7 +28,7 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
             $rootScope.menu_mobile_open = false;
             $rootScope.array_tags = [];
               $rootScope.contador_animation=0;
-              var promise2 = services.get_destaques();
+              var promise2 = services.get_destaques(lang);
               promise2.then(
                   function(response){
                       $rootScope.destaques = response;
