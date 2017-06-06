@@ -63,7 +63,6 @@ services.service('services',['$http','$q','$location','$window', function ($http
     }
 
     this.getPortefolio2 = function (url,lang) {
-        $rootScope.sub_area_sel = 'portfolio2';
 
         var deferred = $q.defer();
         $http.post('server/portfolio_id_get_data.php?lang='+lang+'&data='+(Math.random()),{'url':url},{ cache: false}).success(function(data, status) {

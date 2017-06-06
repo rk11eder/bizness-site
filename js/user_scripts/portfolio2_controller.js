@@ -16,6 +16,7 @@ biznessApp.controller('portfolio2Ctrl', ['$scope', '$rootScope','$window','$time
 
     $rootScope.projetosPortfolio=items.projetos;
 	console.log($rootScope.projetosPortfolio);
+    $rootScope.sub_area_sel = 'portfolio2';
     var w = angular.element($window);
     $scope.getWindowDimensions = function () {
         return {

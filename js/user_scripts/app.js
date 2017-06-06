@@ -73,8 +73,8 @@ biznessApp.config(['$routeProvider','$locationProvider','$animateProvider',
                 $rootScope.area_sel = 'portfolio';
                 $rootScope.menu_mobile_open = false;
                 $rootScope.array_tags = [];
-
                 return services.getPortefolio2($route.current.params.url,lang);
+
 
 
 
