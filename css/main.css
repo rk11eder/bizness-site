@@ -274,6 +274,7 @@ p{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+    min-height: 41vw;
 }
 
 .contactos_home_holder{
@@ -831,6 +832,7 @@ overflow: hidden;
     background-image: url('../img/contactos.png');
     background-position: center center;
     background-size:cover;
+    min-height: 41vw;
 }
 
 /*MENU*/
@@ -1313,6 +1315,10 @@ canvas{
     .input_submit_contactos_home {
         height: 100%;
     }
+    .holder_home_logos_holder_esquerda{
+        padding: 50px 0;
+        min-height: 41vw;
+    }
 
 
 
@@ -1371,6 +1377,7 @@ canvas{
     .menu-list-holder2{
         height: 67px;
     }
+
 
 
 }
