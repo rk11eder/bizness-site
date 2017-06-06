@@ -1,6 +1,6 @@
 <div class="col-sm-12 pd0">
     <div class="col-sm-12 pd0 holder_destaques_home " >
-        <div class="col-sm-12 pd0 titulo_destaques">
+        <div class="col-sm-12 pd0 titulo_destaques" id="parent_titulo">
             <div class="holder_barras" style="top: 0">
                 <div class="holder_barra" ng-repeat="slide in destaques" ng-click="setCurrentSlideIndex($index)" >
                     <div class="barra_destaque">
@@ -14,22 +14,24 @@
                 <div class="barra_destaque_red" ng-click="setCurrentSlideIndex($index)"
                      ng-class="{slide_activo:isCurrentSlideIndex($index)}" ng-repeat="slide in destaques"></div>
             </div>-->
-
-            <div ng-repeat="slide in destaques"
-                 class="col-md-6 col-md-offset-6 col-sm-12 pd0 holder_titulo_home  slide slide-animation-titulo"
-                 style="position: absolute" ng-hide="!isCurrentSlideIndex($index)" ng-class="{primeiro_destaque: $index == 0}">
-                <div class="home_tipo">
-                    {{slide.tipo}}
-                </div>
-                <div class="home_titulo">
-                    <span class="first_titulo">{{slide.titulo[0]}}</span><br>
-                    <div class="scndline">
-                        <span class="scnd_titulo" ng-bind-html="slide.titulo[1]"></span> <!--<img class="seta_destaques" src="img/seta_destaques.svg">-->
+            <div class="destaques_holder">
+                <div ng-repeat="slide in destaques"
+                     class="col-md-6 col-md-offset-6 col-sm-12 pd0 holder_titulo_home  slide slide-animation-titulo"
+                     style="position: absolute" ng-hide="!isCurrentSlideIndex($index)" ng-class="{primeiro_destaque: $index == 0}">
+                    <div class="home_tipo">
+                        {{slide.tipo}}
                     </div>
+                    <div class="home_titulo">
+                        <span class="first_titulo">{{slide.titulo[0]}}</span><br>
+                        <div class="scndline">
+                            <span class="scnd_titulo" ng-bind-html="slide.titulo[1]"></span> <!--<img class="seta_destaques" src="img/seta_destaques.svg">-->
+                        </div>
 
 
+                    </div>
                 </div>
             </div>
+
         </div>
         <div class="col-sm-12 col-xs-12 pd0 fotos_destaques container slider">
 
@@ -104,21 +106,7 @@
             <div class="logo_insta"><img src="img/logo_instagram_red.svg"></div>
             <img ng-src="{{i.images.standard_resolution.url}}" alt="">
         </div>
-        <!--<div class="col-sm-6 pd0">
-            <div class="holder_backgrounds " style="background-color: rgba(52,57,79,0.7);"></div>
-            <div class="logo_insta"><img src="img/logo_instagram_red.svg"> </div>
-            <img src="img/instagram_foto.jpg" alt="" width="100%">
-        </div>
-        <div class="col-sm-6 pd0">
-            <div class="holder_backgrounds " style="background-color: rgba(52,57,79,0.7);"></div>
-            <div class="logo_insta"><img src="img/logo_instagram_red.svg"> </div>
-            <img src="img/instagram_foto.jpg" alt="" width="100%">
-        </div>
-        <div class="col-sm-6 pd0">
-            <div class="holder_backgrounds " style="background-color: rgba(52,57,79,0.7);"></div>
-            <div class="logo_insta"><img src="img/logo_instagram_red.svg"> </div>
-            <img src="img/instagram_foto.jpg" alt="" width="100%">
-        </div>-->
+
     </div>
 
 </div>
@@ -148,26 +136,6 @@
             <div class="logo_insta"><img src="img/logo_instagram_red.svg"></div>
             <img ng-src="{{i.images.standard_resolution.url}}" alt="">
         </div>
-        <!--<div class="col-sm-6 pd0">
-            <div class="holder_backgrounds " style="background-color: rgba(52,57,79,0.7);"></div>
-            <div class="logo_insta"><img src="img/logo_instagram_red.svg"> </div>
-            <img src="img/instagram_foto.jpg" alt="" width="100%">
-        </div>
-        <div class="col-sm-6 pd0">
-            <div class="holder_backgrounds " style="background-color: rgba(52,57,79,0.7);"></div>
-            <div class="logo_insta"><img src="img/logo_instagram_red.svg"> </div>
-            <img src="img/instagram_foto.jpg" alt="" width="100%">
-        </div>
-        <div class="col-sm-6 pd0">
-            <div class="holder_backgrounds " style="background-color: rgba(52,57,79,0.7);"></div>
-            <div class="logo_insta"><img src="img/logo_instagram_red.svg"> </div>
-            <img src="img/instagram_foto.jpg" alt="" width="100%">
-        </div>
-        <div class="col-sm-6 pd0">
-            <div class="holder_backgrounds " style="background-color: rgba(52,57,79,0.7);"></div>
-            <div class="logo_insta"><img src="img/logo_instagram_red.svg"> </div>
-            <img src="img/instagram_foto.jpg" alt="" width="100%">
-        </div>-->
     </div>
 
 </div>
@@ -181,9 +149,6 @@
             <p> ou prestar mais onformações</p>
         </div>
 
-        <!--<div class="col-sm-12 col-xs-12 pd0">
-            <img src="img/contactos.jpg" alt="" height= "100%" width="100%">
-        </div>-->
     </div>
     <div class="col-md-5 col-sm-12 col-xs-12 pd0 contactos_holder">
             <form id="formulario" name="formulario">

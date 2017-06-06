@@ -24,7 +24,7 @@ biznessApp.controller('sobrenosCtrl', ['$scope', '$rootScope','$window','$timeou
 	};
     $scope.scroll_bottom = function(){
 
-        angular.element('body,html').animate({scrollTop: w.height()-100},500,function(){
+        angular.element('body,html').animate({scrollTop: w.height()-63},500,function(){
             // controlo_scroll = 0;
         });
     }
