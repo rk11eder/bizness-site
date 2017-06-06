@@ -258,6 +258,15 @@ biznessApp.controller('contactosCtrl', ['$scope', '$rootScope','$window','$timeo
     };
 
 
+
+   angular.element($window).bind("scroll", function(){
+        console.log("ola");
+			
+        $scope.$apply();
+    });
+
+
+
      var tempo = setTimeout(function(){ 
         
         $rootScope.flag_loading = 0;
