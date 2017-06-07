@@ -507,6 +507,7 @@ font-family: 'Roboto';
 }
 
 .holder_backgrounds:hover {
+    opacity: 0;
 
     -webkit-opacity: 0;
     -ms-opacity: 0;
