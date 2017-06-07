@@ -526,7 +526,10 @@ font-family: 'Roboto';
 a:hover .la {
     transform: scale(1.4);
     filter: none;
-    transition: filter 4s, transform 4s ;
+    -webkit-transition: filter 4s, transform 4s ;
+            -ms-transition: filter 4s, transform 4s ;
+            -o-transition: filter 4s, transform 4s ;
+            -moz-transition: filter 4s, transform 4s ;
 }
 
 
