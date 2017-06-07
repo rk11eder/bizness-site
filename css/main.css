@@ -8,6 +8,9 @@
 .gm-style-pbc{
     display: none !important
 }
+a:focus {
+    outline: none;
+}
 
 .loading{
     background-color: #33384e;
