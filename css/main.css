@@ -507,7 +507,11 @@ font-family: 'Roboto';
 }
 
 .holder_backgrounds:hover {
-    opacity: 0;
+
+    -webkit-opacity: 0;
+    -ms-opacity: 0;
+    -o-opacity: 0;
+    -moz-opacity: 0;
 }
 
 .holder_backgrounds:hover ~ .la {
