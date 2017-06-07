@@ -878,7 +878,7 @@ overflow: hidden;
   color: #7f7f7f;
   height: 66px;
   width: calc(100vh - 100px);
-
+    font-size: 13px;
 }
 .menu-list-holder2{
   -webkit-transform-origin: left top;
